@@ -11,24 +11,15 @@
             "id": "c181a3bf971b852a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "0dc8320915ecf82a",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "test note.md",
+                "file": "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "test note.md",
+                "file": "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "test note.md",
+                "file": "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "test note.md"
+                "file": "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md"
               }
             }
           },
@@ -159,7 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 275.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,8 +167,10 @@
   },
   "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
+    "attachments",
+    "attachments/pfsense download settings.png",
     "test note.md",
-    "Untitled",
+    "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "new folder",
     "new folder",
     "repository",
