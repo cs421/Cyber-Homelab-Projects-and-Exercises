@@ -28,5 +28,9 @@ Click **Finish**
 
 ![[virtualbox_pfsense_finish.png]]
 
+Click **Continue**
+
+![[virtualbox_pfsense_setup_final.png]]
+
 
 
