@@ -12,3 +12,6 @@ https://www.pfsense.org/download/
 
 In this instance, since I couldn't afford to purchase the pro version of VMware workstation, I used Virtual Box.
 
+#### Setting up Pfsense in Virtual Box
+
+![[virtualbox_pfsense_setup_01.png]]
