@@ -15,3 +15,18 @@ In this instance, since I couldn't afford to purchase the pro version of VMware 
 #### Setting up Pfsense in Virtual Box
 
 ![[virtualbox_pfsense_setup_01.png]]
+
+Set base memory to **2GB** and click **next**
+
+![[virtualbox_pfsense_setup_02.png]]
+
+Select **Do Not Add a Virtual Hard Disk** and click **Next**
+
+![[virtualbox_pfsense_setup_03.png]]
+
+Click **Finish**
+
+![[virtualbox_pfsense_finish.png]]
+
+
+
