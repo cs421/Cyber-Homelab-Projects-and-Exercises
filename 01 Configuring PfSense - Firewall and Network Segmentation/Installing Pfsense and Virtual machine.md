@@ -79,3 +79,5 @@ Accept default settings from here on
 ![[pfsense install_03.png]]
 ![[pfsense install_04.png]]
 ![[pfsense install_05.png]]
+![[pfsense install_06.png]]
+![[pfsense install_07.png]]
