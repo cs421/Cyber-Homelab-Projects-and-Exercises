@@ -44,7 +44,19 @@ We will be adding six network adapters, but VirtualBox only offers four adapters
 
 To add more than four network adapters, we will need to use the CLI to enter commands.
 
-To use the CLI, navigate to the VirtualBox directory, usually in **C:\Program Files\Oracle\VirtualBox**
+To use the CLI, open command prompt as admin, then navigate to the VirtualBox directory, usually in **C:\Program Files\Oracle\VirtualBox**
+
+The code to add a network adapter is `vmboxmanage modifyvm <machine_name> --nic[N]= <network>`
+
+`<machine_name>` is the name of the virtual machine. In this case, it's **Pfsense**.
+
+`[N]` is the adapter number you want to configure or to add. In our case, we need to add two more network adapters, so we would replace `[N]` with **5** and **6**.
+
+`<network>` is the network type used by each network adapter. We will use **nat** for the type being, as we will configure this later.
+
+
+
+
 
 
 
