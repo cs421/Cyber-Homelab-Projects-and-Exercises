@@ -54,8 +54,18 @@ The code to add a network adapter is `vmboxmanage modifyvm <machine_name> --nic[
 
 `<network>` is the network type used by each network adapter. We will use **nat** for the type being, as we will configure this later.
 
+![[pfsense nic5.png]]
+![[pfsense nic6.png]]
 
+We can now see the newly added adapters back in the dashboard.
 
+![[pfsense added adapters.png]]
+
+We will now configure the network types of each network adapter. We'll leave **Adapter 1** to **NAT** as default.
+Click on the network type on **Adapter 2** to change it. Select **Internal Network** and rename the network. For continuity's sake, we will name each internal network as *vmnet2*, *vmnet3*, and so on.
+![[vmnet.png]]
+
+#### Booting Up Pfsense
 
 
 

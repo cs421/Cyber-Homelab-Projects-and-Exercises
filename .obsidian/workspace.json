@@ -167,6 +167,10 @@
   },
   "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
+    "attachments/vmnet.png",
+    "attachments/pfsense added adapters.png",
+    "attachments/pfsense nic6.png",
+    "attachments/pfsense nic5.png",
     "attachments/pfsense network adapters.png",
     "attachments/virtualbox_pfsense_setup_final.png",
     "attachments/virtualbox_pfsense_finish.png",
@@ -175,7 +179,6 @@
     "attachments/virtualbox_pfsense_setup_02.png",
     "attachments/virtualbox_pfsense_setup_01.png",
     "attachments",
-    "attachments/pfsense download settings.png",
     "test note.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "new folder",
