@@ -14,6 +14,8 @@ In this instance, since I couldn't afford to purchase the pro version of VMware 
 
 #### Setting up Pfsense in Virtual Box
 
+For the ISO image, browse for the downloaded **pfsense iso** file
+
 ![[virtualbox_pfsense_setup_01.png]]
 
 Set base memory to **2GB** and click **next**
@@ -31,6 +33,15 @@ Click **Finish**
 Click **Continue**
 
 ![[virtualbox_pfsense_setup_final.png]]
+
+#### Adding Network Adapters
+
+In VirtualBox, select the **Pfsense** machine, click on **Settings**, then click on **Network**.
+
+![[pfsense network adapters.png]]
+
+We will be adding six network adapters, but VirtualBox only offers four adapters as the default amount.
+To add more than four network adapters, we will need to use the CLI to enter commands.
 
 
 
