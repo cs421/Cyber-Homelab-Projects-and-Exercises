@@ -75,7 +75,9 @@ Click **Start** to boot up **Pfsense** in VirtualBox
 ![[pfsense default.png]]
 ![[pfsense install_01.png]]
 ![[psense install_02.png]]
-
-
-
-
+![[pfsense install_03.png]]
+![[pfsense install_04.png]]
+![[pfsense install_05.png]]
+![[pfsense_install 06.png]]
+![[pfsense install_07.png]]
+![[Pasted image 20231202184726.png]]
