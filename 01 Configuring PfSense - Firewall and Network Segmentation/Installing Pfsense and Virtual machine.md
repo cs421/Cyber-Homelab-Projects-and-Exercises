@@ -41,7 +41,11 @@ In VirtualBox, select the **Pfsense** machine, click on **Settings**, then click
 ![[pfsense network adapters.png]]
 
 We will be adding six network adapters, but VirtualBox only offers four adapters as the default amount.
+
 To add more than four network adapters, we will need to use the CLI to enter commands.
+
+To use the CLI, navigate to the VirtualBox directory, usually in **C:\Program Files\Oracle\VirtualBox**
+
 
 
 
