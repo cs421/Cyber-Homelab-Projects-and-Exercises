@@ -67,7 +67,15 @@ Click on the network type on **Adapter 2** to change it. Select **Internal Netwo
 
 #### Booting Up Pfsense
 
+Click **Start** to boot up **Pfsense** in VirtualBox
 
+![[pfsense boot.png]]
 
+Accept default settings from here on
 
-
+![[pfsense default.png]]
+![[pfsense install_01.png]]
+![[pfsense install_02.png]]
+![[pfsense install_03.png]]
+![[pfsense install_04.png]]
+![[pfsense install_05.png]]
