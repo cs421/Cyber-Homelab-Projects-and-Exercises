@@ -11,15 +11,24 @@
             "id": "c181a3bf971b852a",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "98d71966943fb065",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
+                "file": "Opnsense Firewall Installation.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
+                "file": "Opnsense Firewall Installation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
+                "file": "Opnsense Firewall Installation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md"
+                "file": "Opnsense Firewall Installation.md"
               }
             }
           },
@@ -165,8 +174,11 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "c181a3bf971b852a",
+  "active": "98d71966943fb065",
   "lastOpenFiles": [
+    "Opnsense Firewall Installation.md",
+    "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
+    "Opnsense Firewall Installation",
     "attachments/Pasted image 20231202184726.png",
     "attachments/pfsense install_07.png",
     "attachments/pfsense_install 06.png",
@@ -177,10 +189,8 @@
     "attachments/pfsense install_07.png",
     "attachments/pfsense install_06.png",
     "attachments/pfsense install_05.png",
-    "attachments/pfsense install_04.png",
     "attachments",
     "test note.md",
-    "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "new folder",
     "new folder",
     "repository",
