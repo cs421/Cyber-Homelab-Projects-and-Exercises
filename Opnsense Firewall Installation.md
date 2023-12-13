@@ -41,3 +41,9 @@
 ![[opnsense lan interface.png]]
 
 ![[opnsense configure process.png]]
+
+![[opnsense set interface em1.png]]
+
+![[opnsense set interface em1 02.png]]
+
+![[opnsense set interface em1 03.png]]
