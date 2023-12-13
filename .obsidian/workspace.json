@@ -174,9 +174,13 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "98d71966943fb065",
+  "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
-    "attachments/Pasted image 20231213155727.png",
+    "attachments/opnsense installer login.png",
+    "attachments/opnsense live mode.png",
+    "attachments/opnsense install process.png",
+    "attachments/opnsense mount and retry.png",
+    "attachments/opnsense mount iso.png",
     "Opnsense Firewall Installation.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "Opnsense Firewall Installation",
@@ -186,10 +190,6 @@
     "attachments/pfsense install_05.png",
     "attachments/pfsense install_04.png",
     "attachments/pfsense install_03.png",
-    "attachments/psense install_02.png",
-    "attachments/pfsense install_07.png",
-    "attachments/pfsense install_06.png",
-    "attachments/pfsense install_05.png",
     "attachments",
     "test note.md",
     "new folder",
