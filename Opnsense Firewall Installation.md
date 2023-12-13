@@ -11,3 +11,11 @@
 ![[opnsense live mode.png]]
 
 ![[opnsense installer login.png]]
+
+![[opnsense default keymap.png]]
+
+![[opnsense ufs.png]]
+
+![[opnsense vbox ada0.png]]
+
+![[opnsense installation.png]]
