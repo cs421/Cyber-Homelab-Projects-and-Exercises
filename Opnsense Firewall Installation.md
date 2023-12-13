@@ -47,3 +47,16 @@
 ![[opnsense set interface em1 02.png]]
 
 ![[opnsense set interface em1 03.png]]
+
+
+![[kali ifconfig set ip.png]]
+
+![[kali ifconfig netmask.png]]
+
+![[kali ifconfig.png]]
+
+![[kali opnsense gui.png]]
+
+![[kali opnsense dashboard.png]]
+
+![[kali opnsense update.png]]
