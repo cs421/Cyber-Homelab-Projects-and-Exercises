@@ -22,3 +22,16 @@
 
 
 ![[opnsense enter root password.png]]
+
+
+![[opnsense complete install.png]]
+
+![[opnsense reboot.png]]
+
+![[opnsense remove disk.png]]
+
+![[opnsense configuring.png]]
+
+![[opnsense login.png]]
+
+![[opnsense enter option.png]]
