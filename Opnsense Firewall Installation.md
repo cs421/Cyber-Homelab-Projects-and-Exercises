@@ -19,3 +19,6 @@
 ![[opnsense vbox ada0.png]]
 
 ![[opnsense installation.png]]
+
+
+![[opnsense enter root password.png]]
