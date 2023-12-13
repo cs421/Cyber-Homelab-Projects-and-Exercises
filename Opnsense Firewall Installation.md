@@ -35,3 +35,9 @@
 ![[opnsense login.png]]
 
 ![[opnsense enter option.png]]
+
+![[opnsenes assign interface.png]]
+
+![[opnsense lan interface.png]]
+
+![[opnsense configure process.png]]
