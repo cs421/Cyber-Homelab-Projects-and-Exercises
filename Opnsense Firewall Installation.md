@@ -60,3 +60,7 @@
 ![[kali opnsense dashboard.png]]
 
 ![[kali opnsense update.png]]
+
+![[opnsense plugins.png]]
+
+![[opnsense virtualbox plugin.png]]
