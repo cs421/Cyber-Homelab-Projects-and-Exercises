@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Opnsense Firewall Installation.md",
+                "file": "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Opnsense Firewall Installation.md",
+                "file": "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Opnsense Firewall Installation.md",
+                "file": "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Opnsense Firewall Installation.md"
+                "file": "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md"
               }
             }
           },
@@ -174,8 +174,9 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "98d71966943fb065",
   "lastOpenFiles": [
+    "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
     "attachments/opnsense virtualbox plugin.png",
     "attachments/opnsense plugins.png",
     "attachments/kali opnsense update.png",
@@ -186,10 +187,9 @@
     "attachments/kali ifconfig set ip.png",
     "attachments/opnsense set interface em1 03.png",
     "attachments/opnsense set interface em1 02.png",
-    "attachments/opnsense set interface em1.png",
     "Opnsense Firewall Installation.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
-    "Opnsense Firewall Installation",
+    "Virtual Lab Building Project",
     "attachments",
     "test note.md",
     "new folder",
