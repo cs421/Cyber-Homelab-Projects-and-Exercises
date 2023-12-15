@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
+                "file": "Virtual Lab Building Project/04 Opnsense Web Filtering - Proxy Configuration.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
+                "file": "Virtual Lab Building Project/04 Opnsense Web Filtering - Proxy Configuration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
+                "file": "Virtual Lab Building Project/04 Opnsense Web Filtering - Proxy Configuration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md"
+                "file": "Virtual Lab Building Project/04 Opnsense Web Filtering - Proxy Configuration.md"
               }
             }
           },
@@ -174,8 +174,10 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "98d71966943fb065",
   "lastOpenFiles": [
+    "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
+    "Virtual Lab Building Project/04 Opnsense Web Filtering - Proxy Configuration.md",
     "attachments/opnsense nmap alert.png",
     "attachments/nmap result.png",
     "attachments/nmap opnsense.png",
@@ -186,8 +188,6 @@
     "attachments/customnmap enable.png",
     "attachments/Pasted image 20231215155148.png",
     "attachments/customnmap xml.png",
-    "attachments/opnsense ids restart.png",
-    "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
     "Opnsense Firewall Installation.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "Virtual Lab Building Project",
