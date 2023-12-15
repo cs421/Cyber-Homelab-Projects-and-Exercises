@@ -36,3 +36,17 @@
 ![[sched tab.png]]
 
 ![[alerts tab.png]]
+
+
+
+## Nmap
+
+![[nmap opnsense.png]]
+
+`-sS` - starts the SYN scan
+`-Pn` - tells Nmap to still continue even if server is not responding to a ping
+`--top-ports 500` - scans the top 500 ports. The default is **1000**
+
+![[nmap result.png]]
+
+![[opnsense nmap alert.png]]
