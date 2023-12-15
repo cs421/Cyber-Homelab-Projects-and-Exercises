@@ -25,3 +25,6 @@
 **Local**: Suricata rules location
 **Remote site:** `/usr/local/opnsense/scripts/suricata/metadata/rules`
 
+![[custom nmap copied.png]]
+
+![[http server.png]]

@@ -174,8 +174,11 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "98d71966943fb065",
+  "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
+    "attachments/custom nmap copied.png",
+    "attachments/http server.png",
+    "attachments/http server.png",
     "attachments/filezilla browse folder.png",
     "attachments/filezilla trust host.png",
     "attachments/filezilla quickconnect.png",
@@ -185,9 +188,6 @@
     "attachments/suricata custom nmap.png",
     "attachments/opnsense ids ips activate.png",
     "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
-    "attachments/opnsense virtualbox plugin.png",
-    "attachments/opnsense plugins.png",
-    "attachments/kali opnsense update.png",
     "Opnsense Firewall Installation.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "Virtual Lab Building Project",
