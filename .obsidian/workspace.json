@@ -174,8 +174,12 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "98d71966943fb065",
+  "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
+    "attachments/webca cert finish.png",
+    "attachments/webca country.png",
+    "attachments/opnsense webca default.png",
+    "attachments/opnsense system trust.png",
     "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
     "Virtual Lab Building Project/04 Opnsense Web Filtering - Proxy Configuration.md",
     "attachments/opnsense nmap alert.png",
@@ -185,9 +189,6 @@
     "attachments/sched tab.png",
     "attachments/opnsense rule view.png",
     "attachments/customnmap enabled.png",
-    "attachments/customnmap enable.png",
-    "attachments/Pasted image 20231215155148.png",
-    "attachments/customnmap xml.png",
     "Opnsense Firewall Installation.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "Virtual Lab Building Project",
