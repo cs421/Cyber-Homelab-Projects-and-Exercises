@@ -12,3 +12,9 @@
 
 ![[customnmap rules.png]]
 ![[customnmap xml.png]]
+
+![[filezilla quickconnect.png]]
+
+**Host:** `sftp://<opnsense ip address>`
+**Port:** 22
+
