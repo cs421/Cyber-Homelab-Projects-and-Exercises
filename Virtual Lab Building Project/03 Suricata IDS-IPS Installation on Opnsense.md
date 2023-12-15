@@ -29,3 +29,10 @@
 
 ![[http server.png]]
 ![[opnsense ids restart.png]]
+![[customnmap enable.png]]
+![[customnmap enabled.png]]
+![[opnsense rule view.png]]
+
+![[sched tab.png]]
+
+![[alerts tab.png]]
