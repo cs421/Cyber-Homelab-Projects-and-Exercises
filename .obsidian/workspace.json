@@ -176,6 +176,8 @@
   },
   "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
+    "attachments/customnmap xml.png",
+    "attachments/customnmap rules.png",
     "attachments/opnsense enable ssh.png",
     "attachments/suricata custom nmap.png",
     "attachments/opnsense ids ips activate.png",
@@ -186,8 +188,6 @@
     "attachments/kali opnsense dashboard.png",
     "attachments/kali opnsense gui.png",
     "attachments/kali ifconfig.png",
-    "attachments/kali ifconfig netmask.png",
-    "attachments/kali ifconfig set ip.png",
     "Opnsense Firewall Installation.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "Virtual Lab Building Project",

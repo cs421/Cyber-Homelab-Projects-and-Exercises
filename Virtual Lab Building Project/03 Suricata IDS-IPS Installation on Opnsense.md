@@ -10,3 +10,5 @@
 
 `sudo apt-get install filezilla`
 
+![[customnmap rules.png]]
+![[customnmap xml.png]]
