@@ -174,8 +174,10 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "98d71966943fb065",
   "lastOpenFiles": [
+    "attachments/filezilla browse folder.png",
+    "attachments/filezilla trust host.png",
     "attachments/filezilla quickconnect.png",
     "attachments/customnmap xml.png",
     "attachments/customnmap rules.png",
@@ -186,8 +188,6 @@
     "attachments/opnsense virtualbox plugin.png",
     "attachments/opnsense plugins.png",
     "attachments/kali opnsense update.png",
-    "attachments/kali opnsense dashboard.png",
-    "attachments/kali opnsense gui.png",
     "Opnsense Firewall Installation.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "Virtual Lab Building Project",

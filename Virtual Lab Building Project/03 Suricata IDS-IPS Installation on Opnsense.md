@@ -18,3 +18,10 @@
 **Host:** `sftp://<opnsense ip address>`
 **Port:** 22
 
+![[filezilla trust host.png]]
+
+![[filezilla browse folder.png]]
+
+**Local**: Suricata rules location
+**Remote site:** `/usr/local/opnsense/scripts/suricata/metadata/rules`
+
