@@ -17,4 +17,13 @@
 
 ![[cert trusted root.png]]
 ![[cert install finished.png]]
+
+
+### Enabling Web Proxy
+
 ![[enable proxy.png]]
+
+#### Transparent Proxy Configuration
+
+![[transparent proxy firewall rule.png]]
+![[transparent proxy firewall rule 02.png]]
