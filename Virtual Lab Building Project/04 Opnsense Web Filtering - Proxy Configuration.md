@@ -27,3 +27,9 @@
 
 ![[transparent proxy firewall rule.png]]
 ![[transparent proxy firewall rule 02.png]]
+![[port forward rule.png]]
+
+![[opnsense forward proxy.png]]
+
+![[authentication settings.png]]
+![[blank authentication method.png]]
