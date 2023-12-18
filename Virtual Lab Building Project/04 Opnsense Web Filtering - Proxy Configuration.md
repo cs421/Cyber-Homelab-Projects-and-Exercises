@@ -44,3 +44,10 @@ https://dsi.ut-capitole.fr/blacklists/index_en.php
 ```
 
 ![[download acl.png]]
+
+![[blacklist edit acl.png]]
+![[blacklist categories.png]]
+![[blacklist deselect category.png]]
+
+### Firewall setup
+
