@@ -57,3 +57,4 @@ https://dsi.ut-capitole.fr/blacklists/index_en.php
 ![[lan firewall rules 02.png]]
 ![[lan firewalls rule clone.png]]![[lan firewall rules https.png]]
 ![[lan firewall rule move up.png]]
+![[lan firewall rules overview.png]]
