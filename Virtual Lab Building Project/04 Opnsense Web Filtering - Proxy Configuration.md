@@ -33,3 +33,14 @@
 
 ![[authentication settings.png]]
 ![[blank authentication method.png]]
+![[remote acl add.png]]
+![[edit blacklist.png]]
+
+**Blacklist URL:** ftp://ftp.ut-capitole.fr/pub/reseau/cache/squidguard_contrib/blacklists.tar.gz
+
+```
+For more info on Blacklists:
+https://dsi.ut-capitole.fr/blacklists/index_en.php
+```
+
+![[download acl.png]]
