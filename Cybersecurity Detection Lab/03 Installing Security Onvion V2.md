@@ -1,0 +1,1 @@
+![[seconion vm install 01.png]]
