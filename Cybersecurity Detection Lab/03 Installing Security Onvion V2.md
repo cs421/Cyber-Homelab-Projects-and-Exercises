@@ -32,3 +32,5 @@
 ### Installing Ubuntu
 
 ![[ubuntu install 1.png]]
+![[ubuntu install 3.png]]
+![[ubuntu install 4.png]]![[ubuntu install 5.png]]
