@@ -27,3 +27,8 @@
 ![[seconion gui install 24.png]]
 ![[seconion gui install 25.png]]
 ![[seconion gui install 26.png]]
+![[seconion gui install 27.png]]
+
+### Installing Ubuntu
+
+![[ubuntu install 1.png]]
