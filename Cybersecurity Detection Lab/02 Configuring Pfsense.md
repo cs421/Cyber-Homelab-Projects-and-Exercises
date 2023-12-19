@@ -24,3 +24,4 @@ Reference: https://i12bretro.github.io/tutorials/0235.html
 ![[pfsense gui install 09.png]]
 ![[pfsense gui install 10.png]]
 ![[pfsense boot.png]]
+![[pfsense gui home.png]]
