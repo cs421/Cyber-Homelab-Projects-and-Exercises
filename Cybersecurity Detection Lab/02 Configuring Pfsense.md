@@ -27,4 +27,9 @@ Reference: https://i12bretro.github.io/tutorials/0235.html
 ![[pfsense gui home.png]]
 ![[pfsense assign interface.png]]
 ![[pfsense assign interface 02.png]]
-![[pfsense set ip address.png]]
+![[pfsense set ip address.png]]![[pfsense set ip addr 01.png]]
+![[pfsense set ip addr 02.png]]![[pfsense set ip addr 03.png]]
+
+
+![[pfsense set ip addr 04.png]]
+![[pfsense set ip addr 05.png]]
