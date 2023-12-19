@@ -25,3 +25,6 @@ Reference: https://i12bretro.github.io/tutorials/0235.html
 ![[pfsense gui install 10.png]]
 ![[pfsense boot.png]]
 ![[pfsense gui home.png]]
+![[pfsense assign interface.png]]
+![[pfsense assign interface 02.png]]
+![[pfsense set ip address.png]]
