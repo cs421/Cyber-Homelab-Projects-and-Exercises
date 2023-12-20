@@ -36,3 +36,9 @@
 ![[ubuntu install 4.png]]![[ubuntu install 5.png]]
 
 ![[ubuntu net tools.png]]
+
+### Accessing SecOnion Web Interface
+
+![[seconion web access accept risk.png]]
+![[seconion login page.png]]
+![[seconion dashboard.png]]
