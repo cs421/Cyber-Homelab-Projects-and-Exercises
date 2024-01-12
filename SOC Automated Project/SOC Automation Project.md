@@ -113,5 +113,15 @@ Name the hostname as "Wazuh", then click on **Create Droplet**
 
 ### Creating a firewall
 
+Before moving to the next step in creating a firewall, we need to identify our public IPv4 address first. you can go to https://www.whatismyip.com/ to find your public IP address.
+![[whatismyip.png]]
+
+
 In the DigitalOcean dashboard, click on the **Networking** link, then on the **Firewalls** tab, and click on **Create Firewall**
 ![[create firewall.png]]
+
+
+For the inbound rules, create a rule where in it allows **All TCP** types on the TCP protocol, and **All ports** are allowed. Do the same for UDP. Then scroll down and click **Create Firewall**
+![[wazuh inbound rules.png]]
+
+![[droplet firewall created.png]]
