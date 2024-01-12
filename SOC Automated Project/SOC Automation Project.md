@@ -112,6 +112,7 @@ Name the hostname as "Wazuh", then click on **Create Droplet**
 ![[droplet name.png]]
 
 ### Creating a firewall
+Inside DigitalOcean, we will be creating a firewall to protect our virtual machines against public scanners and unauthorized SSH, and to make sure that the VMs that we create in the cloud provider are only accessible to us via our own public IP address.
 
 Before moving to the next step in creating a firewall, we need to identify our public IPv4 address first. you can go to https://www.whatismyip.com/ to find your public IP address.
 ![[whatismyip.png]]
@@ -124,4 +125,11 @@ In the DigitalOcean dashboard, click on the **Networking** link, then on the **F
 For the inbound rules, create a rule where in it allows **All TCP** types on the TCP protocol, and **All ports** are allowed. Do the same for UDP. Then scroll down and click **Create Firewall**
 ![[wazuh inbound rules.png]]
 
+We can now start adding VMs to the firewall we created.
 ![[droplet firewall created.png]]
+
+In the dashboard, click on **Droplets**, and right then, we can see our Wazuh VM, along with its public IP address.
+![[wazuh public ip.png]]
+Click on Wazuh and click on the **Networking** tab.
+![[wazuh networking.png]]Scroll down to the **Firewalls** section and click **Edit**
+![[droplet firewall edit.png]]
