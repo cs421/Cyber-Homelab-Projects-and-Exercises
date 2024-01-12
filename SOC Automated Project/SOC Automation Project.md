@@ -32,11 +32,12 @@ I will be following **MyDFIR's** videos in creating this lab, as found in: https
 
 # Part 2: Installing Virtual Machines and Applications
 
+### Installing VirtualBox and Windows 10 virtual machine
+
 Installing VirtualBox and the Windows 10 VM is very linear, as shown in MyDFIR's tutorial: https://www.youtube.com/watch?v=YxpUx0czgx4 from **2:07 - 8:34**
 
 ### Installing Sysmon
-
-Go to https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and choose **Download Sysmon**
+By now, the Windows 10 VM should have been installed and prepped. Open up a browser and go to https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and choose **Download Sysmon**
 
 ![[download sysmon.png]]
 
@@ -47,3 +48,10 @@ Go to https://github.com/olafhartong/sysmon-modular, scroll down and click **sys
 click **Raw**, then right click and **Save as** the xml file
 ![[sysmon config raw.png]]
 ![[sysmon xml save.png]]
+
+Go to the Sysmon's download location, right click the zip file and select "Extract All"
+![[sysmon extract.png]]
+
+We will be needing **Powershell** in this next step. Go to start, and search for powershell, and select "Run as Administrator"
+
+![[powershell admin.png]]
