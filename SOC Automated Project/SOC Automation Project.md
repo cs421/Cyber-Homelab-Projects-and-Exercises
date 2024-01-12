@@ -62,10 +62,23 @@ We will be needing **Powershell** in this next step. Go to start, and search for
 ![[sysmon folder.png]]
 **Note:** For good practice, always put paths inside quotation marks (" ")
 
-Run **Sysmon64.exe**
-![[sysmon64 exe.png]]
+We will now install sysmon along with the downloaded configuration file.
 
-The following details will pop up:
+Run `.\ sysmon64.exe -i sysmonconfig.xml`
 ![[sysmon64 install.png]]
 
+The license agreement window should appear. Click "Agree", and let the installer run its course
+![[sysmon64 license agreement.png]]
+![[sysmon install progress.png]]
 
+To double check if Sysmon has been successfully installed, we can do the following steps:
+
+##### Services
+Open the **Services** app by typing 'services' in the start menu
+![[services.png]]
+Scroll down until you find **Sysmon64** in the list.
+![[services sysmon.png]]
+
+##### Event Viewer
+Open the **Event Viewer** by typing 'event' in the start menu and cli
+![[Pasted image 20240112164818
