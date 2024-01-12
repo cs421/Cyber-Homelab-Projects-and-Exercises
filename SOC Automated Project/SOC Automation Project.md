@@ -92,4 +92,15 @@ Scroll down until you find the **Sysmon** folder
 
 For the Wazuh and TheHive installation, we will be doing it on the **DigitalOcean** (https://www.digitalocean.com/) cloud provider.
 
-DigitalOcean gives you a free $200 credit whenever you sign up 
+DigitalOcean gives you a free $200 credit for 60 days whenever you use this link to sign up: [https://m.do.co/c/e2ce5a05f701](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbUE1X1ZjT0hjYnRsSmFYckpvNTV6S3pNdVpwUXxBQ3Jtc0tsci0xNC1Fb3M0ckhrSENyQTBoMkFPYTBiSHRGRGRlMDF6SHBZMktEYUp6SUd0NkhXRmpVRWNvQmZVRmlYTUg2czNTRkxsSnZjLURPWjl2aVFVYTRnSEV4UGVrUTZ1ZXI3T0hRYzU4ZmlJdU9vUWR2cw&q=https%3A%2F%2Fm.do.co%2Fc%2Fe2ce5a05f701&v=YxpUx0czgx4) , but a valid credit card is necessary. This is fair, 60 days is a lot of time to do any documentations regarding this project.
+
+**IMPORTANT:** To avoid being billed after 60 days has ran out, you have to **DESTROY** the VMs created inside DigitalOcean after you have documented your project and/or are finished with the lab. 
+
+To create a virtual machine, click on "Create" and select "Droplets". Virtual machines are called **Droplets** in DigitalOcean.
+![[create droplet.png]]
+
+For the **Region**, select the region closest to you.
+
+
+
+
