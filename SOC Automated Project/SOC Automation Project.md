@@ -52,6 +52,20 @@ click **Raw**, then right click and **Save as** the xml file
 Go to the Sysmon's download location, right click the zip file and select "Extract All"
 ![[sysmon extract.png]]
 
+Move or drag and drop the sysmon config file into the sysmon folder.
+![[sysmonconfig move.png]]
+
 We will be needing **Powershell** in this next step. Go to start, and search for powershell, and select "Run as Administrator"
 
 ![[powershell admin.png]]
+`cd` to the extracted sysmon folder
+![[sysmon folder.png]]
+**Note:** For good practice, always put paths inside quotation marks (" ")
+
+Run **Sysmon64.exe**
+![[sysmon64 exe.png]]
+
+The following details will pop up:
+![[sysmon64 install.png]]
+
+
