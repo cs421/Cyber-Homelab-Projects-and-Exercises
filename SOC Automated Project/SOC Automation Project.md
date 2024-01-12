@@ -72,7 +72,6 @@ The license agreement window should appear. Click "Agree", and let the installer
 ![[sysmon install progress.png]]
 
 To double check if Sysmon has been successfully installed, we can do the following steps:
-
 ##### Services
 Open the **Services** app by typing 'services' in the start menu
 ![[services.png]]
@@ -80,5 +79,17 @@ Scroll down until you find **Sysmon64** in the list.
 ![[services sysmon.png]]
 
 ##### Event Viewer
-Open the **Event Viewer** by typing 'event' in the start menu and cli
-![[Pasted image 20240112164818
+Open the **Event Viewer** by typing 'event' in the start menu and clicking on the app
+![[event viewer.png]]
+
+Navigate to **Applications and Services Logs** -> **Microsoft** -> **Windows**.
+Scroll down until you find the **Sysmon** folder
+![[event viewer 1.png]]
+![[event view 2.png]]
+
+
+### Installing Wazuh
+
+For the Wazuh and TheHive installation, we will be doing it on the **DigitalOcean** (https://www.digitalocean.com/) cloud provider.
+
+DigitalOcean gives you a free $200 credit whenever you sign up 
