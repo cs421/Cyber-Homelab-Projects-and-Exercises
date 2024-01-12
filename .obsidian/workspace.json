@@ -11,12 +11,8 @@
             "id": "c181a3bf971b852a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cybersecurity Detection Lab/03 Installing Security Onvion V2.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity Detection Lab/03 Installing Security Onvion V2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cybersecurity Detection Lab/03 Installing Security Onvion V2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Cybersecurity Detection Lab/03 Installing Security Onvion V2.md"
-              }
+              "state": {}
             }
           },
           {
@@ -165,8 +157,10 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "19ccf79e77f02ec7",
   "lastOpenFiles": [
+    "Cybersecurity Detection Lab/03 Installing Security Onvion V2.md",
+    "SOC Automated Project",
     "Cybersecurity Detection Lab/attachments_02/seconion dashboard.png",
     "Cybersecurity Detection Lab/attachments_02/seconion login page.png",
     "Cybersecurity Detection Lab/attachments_02/seconion web access accept risk.png",
@@ -177,8 +171,6 @@
     "Cybersecurity Detection Lab/attachments_02/ubuntu install 2.png",
     "Cybersecurity Detection Lab/attachments_02/ubuntu install 1.png",
     "Cybersecurity Detection Lab/attachments_02/seconion gui install 27.png",
-    "Cybersecurity Detection Lab/attachments_02/seconion gui install 26.png",
-    "Cybersecurity Detection Lab/03 Installing Security Onvion V2.md",
     "Cybersecurity Detection Lab/02 Configuring Pfsense - Firewall & Network Segmentation.md",
     "Cybersecurity Detection Lab/attachments_02",
     "Cybersecurity Detection Lab",
