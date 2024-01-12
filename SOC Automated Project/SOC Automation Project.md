@@ -4,3 +4,4 @@ I will be following **MyDFIR's** videos on creating this lab, as found in: https
 
 ## Part 1: Diagram
 
+![[SOC Automated Homelab Diagram.png]]
