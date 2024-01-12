@@ -40,3 +40,10 @@ Go to https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and choose
 
 ![[download sysmon.png]]
 
+### Downloading Sysmon configuration file
+
+Go to https://github.com/olafhartong/sysmon-modular, scroll down and click **sysmonconfig.xml**
+![[sysmon config.png]]
+click **Raw**, then right click and **Save as** the xml file
+![[sysmon config raw.png]]
+![[sysmon xml save.png]]
