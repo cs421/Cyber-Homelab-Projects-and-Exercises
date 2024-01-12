@@ -99,8 +99,19 @@ DigitalOcean gives you a free $200 credit for 60 days whenever you use this link
 To create a virtual machine, click on "Create" and select "Droplets". Virtual machines are called **Droplets** in DigitalOcean.
 ![[create droplet.png]]
 
-For the **Region**, select the region closest to you.
+For the **Region**, select the region closest to you. For the **image**, we will be using **Ubuntu 22.04 (LTS) x64**
+![[droplet region image.png]]
 
+For **CPU** options, select the **Basic plan**, then **Premium Intel**, then **8GB/ 2 Intel CPUs** option
+![[droplet cpu.png]]
 
+For the **authentication method**, choose a password and create a strong one.
+![[droplet authentication.png]]
 
+Name the hostname as "Wazuh", then click on **Create Droplet**
+![[droplet name.png]]
 
+### Creating a firewall
+
+In the DigitalOcean dashboard, click on the **Networking** link, then on the **Firewalls** tab, and click on **Create Firewall**
+![[create firewall.png]]
