@@ -1,9 +1,11 @@
 **Goal:** The goal of this project is to create an automated SOC analyst lab complete with the SIEM tool, as the case management tool, and a security automation platform for SOAR (Security Orchestration, Automation and Response) capabilities. This lab will also utilize **Mimikatz** as the sample credential harvesting attack.
 
 ### Tools to be used
-1. **Wazuh** - XDR and SIEM tool, for receiving events and sending alerts to SOAR
+1. **Wazuh** (https://wazuh.com) - XDR and SIEM tool, for receiving events and sending alerts to SOAR
 2. **Shuffle** (https://shuffler.io) - for SOAR and IOC (indicators of compromise) enrichment
-3. **TheHive** (https://thehive-project.org)
+3. **TheHive** (https://thehive-project.org) - Security Incident Response Platform, for ticket and alert assignments of SOC analysts
+4. **VirusTotal** (https://www.virustotal.com) - for IOC enrichment and threat intel
+5. **Mimikatz** - 
 
 
 There will be **two (2)** virtual machines to be used in this project, namely:
