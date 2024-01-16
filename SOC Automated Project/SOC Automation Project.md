@@ -150,6 +150,26 @@ For some reason, I couldn't access the terminal through the **Droplet console** 
 
 To remedy this, I installed **WSL (Windows Subsytem for Linux)** https://learn.microsoft.com/en-us/windows/wsl/install, since I am mainly using Windows 10 as my OS. 
 
-To install WSL, open Powershe
+To install WSL, open Powershell in **admin mode**, and enter:
+```powershell
+wsl --install
+```
 
+This will install the Ubuntu distro of Linux. This is enough to run commands and establish **ssh** connections with Digital Ocean VMs.
+
+Once installed, you can now open an Ubuntu terminal within Windows.
+
+### SSH to Wazuh VM
+
+To establish a connection with your Wazuh VM in Digital Ocean, open up a WSL terminal and make an **ssh** connection with the command:
+
+`ssh root@MACHINE_IP`
+
+The machine IP is your Wazuh VM's public IP address. Type your password as required, and you will be logged in as **root**
+
+Update everything first by typing `apt-get update && apt-get upgrade -y`
+![[wazuh terminal update.png]]
+
+Just hit **enter** whenever you see this screen.
+![[wazuh update.png]]
 
