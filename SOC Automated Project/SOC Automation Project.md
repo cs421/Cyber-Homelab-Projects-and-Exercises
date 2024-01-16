@@ -41,7 +41,7 @@ By now, the Windows 10 VM should have been installed and prepped. Open up a brow
 
 ![[download sysmon.png]]
 
-### Downloading Sysmon configuration file
+#### Downloading Sysmon configuration file
 
 Go to https://github.com/olafhartong/sysmon-modular, scroll down and click **sysmonconfig.xml**
 ![[sysmon config.png]]
@@ -194,3 +194,15 @@ We can now log in with the credentials we saved earlier.
 
 
 ### Installing TheHive VM
+
+The steps for installing TheHive VM is very similar to the steps we took in creating our Wazuh VM. 
+
+![[thehive create droplet.png]]
+![[droplet region image.png]]![[droplet cpu.png]]
+![[droplet authentication.png]]
+
+The only difference is the Hostname, which we will change to **thehive**.
+![[Pasted image 20240116172816.png]]
+
+After creating TheHive droplet, we should also add it to the firewall as we did with our Wazuh VM.
+
