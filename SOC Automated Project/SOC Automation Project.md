@@ -141,7 +141,7 @@ Search for your Wazuh VM then click **Add Droplet**
 
 ### Accessing the Wazuh VM
 
-In the **Droplets** dashboard, click on the **Launch Droplet Console** to access the machine's terminal. You will be logged as **root**.
+In the **Droplets** dashboard, select your Wazuh VM, click on the **Access**, then select **Launch Droplet Console** to access the machine's terminal. You will be logged as **root**.
 ![[wazuh access droplet.png]]
 
 For some reason, I couldn't access the terminal through the **Droplet console** throughout my entire lab activity. This may be caused by busy servers in Digital Ocean, or some other technical issue that I don't know about.
@@ -202,7 +202,24 @@ The steps for installing TheHive VM is very similar to the steps we took in crea
 ![[droplet authentication.png]]
 
 The only difference is the Hostname, which we will change to **thehive**.
-![[Pasted image 20240116172816.png]]
+![[droplet thehive name.png]]
 
 After creating TheHive droplet, we should also add it to the firewall as we did with our Wazuh VM.
+![[thehive add firewall.png]]
+![[thehive add firewall 2.png]]
 
+Now both our Wazuh and TheHive VM are protected by our firewall.
+![[thehive wazuh firewall.png]]
+
+### Accessing TheHive VM
+
+In the **Droplets** dashboard, select your TheHive VM, click on the **Access,** then select **Launch Droplet Console** to access the machine's terminal. You will be logged as **root**.
+
+![[thehive droplet console.png]]
+
+Or, you can open up a WSL terminal and **ssh** to your TheHiveVM by:
+`ssh root@MACHINE_IP` and provide your password.
+
+#### Installing TheHive dependencies
+
+There are a lot of dependencies that we need to download and install in our TheHive VM. MyDIFR has provided these in their github 
