@@ -220,6 +220,49 @@ In the **Droplets** dashboard, select your TheHive VM, click on the **Access,** 
 Or, you can open up a WSL terminal and **ssh** to your TheHiveVM by:
 `ssh root@MACHINE_IP` and provide your password.
 
-#### Installing TheHive dependencies
+**Note:** Don't forget to run `apt-get update && apt-get upgrade` first
 
-There are a lot of dependencies that we need to download and install in our TheHive VM. MyDIFR has provided these in their github 
+#### Installing TheHive dependencies & applications
+
+There are a lot of dependencies that we need to download and install in our TheHive VM. We just need to run the following commands in the terminal and we are good to go.
+
+###### Dependencies
+- `apt install wget gnupg apt-transport-https git ca-certificates ca-certificates-java curl  software-properties-common python3-pip lsb-release`
+
+###### Install Java
+- `wget -qO- https://apt.corretto.aws/corretto.key | sudo gpg --dearmor  -o /usr/share/keyrings/corretto.gpg`
+- `echo "deb [signed-by=/usr/share/keyrings/corretto.gpg] https://apt.corretto.aws stable main" |  sudo tee -a /etc/apt/sources.list.d/corretto.sources.list`
+- `sudo apt update`
+- `sudo apt install java-common java-11-amazon-corretto-jdk`
+- `echo JAVA_HOME="/usr/lib/jvm/java-11-amazon-corretto" | sudo tee -a /etc/environment `
+- `export JAVA_HOME="/usr/lib/jvm/java-11-amazon-corretto"`
+
+###### Install Cassandra
+- `wget -qO -  https://downloads.apache.org/cassandra/KEYS | sudo gpg --dearmor  -o /usr/share/keyrings/cassandra-archive.gpg`
+- `echo "deb [signed-by=/usr/share/keyrings/cassandra-archive.gpg] https://debian.cassandra.apache.org 40x main" |  sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list`
+- `sudo apt update`
+- `sudo apt install cassandra`
+
+###### Install ElasticSearch
+- `wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch |  sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg`
+- `sudo apt-get install apt-transport-https`
+- `echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" |  sudo tee /etc/apt/sources.list.d/elastic-7.x.list`
+- `sudo apt update`
+- `sudo apt install elasticsearch`
+###### ***OPTIONAL ELASTICSEARCH***
+- Create a **jvm.options** file under */etc/elasticsearch/jvm.options.d* and put the following configurations in that file:
+```
+-Dlog4j2.formatMsgNoLookups=true
+-Xms2g
+-Xmx2g
+```
+
+###### Install TheHive
+- `wget -O- https://archives.strangebee.com/keys/strangebee.gpg | sudo gpg --dearmor -o /usr/share/keyrings/strangebee-archive-keyring.gpg`
+- `echo 'deb [signed-by=/usr/share/keyrings/strangebee-archive-keyring.gpg] https://deb.strangebee.com thehive-5.2 main' | sudo tee -a /etc/apt/sources.list.d/strangebee.list`
+- `sudo apt-get update`
+- `sudo apt-get install -y thehive`
+
+The default credentials for TheHive is:
+- **username:** admin@thehive.local
+- **password:** secret
