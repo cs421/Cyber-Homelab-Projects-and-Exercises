@@ -146,7 +146,7 @@ In the **Droplets** dashboard, click on the **Launch Droplet Console** to access
 
 For some reason, I couldn't access the terminal through the **Droplet console** throughout my entire lab activity. This may be caused by busy servers in Digital Ocean, or some other technical issue that I don't know about.
 
-### WSL (Windows Subsystem for Linux)
+#### WSL (Windows Subsystem for Linux)
 
 To remedy this, I installed **WSL (Windows Subsytem for Linux)** https://learn.microsoft.com/en-us/windows/wsl/install, since I am mainly using Windows 10 as my OS. 
 
@@ -159,7 +159,7 @@ This will install the Ubuntu distro of Linux. This is enough to run commands and
 
 Once installed, you can now open an Ubuntu terminal within Windows.
 
-### SSH to Wazuh VM
+#### SSH to Wazuh VM
 
 To establish a connection with your Wazuh VM in Digital Ocean, open up a WSL terminal and make an **ssh** connection with the command:
 
@@ -170,6 +170,27 @@ The machine IP is your Wazuh VM's public IP address. Type your password as requi
 Update everything first by typing `apt-get update && apt-get upgrade -y`
 ![[wazuh terminal update.png]]
 
-Just hit **enter** whenever you see this screen.
+Just hit **enter** whenever you see these screens.
 ![[wazuh update.png]]
+![[wazuh terminal update 2.png]]
 
+After everything has updated, we can now run the Wazuh installer.
+
+In the terminal, type: `curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-install.sh -a` and hit **enter**.
+
+![[wazuh installer.png]]
+
+Wazuh should complete its installation in a few moments, giving us this screen:
+![[wazuh install complete.png]]
+Take note of the credentials presented to you, since we will be using it when we log on to the browser interface, which be accessed by typing `https://[wazuh_public_ip]` in the browser
+
+Click on **Advanced** when you see this screen
+![[wazuh connection not private.png]]
+then click on the bottom link to access the login page.
+![[wazuh connection not private 2.png]]
+
+We can now log in with the credentials we saved earlier.
+![[wazuh login page.png]]
+
+
+### Installing TheHive VM
