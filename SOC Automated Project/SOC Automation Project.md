@@ -132,4 +132,13 @@ In the dashboard, click on **Droplets**, and right then, we can see our Wazuh VM
 ![[wazuh public ip.png]]
 Click on Wazuh and click on the **Networking** tab.
 ![[wazuh networking.png]]Scroll down to the **Firewalls** section and click **Edit**
-![[droplet firewall edit.png]]
+![[droplet firewall edit.png]]Select the firewall that was created earlier
+![[droplet firewall 2.png]]On the **Droplets** tab, click **Add Droplets**
+![[firewall add droplets.png]]
+Search for your Wazuh VM then click **Add Droplet**
+![[wazuh add firewall.png]]The Wazuh VM should now be protected by the firewall
+![[wazuh firewall added.png]]
+
+### Accessing the Wazuh VM
+
+![[wazuh access droplet.png]]
