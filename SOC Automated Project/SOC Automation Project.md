@@ -141,4 +141,15 @@ Search for your Wazuh VM then click **Add Droplet**
 
 ### Accessing the Wazuh VM
 
+In the **Droplets** dashboard, click on the **Launch Droplet Console** to access the machine's terminal. You will be logged as **root**.
 ![[wazuh access droplet.png]]
+
+For some reason, I couldn't access the terminal through the **Droplet console** throughout my entire lab activity. This may be caused by busy servers in Digital Ocean, or some other technical issue that I don't know about.
+
+### WSL (Windows Subsystem for Linux)
+
+To remedy this, I installed **WSL (Windows Subsytem for Linux)** https://learn.microsoft.com/en-us/windows/wsl/install, since I am mainly using Windows 10 as my OS. 
+
+To install WSL, open Powershe
+
+
