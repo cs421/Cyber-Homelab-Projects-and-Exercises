@@ -284,9 +284,19 @@ Scroll down to the `cluster_name` and name it according to your preference
 
 Next, we will be changing the settings for the `listen_address` and `rpc_address`
 
-To quickly search for strings inside Nano, press **ctrl+w** to bring up the search bar and type "**listen_address.**"
+To quickly search for strings inside Nano, press **ctrl+w** to bring up the search bar, type "**listen_address**" and press enter.
 
 ![[nano listen address.png]]
 
+Scroll down to the `listen_address` setting and change the value from `localhost` to **TheHive's** public IP.
 
+![[cassandra listen address.png]]
 
+Same goes with searching for `rpc_address`.
+![[nano rpc address.png]]
+
+Scroll down to the `rpc_address` setting and change the value from `localhost` to **TheHive's** public IP.
+
+![[cassandra rpc address.png]]
+
+The last configuration we need to change is the **seed address**. Search for `seed_provider` and scroll down to the setting. Change
