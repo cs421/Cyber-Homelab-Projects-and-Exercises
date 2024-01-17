@@ -268,3 +268,8 @@ The default credentials for TheHive is:
 
 # Part 3: Configuring Wazuh and TheHive
 
+## Configuring TheHive
+
+### Editing the Cassandra yaml file
+**Cassandra**(https://cassandra.apache.org/_/index.html) is an open source database from **Apache** used by **TheHive**
+
