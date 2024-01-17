@@ -446,7 +446,20 @@ In the **Deploy new agent** page, select **Windows** as the package. For the **S
 
 ![[wazuh deploy agent.png]]
 
-Copy the commands in the 4th step, and paste it in your Windows 10 machine's powershell terminal. This will install the Wazuh agent i Note that you should run powershell with admin privileges.
+Copy the commands in the 4th step, and paste it in your Windows 10 machine's powershell terminal. This will install the Wazuh agent to your Windows 10 machine. Note that you should run powershell with admin privileges.
 
 ![[wazuh agent command.png]]
 
+![[powershell wazuh agent.png]]
+
+After the agent has finished installing, we can start the agent by typing `net start wazuhsvc`.
+
+![[wazuh start service.png]]
+
+You can also check the status of the wazuh agent by typing **"services"** in the start menu and opening the app. Then scroll down until you find **Wazuh** in the list.
+
+![[services wazuh.png]]
+
+Back in the **Wazuh** dashboard, wait for a few moments and refresh the page to see the enrolled agent.
+
+![[wazuh dashboard agent.png]]
