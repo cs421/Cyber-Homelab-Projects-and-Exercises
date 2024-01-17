@@ -278,9 +278,15 @@ We first need to configure the **cassandra.yaml** file for it to work in **TheHi
 **SSH** into **TheHive** terminal and type `nano /etc/cassandra/cassandra.yaml`
 ![[cassandra thehive ssh.png]]
 
-Comment out the `cluster_name` and name it according to your preference
+Scroll down to the `cluster_name` and name it according to your preference
 
 ![[cassandra cluster name.png]]
 
 Next, we will be changing the settings for the `listen_address` and `rpc_address`
+
+To quickly search for strings inside Nano, press **ctrl+w** to bring up the search bar and type "**listen_address.**"
+
+![[nano listen address.png]]
+
+
 
