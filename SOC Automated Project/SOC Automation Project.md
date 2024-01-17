@@ -316,4 +316,22 @@ We also need to remove old files prior to configuring the yaml file. In the term
 To restart the service, type `systemctl start cassandra.service` in the terminal.
 ![[start cassandra.png]]
 
-We should also ma
+We should also maintain a good habit of double checking the status of the service we intend to run. To check **Cassandra's** status, type `systemctl status cassandra.service` in the terminal. It should say whether the service is active and running or has stopped or failed.
+![[cassandra status.png]]
+To exit from the status, press **q.**
+
+### Setting up Elasticsearch
+
+**Elasticsearch** is a search engine and data query management that is used by **TheHive.**
+
+The configuration file for **Elasticsearch** is located at `/etc/elasticsearch/elasticsearch.yml`. To configure this, we need to open the **yml** file in **Nano.**
+
+The first setting to change is the **cluster name**. Scroll down to the `cluster.name` value, remove the comment # and change the value to "**thehive**."
+
+Scroll down to the `node.name` setting, remove the comment # and leave the value `node-1` as is.
+
+Leave the values for
+
+
+
+
