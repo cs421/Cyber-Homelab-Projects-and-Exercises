@@ -436,9 +436,14 @@ After extracting, we can **cd** to the install files directory and see its conte
 We can **cat** the .txt file to view its contents. We can now see the credentials we need to log in to the dashboard.
 ![[wazuh passwords.png]]
 
-We should also take note of the crea
+We should also take note of the credentials for **wazuh API user**, since we will be using it later on to perform responsive capabilities.
+![[wazuh api user.png]]
+In the **Wazuh** dashboard, we can see that no agent has been added yet. To add one, simply click **Add agent**.
 
 ![[wazuh dashboard.png]]
 
-In the **Wazuh** dashboard, we can see that no agent has been added yet.
+In the **Deploy new agent** page, select **Windows** as the package. For the **Server address**, type in **Wazuh's** public IP. You can name the agent 
+
+![[Pasted image 20240117182231.png]]
+
 
