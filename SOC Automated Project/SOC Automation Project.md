@@ -357,6 +357,7 @@ We should also check **Cassandra's** status again after running **Elasticsearch*
 
 ### Configuring TheHive config file
 
+##### Changing file path ownership
 Before configuring **TheHive's** config file, we need to check whether **TheHive's** user and its group has access to a particular file path. The file path is `/opt/thp`
 
 To check permissions, type `ls -la /opt/thp`
@@ -366,8 +367,24 @@ Currently, the **root** user and group has access to the file path and needs to 
 To change ownership, type `chown -R thehive:thehive /opt/thp`.
 ![[chown thehive.png]]
 
+Double check with `ls -la`.
 
 ![[thehive ownership.png]]
 
+##### Setting up the config file.
 
+**TheHive's** config file is located at `/etc/thehive/application.conf`
 
+Open up the config file with **Nano**.
+
+Scroll down the the first `hostname` setting and change the value from the default to **TheHive's** public IP.
+
+Change the `cluster-name` value to the value that you put the **Cassandra** config file.
+
+Within the `index.search` function, change the `hostname` from default to **TheHive's** public IP.
+
+![[thehive config.png]]
+
+Scrolling a bit down to the `Attachment storage configuration`, it states that the path should belong to the user and group running **thehive** service. This is the reason why we had to change ownership for the file path earlier.
+
+![[thehive default ownership.png]]
