@@ -35,7 +35,6 @@ I will be following **MyDFIR's** videos in creating this lab, as found in: https
 ### Installing VirtualBox and Windows 10 virtual machine
 
 Installing VirtualBox and the Windows 10 VM is very linear, as shown in MyDFIR's tutorial: https://www.youtube.com/watch?v=YxpUx0czgx4 from **2:07 - 8:34**
-
 ### Installing Sysmon
 By now, the Windows 10 VM should have been installed and prepped. Open up a browser and go to https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and choose **Download Sysmon**
 
