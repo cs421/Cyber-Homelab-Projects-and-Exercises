@@ -425,11 +425,18 @@ The settings above tells **TheHive** to allocate 2gb of memory for Java instead 
 
 We first need to access the **Wazuh** web interface by typing the **Wazuh** VM's public IP in the browser and logging in with the credentials that **Wazuh** has provided us during the installation section back in **Part 2**.
 
-If you do not have the credentials provided, you can access the **Wazuh**
+If you do not have the credentials provided, you can access the **Wazuh** manager terminal by **ssh** and type `ls`.
+![[wazuh terminal.png]]
+You should see the **.tar** file for wazuh install files, and we need to extract its contents by typing `tar -xvf wazuh-install-files.tar`.
+![[wazuh install extract.png]]
 
+After extracting, we can **cd** to the install files directory and see its contents. The file that we want is `wazuh-passwords.txt`
+![[cd wazuh install.png]]
 
+We can **cat** the .txt file to view its contents. We can now see the credentials we need to log in to the dashboard.
+![[wazuh passwords.png]]
 
-
+We should also take note of the crea
 
 ![[wazuh dashboard.png]]
 
