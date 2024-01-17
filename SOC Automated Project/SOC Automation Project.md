@@ -403,4 +403,25 @@ We should also check **TheHive's** status with `systemctl status thehive`.
 
 ![[status all.png]]
 
-You can now access the web interface for **TheHive** by 
+You can now access the web interface for **TheHive** by typing `http://thehive_publicip:9000` on the browser.
+
+![[thehive log in page.png]]
+
+You can also sign in with the default credentials of: `admin@thehive.local` and password: `secret`.
+
+#### Troubleshooting TheHive login error
+
+If you ever encounter an error when trying to log in to **TheHive**, it may be possible that the **Elasticsearch** service is down. You can check the status by `systemctl status elasticsearch`. 
+
+If the error exists, **MyDIFR** recommends creating a custom **jvm** option file by typing `nano /etc/elasticsearch/jvm.options.d/jvm.optons` and put the following settings in the file:
+```
+-Dlog4j2.formatMsgNoLookups=true
+-Xms2g
+
+```
+
+
+
+
+## Configuring Wazuh
+
