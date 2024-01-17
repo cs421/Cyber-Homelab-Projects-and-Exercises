@@ -299,4 +299,21 @@ Scroll down to the `rpc_address` setting and change the value from `localhost` t
 
 ![[cassandra rpc address.png]]
 
-The last configuration we need to change is the **seed address**. Search for `seed_provider` and scroll down to the setting. Change
+The last configuration we need to change is the **seed address**. Search for `seed_provider` and scroll down to the setting. Change the value from **127.0.0.1** to **TheHive's** public IP.
+![[nano seed provider.png]]
+![[cassandra seed provider.png]]
+After that, press **ctrl+x** to prompt exit, type **Y** to save and press enter.
+
+We will need to stop and restart **Cassandra's** services for the changes to take effect.
+
+To stop **Cassandra**, type `systemctl stop cassandra.service` in the terminal and press enter.
+![[stop cassandra.png]]
+
+We also need to remove old files prior to configuring the yaml file. In the terminal, type `rm -rf /var/lib/cassandra/*`
+**Note:** The ( * ) input will delete all files inside the directory.
+![[remove old cassandra.png]]
+
+To restart the service, type `systemctl start cassandra.service` in the terminal.
+![[start cassandra.png]]
+
+We should also ma
