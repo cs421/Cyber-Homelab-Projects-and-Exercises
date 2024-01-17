@@ -388,3 +388,19 @@ Within the `index.search` function, change the `hostname` from default to **TheH
 Scrolling a bit down to the `Attachment storage configuration`, it states that the path should belong to the user and group running **thehive** service. This is the reason why we had to change ownership for the file path earlier.
 
 ![[thehive default ownership.png]]
+
+Scroll down to the `Service configuration` section. Change the value of `application.baseUrl` from **localhost** to **TheHive's** public IP.
+![[thehive service config.png]]
+Save changes and exit the config file.
+
+We now need to start and enable **TheHive** as a service with `systemctl start thehive` and `systemctl enable thehive`.
+![[start enable thehive.png]]
+
+We should also check **TheHive's** status with `systemctl status thehive`.
+![[thehive status.png]]
+
+**Important**: For **TheHive** to run successfully, it also needs **Cassandra** and **Elasticsearch** to be active and running as well. Double checking the status of all three is necessary.
+
+![[status all.png]]
+
+You can now access the web interface for **TheHive** by 
