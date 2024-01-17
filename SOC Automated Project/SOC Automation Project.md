@@ -330,8 +330,24 @@ The first setting to change is the **cluster name**. Scroll down to the `cluster
 
 Scroll down to the `node.name` setting, remove the comment # and leave the value `node-1` as is.
 
-Leave the values for
+Leave the values for `path.data` and `path.logs` as is.
+![[elasticsearch yml.png]]
 
+Scroll down to the `network.host` setting. Remove the comment, and change the value from the default to **TheHive's** public IP.
 
+Remove the comment for `http.port`.
 
+Remove the comment for `cluster.initial_master_nodes` and leave only `node-1` as the value.
 
+![[elasticsearch config 2.png]]
+
+Save the file and exit.
+
+Now, we need to start **Elasticsearch** as a service. Type `systemctl start elasticsearch` in the terminal. 
+![[start elasticsearch.png]]
+
+We will also need to enable **Elasticsearch**. Type `systemctl enable elasticsearch`
+![[enable elasticsearch.png]]
+
+To double check the status, type `systemctl status elasticsearch`
+![[elasticsearch status.png]]
