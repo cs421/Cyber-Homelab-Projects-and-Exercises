@@ -417,11 +417,21 @@ If the error exists, **MyDIFR** recommends creating a custom **jvm** option file
 ```
 -Dlog4j2.formatMsgNoLookups=true
 -Xms2g
-
+-Xmx2g
 ```
-
-
-
+The settings above tells **TheHive** to allocate 2gb of memory for Java instead of the default (8gb).
 
 ## Configuring Wazuh
+
+We first need to access the **Wazuh** web interface by typing the **Wazuh** VM's public IP in the browser and logging in with the credentials that **Wazuh** has provided us during the installation section back in **Part 2**.
+
+If you do not have the credentials provided, you can access the **Wazuh**
+
+
+
+
+
+![[wazuh dashboard.png]]
+
+In the **Wazuh** dashboard, we can see that no agent has been added yet.
 
