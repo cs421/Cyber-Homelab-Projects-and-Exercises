@@ -442,8 +442,11 @@ In the **Wazuh** dashboard, we can see that no agent has been added yet. To add 
 
 ![[wazuh dashboard.png]]
 
-In the **Deploy new agent** page, select **Windows** as the package. For the **Server address**, type in **Wazuh's** public IP. You can name the agent 
+In the **Deploy new agent** page, select **Windows** as the package. For the **Server address**, type in **Wazuh's** public IP. You can name the agent any way you want, but remember that it cannot be changed once the agent has been enrolled. Leave the groups tab in as default.
 
-![[Pasted image 20240117182231.png]]
+![[wazuh deploy agent.png]]
 
+Copy the commands in the 4th step, and paste it in your Windows 10 machine's powershell terminal. This will install the Wazuh agent i Note that you should run powershell with admin privileges.
+
+![[wazuh agent command.png]]
 
