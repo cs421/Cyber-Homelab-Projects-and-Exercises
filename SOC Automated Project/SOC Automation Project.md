@@ -351,3 +351,23 @@ We will also need to enable **Elasticsearch**. Type `systemctl enable elasticsea
 
 To double check the status, type `systemctl status elasticsearch`
 ![[elasticsearch status.png]]
+
+We should also check **Cassandra's** status again after running **Elasticsearch** to make sure it is still running.
+![[cassandra elasticsearch status.png]]
+
+### Configuring TheHive config file
+
+Before configuring **TheHive's** config file, we need to check whether **TheHive's** user and its group has access to a particular file path. The file path is `/opt/thp`
+
+To check permissions, type `ls -la /opt/thp`
+![[thp access.png]]
+Currently, the **root** user and group has access to the file path and needs to be changed.
+
+To change ownership, type `chown -R thehive:thehive /opt/thp`.
+![[chown thehive.png]]
+
+
+![[thehive ownership.png]]
+
+
+
