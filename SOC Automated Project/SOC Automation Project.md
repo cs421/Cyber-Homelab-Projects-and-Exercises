@@ -267,3 +267,4 @@ The default credentials for TheHive is:
 - **password:** secret
 
 # Part 3: Configuring Wazuh and TheHive
+
