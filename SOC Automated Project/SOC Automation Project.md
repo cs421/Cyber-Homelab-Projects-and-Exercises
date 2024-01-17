@@ -273,3 +273,14 @@ The default credentials for TheHive is:
 ### Editing the Cassandra yaml file
 **Cassandra**(https://cassandra.apache.org/_/index.html) is an open source database from **Apache** used by **TheHive**
 
+We first need to configure the **cassandra.yaml** file for it to work in **TheHive** by customizing our listen ports and cluster name
+
+**SSH** into **TheHive** terminal and type `nano /etc/cassandra/cassandra.yaml`
+![[cassandra thehive ssh.png]]
+
+Comment out the `cluster_name` and name it according to your preference
+
+![[cassandra cluster name.png]]
+
+Next, we will be changing the settings for the `listen_address` and `rpc_address`
+
