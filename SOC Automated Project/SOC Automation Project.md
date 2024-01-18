@@ -541,4 +541,20 @@ Using **Google Chrome** is recommended when downloading **Mimikatz** because you
 Right click on the **.zip** file and **Save As**, and save it to the *Downloads* folder.
 
 ![[download mimikatz.png]]
-Go to your *Downloads* folder, right click on the zip file and select "Extrac
+Go to your *Downloads* folder, right click on the zip file and select "Extract all"
+
+![[extract mimikatz.png]]
+
+Double click on the newly extracted folder and go inside the **x64** folder.
+
+Open up **Powershell** with **admin** privileges and **cd** into the **x64** folder.
+
+![[powershell mimikatz folder.png]]
+Run `.\mimikatz.exe`.
+![[mimikatz exe.png]]
+
+Going back to the **Wazuh** dashboard, if you search for "mimikatz" events, you may not get anything yet. 
+
+![[Pasted image 20240118180643.png]]
+
+This is due to the fact that **Sysmon** or **Wazuh** rules may not be triggering alerts, because, by default, **Wazuh** will only log events whenever a rule or alert is triggered.
