@@ -468,4 +468,5 @@ You can also check the status of the wazuh agent by typing **"services"** in the
 Back in the **Wazuh** dashboard, wait for a few moments and refresh the page to see the enrolled agent.
 
 ![[wazuh dashboard agent.png]]
-# Part 4:
+# Part 4: Generate Telemetry & Ingest into Wazuh
+
