@@ -508,4 +508,18 @@ Now we need to restart **Wazuh** by going to Services -> **Wazuh** and clicking 
 
 **Note:** Every time you change settings in the config file, you **MUST** restart the **Wazuh** service.
 
-We can now go back to the **Wazuh** dashboard and search for "sysmon" events. It may take some time for events to show up
+We can now go back to the **Wazuh** dashboard and search for "sysmon" events. It may take some time for events to show up.
+
+![[wazuh sysmon search.png]]
+
+### Downloading Mimikatz
+
+**Mimikatz** is a credential harvesting application used by pentesters and hackers to extract credentials from a machine.
+
+Before downloading **Mimikatz** we need to exclude our *Downloads* folder from Windows Security's scanning scope. 
+
+Go to **Windows Security,** click on **Virus & threat protection** -> **Manage settings**, scroll down to the **Exclusions** section, and click **Add or remove exclusions**.
+
+![[windows security.png]]
+![[virus threat protection.png]]![[manage settings.png]]
+![[exclusions.png]]
