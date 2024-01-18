@@ -470,3 +470,15 @@ Back in the **Wazuh** dashboard, wait for a few moments and refresh the page to 
 ![[wazuh dashboard agent.png]]
 # Part 4: Generate Telemetry & Ingest into Wazuh
 
+### Windows 10 Telemetry
+We will be configuring the .conf file for **Wazuh** to generate telemetry and use **Mimikatz** as the sample attack .
+
+In your Windows 10 VM, go to **C:\Program Files (x86)\ossec-agent** and look for the **ossec.conf** file. We will be configuring this config file to generate telemetry. 
+
+Before opening the file, make a backup by copy-pasting the .conf file and renaming it **osse.conf.backup**.
+
+You can open the .conf file in **Notepad**
+
+We will be adding syntaxes right below this line group:
+
+![[log analysis.png]]
