@@ -488,7 +488,7 @@ You can also copy the syntax above and build rules from it. Paste the template j
 First, we will build a rule that will ingest **Sysmon** logs into **Wazuh**. We will be needing **Sysmon's** channel name for the `<location>` tag. **Sysmon's** channel name can be located via **Event Viewer**:
 
 Open up **Event Viewer**, expand **Applications and Services Logs** -> **Microsoft** -> **Windows**, then scroll down to the **Sysmon** folder and click it. Right click on **Operational** and select **Properties**. 
-![[event viewer 1.png]]
+![[event viewer 1 1.png]]
 ![[sysmon properties.png]]![[sysmon full name.png]]
 
 Copy the **Full Name** and replace the `Application` value in the syntax.
@@ -523,3 +523,22 @@ Go to **Windows Security,** click on **Virus & threat protection** -> **Manage s
 ![[windows security.png]]
 ![[virus threat protection.png]]![[manage settings.png]]
 ![[exclusions.png]]
+
+Click on **Add an exclusion** and choose "Folder", then browse to your *Downloads* folder and select it.
+![[exclude download folder.png]]
+![[select download folder.png]]
+
+Your *Downloads* folder should appear on the list.
+![[download folder list.png]]
+
+Using **Google Chrome** is recommended when downloading **Mimikatz** because you can easily disable the browser protection from the security settings.
+
+![[chrome settings.png]]
+![[chrome no protection.png]]
+
+**Mimikatz** download link: [https://github.com/gentilkiwi/mimikatz/releases/tag/2.2.0-20220919](https://github.com/gentilkiwi/mimikatz/releases/tag/2.2.0-20220919)
+
+Right click on the **.zip** file and **Save As**, and save it to the *Downloads* folder.
+
+![[download mimikatz.png]]
+Go to your *Downloads* folder, right click on the zip file and select "Extrac
