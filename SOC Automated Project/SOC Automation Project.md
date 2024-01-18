@@ -477,7 +477,7 @@ In your Windows 10 VM, go to **C:\Program Files (x86)\ossec-agent** and look for
 
 Before opening the file, make a backup by copy-pasting the .conf file and renaming it **ossec-backup**.
 
-You can open the .conf file in **Notepad**.
+You can open the .conf file in **Notepad** with **Administrative Privileges**.
 
 We will be adding syntaxes right below this line group:
 
@@ -495,7 +495,17 @@ Copy the **Full Name** and replace the `Application` value in the syntax.
 
 ![[sysmon channel name.png]]
 
-For the sake of ingestion, we can remove the **Application**, **Security**, and **System** syntax and just retain the **Sysmon** syntax
+For the sake of ingestion, we can remove the **Application**, **Security**, and **System** syntax and just retain the **Sysmon** syntax. This means that application, security, and system logs will not be forwarded into **Wazuh**. This is fine because we only want to observe **Sysmon** logs.
 
 ![[remove app security syntax.png]]
 ![[remove system syntax.png]]
+
+Save the file and exit.
+
+Now we need to restart **Wazuh** by going to Services -> **Wazuh** and clicking Restart.
+
+![[restart wazuh.png]]
+
+**Note:** Every time you change settings in the config file, you **MUST** restart the **Wazuh** service.
+
+We can now go back to the **Wazuh** dashboard and search for "sysmon" events. It may take some time for events to show up
