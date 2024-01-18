@@ -631,7 +631,27 @@ Back in the **Wazuh** dashboard, search for "mimikatz" events again, and a coupl
 
 Expanding the alert for more details, we can scroll down and see a field called `originalFileName`. We can use this field to create our alert for **Mimikatz**. This field is more reliable to use than the `image` field, because attackers can simply rename the file and it will reflect on that field, and they can bypass the alert, whereas the `originalFileName` field keeps the original name of that file, regardless of any renaming process.
 
-![[Pasted image 20240118185501.png]]
+![[orignalfilename mimikatz.png]]
 
 
-### Creating Rules in Wazuh.
+### Creating Rules in Wazuh
+
+In the **Wazuh** dashboard, click on the drop-down button, click on **Management**, and select **Rules**.
+![[wazuh create rules.png]]
+
+Click on **Manage Rules Files**.
+![[manage rules files.png]]
+
+Search for "sysmon" and look for **0800-sysmon_id_1.xml**. Preview the file by clicking on the **eye** icon
+
+![[sysmon event id 1.png]]
+
+We can copy the first rule and use it as our template.
+![[sysmon copy rule.png]]
+
+Go back from the sysmon xml rule and click **Custom rules**.
+
+![[custom rules.png]]
+
+Inside, we can see the `local_rules.xml` file. We can edit this by clicking on the **pencil** icon.
+![[local rules.png]]
