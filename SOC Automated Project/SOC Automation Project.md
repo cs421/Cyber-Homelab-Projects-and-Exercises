@@ -423,6 +423,8 @@ The settings above tells **TheHive** to allocate 2gb of memory for Java instead 
 
 ## Configuring Wazuh
 
+#### Logging in to the dashboard
+
 We first need to access the **Wazuh** web interface by typing the **Wazuh** VM's public IP in the browser and logging in with the credentials that **Wazuh** has provided us during the installation section back in **Part 2**.
 
 If you do not have the credentials provided, you can access the **Wazuh** manager terminal by **ssh** and type `ls`.
@@ -438,6 +440,9 @@ We can **cat** the .txt file to view its contents. We can now see the credential
 
 We should also take note of the credentials for **wazuh API user**, since we will be using it later on to perform responsive capabilities.
 ![[wazuh api user.png]]
+
+#### Deploying a new agent
+
 In the **Wazuh** dashboard, we can see that no agent has been added yet. To add one, simply click **Add agent**.
 
 ![[wazuh dashboard.png]]
@@ -463,3 +468,4 @@ You can also check the status of the wazuh agent by typing **"services"** in the
 Back in the **Wazuh** dashboard, wait for a few moments and refresh the page to see the enrolled agent.
 
 ![[wazuh dashboard agent.png]]
+# Part 4:
