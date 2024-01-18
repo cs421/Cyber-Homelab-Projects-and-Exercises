@@ -561,7 +561,7 @@ This is due to the fact that **Sysmon** or **Wazuh** rules may not be triggering
 
 To fix this, we will need to configure the **ossec.conf** file in our **Wazuh manager** so that it will log everything, and/or create a rule or rules specifying a particular event so that **Wazuh** can log that event whenever that rule is triggered.
 
-##### Configuring the Wazuh manager config file.
+### Configuring the Wazuh manager config file
 
 Go to the **Wazuh** manager terminal by accessing it via the Digital Ocean Droplet console or establishing an **ssh** connection.
 
@@ -596,4 +596,20 @@ Save the file and exit.
 
 Restart the **filebeat** service by `systemctl restart filebeat`.
 
-### Creating 
+### Creating a new Wazuh index
+
+In our **Wazuh** dashboard, click on the **3-line icon**, click on **Stack Management**, and select **Index Patterns**.
+![[wazuh stack management.png]]
+![[index patterns.png]]
+
+Inside **Index patterns**, we will originally see three patterns.
+![[index pattern list.png]]
+
+We will need to create a new index pattern for our **archives**. Click on the **Create index pattern** and name the new pattern as `wazuh-archives-**`
+
+![[create new index.png]]
+
+![[wazuh archives name.png]]
+Click on **Next**, then select `timestamp` for the **Time field**, then click **Create index pattern**.
+![[timestamp time field.png]]
+
