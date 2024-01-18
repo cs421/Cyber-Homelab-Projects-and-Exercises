@@ -574,5 +574,26 @@ Now we'll edit the .conf file in **Nano**: `nano /var/ossec/etc/ossec.conf`
 
 Scroll down to the `<logall>` and `<logall_json>` options and change the value from 'no' to 'yes'
 
-![[Pasted image 20240118181834.png]]
+![[wazuh manager nano.png]]
 
+Save and exit the file.
+
+Now we need to restart the **Wazuh** service by `systemctl restart wazuh-manager.service`.
+
+By then, **Wazuh** will now log all events and put it in a file called "**archives**", which is located at `/var/ossec/logs/archives`.
+
+![[wazuh archives.png]]
+
+In order for **Wazuh** to start ingesting the logs, we need to configure our **filebeat** file. **Filebeat** is a log forwarder used by **Elasticsearch**. 
+
+We can edit the **filebeat** config file in **nano** by `nano /etc/filebeat/filebeat.yml`.
+
+Scroll down to the `filebeat.modules` option, and change the `enabled` value under `archives` from false to `true`.
+
+![[filebeat true.png]]
+
+Save the file and exit.
+
+Restart the **filebeat** service by `systemctl restart filebeat`.
+
+### Creating 
