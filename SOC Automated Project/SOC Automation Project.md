@@ -483,9 +483,19 @@ We will be adding syntaxes right below this line group:
 
 ![[log analysis.png]]
 
-You can also copy the syntax above and build rules from it.
+You can also copy the syntax above and build rules from it. Paste the template just below the former syntax.
 
 First, we will build a rule that will ingest **Sysmon** logs into **Wazuh**. We will be needing **Sysmon's** channel name for the `<location>` tag. **Sysmon's** channel name can be located via **Event Viewer**:
 
 Open up **Event Viewer**, expand **Applications and Services Logs** -> **Microsoft** -> **Windows**, then scroll down to the **Sysmon** folder and click it. Right click on **Operational** and select **Properties**. 
 ![[event viewer 1.png]]
+![[sysmon properties.png]]![[sysmon full name.png]]
+
+Copy the **Full Name** and replace the `Application` value in the syntax.
+
+![[sysmon channel name.png]]
+
+For the sake of ingestion, we can remove the **Application**, **Security**, and **System** syntax and just retain the **Sysmon** syntax
+
+![[remove app security syntax.png]]
+![[remove system syntax.png]]
