@@ -664,6 +664,13 @@ We can paste the rule we copied earlier below the already existing rule inside *
 - The `level`'s max range is **15**, so we'll just set it to max.
 - For the `field name`, we'll set it to `win.eventdata.originalFileName`, then change `\\(c|w)script\.exe` to `mimikatz\.exe` inside the `type` field.
 - Remove the `<options>` field, then change the `<description>` to `Mimikatz Usage Detected`.
-- Change the **mirtre id** to `T1003`, which is **credential dumping**.
+- Change the **mirtre id** to `T1003`,  (**credential dumping**), which is what **Mimikatz** is known to do.
 
-![[Pasted image 20240118191221.png]]
+![[create mimikatz rule.png]]
+
+Save the rule and restart the manager.
+
+Before we run **Mimikatz** again, we can try renaming the .exe file into something different.
+
+![[suckondeez.png]]
+Now we'll run **Mimikatz** in powershell once more.
