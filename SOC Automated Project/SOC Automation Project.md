@@ -475,10 +475,16 @@ We will be configuring the .conf file for **Wazuh** to generate telemetry and us
 
 In your Windows 10 VM, go to **C:\Program Files (x86)\ossec-agent** and look for the **ossec.conf** file. We will be configuring this config file to generate telemetry. 
 
-Before opening the file, make a backup by copy-pasting the .conf file and renaming it **osse.conf.backup**.
+Before opening the file, make a backup by copy-pasting the .conf file and renaming it **ossec-backup**.
 
-You can open the .conf file in **Notepad**
+You can open the .conf file in **Notepad**.
 
 We will be adding syntaxes right below this line group:
 
 ![[log analysis.png]]
+
+You can also copy the syntax above and build rules from it.
+
+First, we will build a rule that will ingest **Sysmon** logs into **Wazuh**. We will be needing **Sysmon's** channel name for the `<location>` tag. **Sysmon's** channel name can be located via **Event Viewer**:
+
+Open up **Event Viewer**, expand **Microsoft** -> **Windows**, then scroll down to the **Sysmon** folder and click it. Right click on **Operational** and select **Properties**. 
