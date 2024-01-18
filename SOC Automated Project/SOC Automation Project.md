@@ -621,11 +621,17 @@ Then click the dropdown button and select `wazuh-archives-**`.
 ![[wazuh archive default.png]]
 It will take time before events start to flow in, but eventually they will come.
 
-You can also re-run **Mimikatz** in the Windows 10 client to see if any alerts appear in **Wazuh** 
+You can also re-run **Mimikatz** in the Windows 10 client to see if any alerts appear in **Wazuh**.
 
 In the **Mimikatz** terminal, exit from the first run by typing `exit` and running it again.
 ![[mimikatz rerun.png]]
 
+Back in the **Wazuh** dashboard, search for "mimikatz" events again, and a couple of alerts should appear. We should focus more on the alert having an **Event ID** of "1", because it is the event ID for **process creation**. 
+![[mimikatz alert.png]]
+
+Expanding the alert for more details, we can scroll down and see a field called `originalFileName`. We can use this field to create our alert for **Mimikatz**. This field is more reliable to use than the `image` field, because attackers can simply rename the file and it will reflect on that field, and they can bypass the alert, whereas the `originalFileName` field keeps the original name of that file, regardless of any renaming process.
+
+![[Pasted image 20240118185501.png]]
 
 
-
+### Creating Rules in Wazuh.
