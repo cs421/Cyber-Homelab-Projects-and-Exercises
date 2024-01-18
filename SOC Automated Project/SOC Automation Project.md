@@ -83,7 +83,7 @@ Open the **Event Viewer** by typing 'event' in the start menu and clicking on th
 
 Navigate to **Applications and Services Logs** -> **Microsoft** -> **Windows**.
 Scroll down until you find the **Sysmon** folder
-![[event viewer 1.png]]
+![[SOC Automated Project/attachments/event viewer 1.png]]
 ![[event view 2.png]]
 
 
@@ -487,4 +487,5 @@ You can also copy the syntax above and build rules from it.
 
 First, we will build a rule that will ingest **Sysmon** logs into **Wazuh**. We will be needing **Sysmon's** channel name for the `<location>` tag. **Sysmon's** channel name can be located via **Event Viewer**:
 
-Open up **Event Viewer**, expand **Microsoft** -> **Windows**, then scroll down to the **Sysmon** folder and click it. Right click on **Operational** and select **Properties**. 
+Open up **Event Viewer**, expand **Applications and Services Logs** -> **Microsoft** -> **Windows**, then scroll down to the **Sysmon** folder and click it. Right click on **Operational** and select **Properties**. 
+![[event viewer 1.png]]
