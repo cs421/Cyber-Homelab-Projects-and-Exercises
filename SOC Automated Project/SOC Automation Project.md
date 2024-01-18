@@ -655,3 +655,15 @@ Go back from the sysmon xml rule and click **Custom rules**.
 
 Inside, we can see the `local_rules.xml` file. We can edit this by clicking on the **pencil** icon.
 ![[local rules.png]]
+
+We can paste the rule we copied earlier below the already existing rule inside **local_rules**.
+
+**Note:** We must ensure and follow proper identations and naming of values in order for the rules to be applied successfully.
+
+- By default, rule IDs start from **100000**, so we'll change the `rule id` to **100002**, since there is already another rule above us.
+- The `level`'s max range is **15**, so we'll just set it to max.
+- For the `field name`, we'll set it to `win.eventdata.originalFileName`, then change `\\(c|w)script\.exe` to `mimikatz\.exe` inside the `type` field.
+- Remove the `<options>` field, then change the `<description>` to `Mimikatz Usage Detected`.
+- Change the **mirtre id** to `T1003`, which is **credential dumping**.
+
+![[Pasted image 20240118191221.png]]
