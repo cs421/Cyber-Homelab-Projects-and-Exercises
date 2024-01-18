@@ -671,6 +671,12 @@ We can paste the rule we copied earlier below the already existing rule inside *
 Save the rule and restart the manager.
 
 Before we run **Mimikatz** again, we can try renaming the .exe file into something different.
+![[rename mimikatz.png]]
 
-![[suckondeez.png]]
 Now we'll run **Mimikatz** in powershell once more.
+
+![[verylegitprogram.png]]
+
+Refresh the **Wazuh** dashboard, then go to **Security Events** to check if any alert has been triggered.
+
+![[mimikatz alert triggered.png]]
