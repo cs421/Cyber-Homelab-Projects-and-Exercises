@@ -613,3 +613,19 @@ We will need to create a new index pattern for our **archives**. Click on the **
 Click on **Next**, then select `timestamp` for the **Time field**, then click **Create index pattern**.
 ![[timestamp time field.png]]
 
+To make `wazuh-archives-**` our default index pattern, click on the **3-line icon** again and select **Discover**.
+![[discover.png]]
+
+Then click the dropdown button and select `wazuh-archives-**`.
+
+![[wazuh archive default.png]]
+It will take time before events start to flow in, but eventually they will come.
+
+You can also re-run **Mimikatz** in the Windows 10 client to see if any alerts appear in **Wazuh** 
+
+In the **Mimikatz** terminal, exit from the first run by typing `exit` and running it again.
+![[mimikatz rerun.png]]
+
+
+
+
