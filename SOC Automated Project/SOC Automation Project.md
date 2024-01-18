@@ -555,6 +555,24 @@ Run `.\mimikatz.exe`.
 
 Going back to the **Wazuh** dashboard, if you search for "mimikatz" events, you may not get anything yet. 
 
-![[Pasted image 20240118180643.png]]
+![[wazuh mimikatz alert.png]]
 
 This is due to the fact that **Sysmon** or **Wazuh** rules may not be triggering alerts, because, by default, **Wazuh** will only log events whenever a rule or alert is triggered.
+
+To fix this, we will need to configure the **ossec.conf** file in our **Wazuh manager** so that it will log everything, and/or create a rule or rules specifying a particular event so that **Wazuh** can log that event whenever that rule is triggered.
+
+##### Configuring the Wazuh manager config file.
+
+Go to the **Wazuh** manager terminal by accessing it via the Digital Ocean Droplet console or establishing an **ssh** connection.
+
+The **ossec.conf** file is located at `/var/ossec/etc/ossec.conf`.
+
+First, we'll create a backup copy of the config file by typing `cp /var/ossec/etc/ossec.conf ~/ossec-backup.conf`
+![[wazuh linux ossec backup.png]]
+
+Now we'll edit the .conf file in **Nano**: `nano /var/ossec/etc/ossec.conf`
+
+Scroll down to the `<logall>` and `<logall_json>` options and change the value from 'no' to 'yes'
+
+![[Pasted image 20240118181834.png]]
+
