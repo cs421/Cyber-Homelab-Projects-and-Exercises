@@ -720,9 +720,9 @@ Open the **ossec.conf** file with **nano**. Scroll down just past below the `<gl
 
 ```
 <integration>
-<name>shuffle</name>
-<hook_url><YOUR_SHUFFLE_URL</hook_url>
-<rule_id>3</rule_id>
-<alert_format>json</alert_format>
+  <name>shuffle</name>
+  <hook_url><YOUR_SHUFFLE_URL</hook_url>
+  <rule_id>1000002</rule_id>
+  <alert_format>json</alert_format>
 </integration>
 ```
