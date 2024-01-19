@@ -699,3 +699,6 @@ Name the workflow as "**SOC Automation Project**" and type any description that 
 
 This will be your new dashboard
 ![[shuffle dashboard.png]]
+
+Navigate to **Triggers** on the bottom left corner, then drag and drop the **Webhook** app into the dashboard.
+![[Pasted image 20240119152129.png]]
