@@ -721,8 +721,8 @@ Open the **ossec.conf** file with **nano**. Scroll down just past below the `<gl
 ```
 <integration>
 <name>shuffle</name>
-<hook_url>http://<YOUR_SHUFFLE_URL/api/v1/hooks/<HOOK_ID></hook_url>
-<level>3</level>
+<hook_url><YOUR_SHUFFLE_URL</hook_url>
+<rule_id>3</rule_id>
 <alert_format>json</alert_format>
 </integration>
 ```
