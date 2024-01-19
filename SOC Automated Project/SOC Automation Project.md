@@ -767,3 +767,16 @@ The file's return value for the **hashes** is appended by their hash type (e.g.,
 
 Click on the **Change Me** icon, and search for "**Regex capture group**" in the **Find Actions** tab, and select it.
 ![[regex capture group.png]]
+
+In the **Input data**, select **Execution Argument** and find the **hashes** parameter. You can check the values of a parameter by hovering over it and looking at the details that appear beside it.
+![[input data.png]]
+![[execution argument hashes.png]]
+
+For the **Regex** field, we can utilize **ChatGPT** to help us create the formula for the hashes. We'll type a prompt to create a regex to parse our file's sha256 value. Copy the hash details of the file earlier and paste it in the prompt as seen below.
+
+![[regex field.png]]
+![[chatgpt hash prompt.png]]
+
+We can now copy the regex that **ChatGPT** has created after it has finished generating. 
+![[Pasted image 20240119170417.png]]
+P
