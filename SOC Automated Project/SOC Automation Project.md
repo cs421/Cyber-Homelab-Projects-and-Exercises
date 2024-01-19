@@ -690,3 +690,12 @@ Head over to the **Shuffle** site (https://shuffler.io) and create an account
 
 Click on **Workflows**
 ![[shuffle workflow.png]]
+
+Click on **New Workflow** to create a new workflow
+![[shuffle new workflow.png]]
+
+Name the workflow as "**SOC Automation Project**" and type any description that you like. For the **Usecases**, you can select any in the list. Click **Done** when you're ready.
+![[shuffle name workflow.png]]
+
+This will be your new dashboard
+![[shuffle dashboard.png]]
