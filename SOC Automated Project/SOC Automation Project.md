@@ -683,4 +683,10 @@ Refresh the **Wazuh** dashboard, then go to **Security Events** to check if any 
 
 Even if we renamed **Mimikatz** into something else, the alert still triggered because we used the `originalFileName` value.
 
-# Part 5
+# Part 5: Connect Suffle (SOAR), Send Alert to TheHive, Send to SOC Analyst via Email
+
+### Configuring Shuffle
+Head over to the **Shuffle** site (https://shuffler.io) and create an account
+
+Click on **Workflows**
+![[shuffle workflow.png]]
