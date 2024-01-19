@@ -749,7 +749,7 @@ This should show results regarding the telemetry. Click on the result and expand
 ![[shuffle telemetry result.png]]
 
 This shows us the information that is generated from **Wazuh**.
-![[Pasted image 20240119164219.png]]
+![[shuffle info from wazuh.png]]
 
 Before moving on with the **IOC Enrichment** setup, we'll review our current objectives for the workflow:
 1. **Mimikatz** alert sent to **Shuffle**
@@ -758,3 +758,12 @@ Before moving on with the **IOC Enrichment** setup, we'll review our current obj
 4. Send details to **TheHive** to create alert
 5. Send email to **SOC Analyst** to begin investigation
 ### IOC Enrichment
+
+![[hash value.png]]
+
+
+The file's return value for the **hashes** is appended by their hash type (e.g., **SHA1, MD5**). We will need to parse out the hash value itself to be sent to VirusTotal.
+
+
+Click on the **Change Me** icon, and search for "**Regex capture group**" in the **Find Actions** tab, and select it.
+![[regex capture group.png]]
