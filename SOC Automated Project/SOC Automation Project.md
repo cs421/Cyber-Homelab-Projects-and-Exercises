@@ -701,4 +701,10 @@ This will be your new dashboard
 ![[shuffle dashboard.png]]
 
 Navigate to **Triggers** on the bottom left corner, then drag and drop the **Webhook** app into the dashboard.
-![[Pasted image 20240119152129.png]]
+![[shuffle add webhook.png]]
+
+Name the webhook as "**Wazuh-Alerts**", then copy the **Webhook URI**. We will need this URI to put into the **ossec.conf** file in our **Wazuh** manager.
+![[shuffle name webhook.png]]
+
+Click on the **Change Me** icon, 
+![[changeme settings.png]]
