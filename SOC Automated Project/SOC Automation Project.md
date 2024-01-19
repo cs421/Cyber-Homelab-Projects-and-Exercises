@@ -778,5 +778,13 @@ For the **Regex** field, we can utilize **ChatGPT** to help us create the formul
 ![[chatgpt hash prompt.png]]
 
 We can now copy the regex that **ChatGPT** has created after it has finished generating. 
-![[Pasted image 20240119170417.png]]
-P
+![[chatgpt finished regex.png]]
+
+Paste the regex into the field and save the workflow.
+![[regex pasted.png]]
+
+Click on the running person icon to show executions, then click the refresh button on top to re-run executions.
+![[refresh workflow.png]]
+
+Expanding on the results will show us the parsed SHA256 hash of the file.
+![[regex parse result.png]]
