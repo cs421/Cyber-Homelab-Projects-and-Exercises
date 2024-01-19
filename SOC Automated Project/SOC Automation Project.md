@@ -741,5 +741,20 @@ Restart the wazuh manager service by `systemctl restart wazuh-manager.service` a
 
 In your Windows 10 VM, re-run **Mimikatz** to generate telemetry.
 
-In the **Shuffle** dashboard, click on the **Wazuh-Alerts** webhook and click **Start**.
+In the **Shuffle** dashboard, click on the **Wazuh-Alerts** webhook and click **Start**. Then click on the running man icon at the bottom to show executions.
 
+![[shuffle test telemetry.png]]
+
+This should show results regarding the telemetry. Click on the result and expand the **Execution Argument** tab.
+![[shuffle telemetry result.png]]
+
+This shows us the information that is generated from **Wazuh**.
+![[Pasted image 20240119164219.png]]
+
+Before moving on with the **IOC Enrichment** setup, we'll review our current objectives for the workflow:
+1. **Mimikatz** alert sent to **Shuffle**
+2. **Shuffle** receives **Mimikatz** alert and extracts **SHA256** hash from file
+3. Check reputation score with **VirustTotal**
+4. Send details to **TheHive** to create alert
+5. Send email to **SOC Analyst** to begin investigation
+### IOC Enrichment
