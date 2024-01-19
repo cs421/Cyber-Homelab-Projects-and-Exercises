@@ -726,3 +726,20 @@ Open the **ossec.conf** file with **nano**. Scroll down just past below the `<gl
   <alert_format>json</alert_format>
 </integration>
 ```
+
+![[shuffle integration.png]]
+
+Replace `YOUR_SHUFFLE_URL` with the url that we copied from **Shuffle** earlier. Add a space (  ) between the url and the `</hook_url>` closing tag to avoid the tag becoming a part of the url. This is indicated by having the url highlighted, but not the `</hook_url>` tag.
+
+The `<rule_id>` is the rule ID for **Mimikatz** that we configured earlier in the **Wazuh** custom rules.
+
+Save and exit the editor.
+
+Restart the wazuh manager service by `systemctl restart wazuh-manager.service` and check the status by `systemctl status wazuh-manager.service`
+
+#### Testing the integration
+
+In your Windows 10 VM, re-run **Mimikatz** to generate telemetry.
+
+In the **Shuffle** dashboard, click on the **Wazuh-Alerts** webhook and click **Start**.
+
