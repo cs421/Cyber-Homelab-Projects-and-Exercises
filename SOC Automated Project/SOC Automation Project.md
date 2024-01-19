@@ -555,7 +555,7 @@ Run `.\mimikatz.exe`.
 
 Going back to the **Wazuh** dashboard, if you search for "mimikatz" events, you may not get anything yet. 
 
-![[wazuh mimikatz alert.png]]
+![[wazuh mimikatz alert 1.png]]
 
 This is due to the fact that **Sysmon** or **Wazuh** rules may not be triggering alerts, because, by default, **Wazuh** will only log events whenever a rule or alert is triggered.
 
@@ -582,7 +582,7 @@ Now we need to restart the **Wazuh** service by `systemctl restart wazuh-manager
 
 By then, **Wazuh** will now log all events and put it in a file called "**archives**", which is located at `/var/ossec/logs/archives`.
 
-![[wazuh archives.png]]
+![[wazuh archives 1.png]]
 
 In order for **Wazuh** to start ingesting the logs, we need to configure our **filebeat** file. **Filebeat** is a log forwarder used by **Elasticsearch**. 
 
@@ -679,4 +679,8 @@ Now we'll run **Mimikatz** in powershell once more.
 
 Refresh the **Wazuh** dashboard, then go to **Security Events** to check if any alert has been triggered.
 
-![[mimikatz alert triggered.png]]
+![[mimikatz alert triggered.png]]![[mimikatz original name.png]]
+
+Even if we renamed **Mimikatz** into something else, the alert still triggered because we used the `originalFileName` value.
+
+# Part 5
