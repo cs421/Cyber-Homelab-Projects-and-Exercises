@@ -706,5 +706,23 @@ Navigate to **Triggers** on the bottom left corner, then drag and drop the **Web
 Name the webhook as "**Wazuh-Alerts**", then copy the **Webhook URI**. We will need this URI to put into the **ossec.conf** file in our **Wazuh** manager.
 ![[shuffle name webhook.png]]
 
-Click on the **Change Me** icon, 
+Click on the **Change Me** icon, select the **Repeat back to me** option in the **Find Actions** tab, and on the **Call** tab, click on the plus icon and select **Execution Argument**.
 ![[changeme settings.png]]
+
+Save the changes.
+![[changeme save.png]]
+
+#### Integrating Shuffle to Wazuh
+
+We'll head over to the **Wazuh** manager terminal to connect **Shuffle** with **Wazuh**. We will be using an **integration** tag inside the **ossec.conf** file.
+
+Open the **ossec.conf** file with **nano**. Scroll down just past below the `<global>` tag and paste the following tag:
+
+```
+<integration>
+<name>shuffle</name>
+<hook_url>http://<YOUR_SHUFFLE_URL/api/v1/hooks/<HOOK_ID></hook_url>
+<level>3</level>
+<alert_format>json</alert_format>
+</integration>
+```
