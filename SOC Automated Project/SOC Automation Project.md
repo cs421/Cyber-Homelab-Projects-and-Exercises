@@ -803,6 +803,18 @@ In the **Apps** tab, search for **VirustTotal** and click it to activate the app
 ![[virustotal app.png]]
 ![[virustotal drag and drop.png]]
 
+##### Checking VirusTotal report file path
+
+Before we delve more into configuring **Virustotal** in the workflow, we must double check first its file path on reports, because it has become an issue to several users whenever they run the workflow with **VirusTotal**.
+
+According to the **VirusTotal** API documentation, the correct file path for getting a file report by hash is in `https://www.virustotal.com/api/v3/files/{id}`
+![[virustotal filepath.png]]
+
+
+
+
+
+
 Click on the **VirusTotal** icon to change its settings. You can change the name to just "Virustotal".
 
 In the **Find Actions** option, search for "hash" and select **Get a hash report.**
@@ -821,6 +833,6 @@ In the **Hash** field, click on the plus icon, select **SHA256_Regex**, then sel
 
 Save your workflow after. Click on the running person icon to show executions, then select the most recent **Wazuh** run. Then click on the refresh icon to re-run the workflow.
 
-![[Pasted image 20240120170734.png]]
+![[virustotal rerun.png]]
 
-![[Pasted image 20240120170754.png]]
+![[virustotal rerun2.png]]
