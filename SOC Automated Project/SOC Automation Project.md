@@ -794,4 +794,11 @@ Expanding on the results will show us the parsed SHA256 hash of the file.
 Go to the **VirusTotal** (https://www.virustotal.com/) website and create an account 
 
 After signing up, request for your API key and copy it.
+![[virustotal api1.png]]
+![[virustotal api2.png]]
 
+
+In the **Apps** tab, search for **VirustTotal** and click it to activate the app. Once it has been added in your instance, drag and drop it into the workflow. Wait for a couple of minutes for **VirusTotal** to finish loading, then refresh the page.
+
+![[virustotal app.png]]
+![[virustotal drag and drop.png]]
