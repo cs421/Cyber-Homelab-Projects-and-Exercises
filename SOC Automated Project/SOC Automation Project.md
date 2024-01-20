@@ -822,7 +822,7 @@ Click on the icon on the top right of **VirusTotal**.
 Click the **FORK** button to edit the files.
 ![[virustotal fork.png]]
 
-Click on **Get a hash report**, then make sure that the **URL path/Curl statement** value is `/files/{id}`.
+Click on **Get a hash report**, then make sure that the **URL path/Curl statement** value is `/files/{id}`. Then click on **Submit** and **SAVE**.
 ![[virustotal edit file 1.png]]
 ![[virustotal edit file 2.png]]
 ![[virustotal edit file 3.png]]
