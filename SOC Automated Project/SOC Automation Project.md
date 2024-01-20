@@ -810,6 +810,22 @@ Before we delve more into configuring **Virustotal** in the workflow, we must do
 According to the **VirusTotal** API documentation, the correct file path for getting a file report by hash is in `https://www.virustotal.com/api/v3/files/{id}`
 ![[virustotal filepath.png]]
 
+We should take note of this file path.
+
+Going back to the **Shuffle** dashboard, click on **Apps** on top of the page.
+
+![[shuffle go to apps.png]]
+
+Click on the icon on the top right of **VirusTotal**.
+![[virustotal top right.png]]
+
+Click the **FORK** button to edit the files.
+![[virustotal fork.png]]
+
+Click on **Get a hash report**, then make sure that the **URL path/Curl statement** value is `/files/{id}`.
+![[virustotal edit file 1.png]]
+![[virustotal edit file 2.png]]
+![[virustotal edit file 3.png]]
 
 
 
