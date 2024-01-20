@@ -788,3 +788,10 @@ Click on the running person icon to show executions, then click the refresh butt
 
 Expanding on the results will show us the parsed SHA256 hash of the file.
 ![[regex parse result.png]]
+
+#### Setting up VirusTotal
+
+Go to the **VirusTotal** (https://www.virustotal.com/) website and create an account 
+
+After signing up, request for your API key and copy it.
+
