@@ -806,4 +806,21 @@ In the **Apps** tab, search for **VirustTotal** and click it to activate the app
 Click on the **VirusTotal** icon to change its settings. You can change the name to just "Virustotal".
 
 In the **Find Actions** option, search for "hash" and select **Get a hash report.**
-![[Pasted image 20240120165726.png]]
+![[virustotal get hash report.png]]
+
+Click on **AUTHENTICATE VIRUSTOTAL V3** for us to authenticate using our API key.
+![[authenticate virustotal.png]]
+
+You can paste your API key here, then click **Submit**.
+![[authenticate virustotal2.png]]
+
+
+In the **Hash** field, click on the plus icon, select **SHA256_Regex**, then select **list**.
+![[hash field regex.png]]
+![[hash field regex2.png]]
+
+Save your workflow after. Click on the running person icon to show executions, then select the most recent **Wazuh** run. Then click on the refresh icon to re-run the workflow.
+
+![[Pasted image 20240120170734.png]]
+
+![[Pasted image 20240120170754.png]]
