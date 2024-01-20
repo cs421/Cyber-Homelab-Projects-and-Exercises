@@ -765,7 +765,7 @@ Before moving on with the **IOC Enrichment** setup, we'll review our current obj
 The file's return value for the **hashes** is appended by their hash type (e.g., **SHA1, MD5**). We will need to parse out the hash value itself to be sent to VirusTotal.
 
 
-Click on the **Change Me** icon, and search for "**Regex capture group**" in the **Find Actions** tab, and select it.
+Click on the **Change Me** icon, and search for "**Regex capture group**" in the **Find Actions** tab, and select it. You can also change the name of the icon to "**SHA256_Regex**".
 ![[regex capture group.png]]
 
 In the **Input data**, select **Execution Argument** and find the **hashes** parameter. You can check the values of a parameter by hovering over it and looking at the details that appear beside it.
@@ -798,7 +798,12 @@ After signing up, request for your API key and copy it.
 ![[virustotal api2.png]]
 
 
-In the **Apps** tab, search for **VirustTotal** and click it to activate the app. Once it has been added in your instance, drag and drop it into the workflow. Wait for a couple of minutes for **VirusTotal** to finish loading, then refresh the page.
+In the **Apps** tab, search for **VirustTotal** and click it to activate the app. Once it has been added in your instance, drag and drop it into the workflow. Save the workflow first. Wait for a couple of minutes for **VirusTotal** to finish loading, then refresh the page.
 
 ![[virustotal app.png]]
 ![[virustotal drag and drop.png]]
+
+Click on the **VirusTotal** icon to change its settings. You can change the name to just "Virustotal".
+
+In the **Find Actions** option, search for "hash" and select **Get a hash report.**
+![[Pasted image 20240120165726.png]]
