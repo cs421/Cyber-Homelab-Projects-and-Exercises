@@ -1010,3 +1010,23 @@ For the **Recipients**, it is best to provide a temporary or disposable email ad
 
 For the Subject, we can type "**Mimikatz Detected!**"
 
+For the **Body**, we can type the following message and values:
+```
+Time: `Execution Argument -> eventdata -> utcTime`
+Title: 'Execution Argument -> title'
+Host: 'Execution Argument -> system -> computer'
+```
+
+![[thehive utctime.png]]![[thehive alert title.png]]
+![[thehive computer value.png]]
+
+Save your workflow after.
+
+Click on the running person icon again to show executions, then refresh the run. 
+
+We can now see that **Shuffle** has successfully sent an email to the analyst.
+![[shuffle email sent.png]]
+
+Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst of the detection.
+
+![[inbox email received.png]]
