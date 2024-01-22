@@ -918,4 +918,17 @@ These are the default dashboards for the cases and alerts inside the analyst pag
 
 Go back to the **Shuffle** dashboard. Click on **TheHive** app and select **AUTHENTICATE THEHIVE 5**.
 
-Paste your **SOAR** API key in the field, and change the url into your **TheHive**'s public ip +
+Paste your **SOAR** API key in the field, and change the url into your **TheHive**'s public ip + port 9000. Click **Submit** when finished. Make sure to save your workflow.
+
+![[authenticate thehive.png]]
+
+Connect **VirusTotal** to **TheHive**. Then click on **TheHive**, and on the **Find Actions** tab, select **Create Alert**.
+![[thehive settings 1.png]]
+
+
+![[Pasted image 20240122172805.png]]
+![[Pasted image 20240122172843.png]]
+
+![[Pasted image 20240122173029.png]]
+![[Pasted image 20240122173145.png]]
+
