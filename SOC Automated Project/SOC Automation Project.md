@@ -807,7 +807,7 @@ In the **Apps** tab, search for **VirustTotal** and click it to activate the app
 
 Before we delve more into configuring **Virustotal** in the workflow, we must double check first its file path on reports, because it has become an issue to several users whenever they run the workflow with **VirusTotal**.
 
-According to the **VirusTotal** API documentation, the correct file path for getting a file report by hash is in `https://www.virustotal.com/api/v3/files/{id}`
+According to the **VirusTotal** API documentation (https://docs.virustotal.com/reference/file-info), the correct file path for getting a file report by hash is in `https://www.virustotal.com/api/v3/files/{id}`
 ![[virustotal filepath.png]]
 
 We should take note of this file path.
@@ -828,8 +828,7 @@ Click on **Get a hash report**, then make sure that the **URL path/Curl statemen
 ![[virustotal edit file 3.png]]
 
 
-
-
+#### Configuring the VirusTotal app
 
 Click on the **VirusTotal** icon to change its settings. You can change the name to just "Virustotal".
 
