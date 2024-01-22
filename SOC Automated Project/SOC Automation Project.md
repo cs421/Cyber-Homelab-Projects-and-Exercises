@@ -875,6 +875,16 @@ Drag and drop **TheHive** app into the dashboard, save your workflow, wait for a
 
 Go to **TheHive** web interface located at `THEHIVE_VM_IP:9000`, then log in with the default credentials of `admin@thehive.local` and the password `secret`.
 
-By default, we will only see one user on the dashboard named "**admin**". We will need to create a new user for ourselves. 
+By default, we will only see one organisation on the dashboard named "**admin**". We will need to create a new user for ourselves. 
 
-C
+Click on the **plus** icon on the top left to add an organisation. Name it however you want, then put "SOC Automation Project" in the **Description** section. Click **Confirm** when ready.
+![[thehive add organization.png]]
+
+We can now see two organisations, the default **admin** and our newly created one. Click the latest organisation to view its users.
+
+![[thehive organizations.png]]
+
+Currently, there are no users yet, so we should create one. Click on the **plus** icon.
+![[thehive add user.png]]
+
+We will leave the **Type** as "Normal", then choose your preferred login with the suffix "`@test.com`". Type your preferred name, then in the **Profile** tab, choose **analyst**. Then 
