@@ -150,7 +150,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,18 +167,18 @@
   },
   "active": "c181a3bf971b852a",
   "lastOpenFiles": [
-    "inbox email received.png",
-    "shuffle email sent.png",
-    "thehive virustotal connect email.png",
-    "thehive email.png",
-    "thehive mimikatz alert expand.png",
-    "thehive mimikatz alert.png",
+    "SOC Automated Project/attachments/inbox email received.png",
+    "SOC Automated Project/attachments/shuffle email sent.png",
+    "SOC Automated Project/attachments/thehive virustotal connect email.png",
+    "SOC Automated Project/attachments/thehive email.png",
+    "SOC Automated Project/attachments/thehive mimikatz alert expand.png",
+    "SOC Automated Project/attachments/thehive mimikatz alert.png",
     "Pasted image 20240122180503 1.png",
     "SOC Automated Project/SOC Automation Project.md",
-    "thehive result.png",
-    "thehive test run.png",
-    "firewall 9000_2.png",
-    "firewall 9000_1.png",
+    "SOC Automated Project/attachments/thehive result.png",
+    "SOC Automated Project/attachments/thehive test run.png",
+    "SOC Automated Project/attachments/firewall 9000_2.png",
+    "SOC Automated Project/attachments/firewall 9000_1.png",
     "Untitled.md",
     "SOC Automated Project/Untitled/Untitled.md",
     "SOC Automated Project/attachments",
