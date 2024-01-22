@@ -866,4 +866,15 @@ The next step is to send the details to **TheHive** so that it can create an ale
 
 ### Setting up TheHive
 
-In the **Apps**
+In the **Apps** tab, search for "thehive", then click on the app to activate it.
+
+![[thehive app.png]]
+
+Drag and drop **TheHive** app into the dashboard, save your workflow, wait for a couple of minutes for the app to finish loading its features, then refresh the page.
+![[thehive drag and drop.png]]
+
+Go to **TheHive** web interface located at `THEHIVE_VM_IP:9000`, then log in with the default credentials of `admin@thehive.local` and the password `secret`.
+
+By default, we will only see one user on the dashboard named "**admin**". We will need to create a new user for ourselves. 
+
+C
