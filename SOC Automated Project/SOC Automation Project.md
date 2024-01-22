@@ -913,3 +913,9 @@ These are the default dashboards for the cases and alerts inside the analyst pag
 
 ![[thehive cases.png]]
 ![[thehive alerts.png]]
+
+### Authenticating TheHive with Shuffle
+
+Go back to the **Shuffle** dashboard. Click on **TheHive** app and select **AUTHENTICATE THEHIVE 5**.
+
+Paste your **SOAR** API key in the field, and change the url into your **TheHive**'s public ip +
