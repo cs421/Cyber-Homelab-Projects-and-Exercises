@@ -900,5 +900,9 @@ For the other user, we will select the **Type** as "Service". For the **Login**,
 ![[thehive add shuffle user.png]]
 
 Next, we will create a password for our main user. In the dashboard, click on **PREVIEW** when you hover over your user link.
+Click on **Edit password** to create your password, then click **Confirm**. 
 
+![[thehive preview user.png]]
+![[thehive set password.png]]
 
+For our 
