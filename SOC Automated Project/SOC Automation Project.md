@@ -936,8 +936,8 @@ Mimikatz detected on host: "Execution Argument -> system -> computer`"
 from user: "Execution Argument -> eventdata -> user"
 ```
 
-![[Pasted image 20240122173029.png]]
-![[Pasted image 20240122173145.png]]
+![[thehive computer value.png]]
+![[thehive user value.png]]
 
 Scroll down and set the following values:
 - **Flag** = `false`
@@ -946,6 +946,18 @@ Scroll down and set the following values:
 - **Severity** = `2`
 - **Source** = `Wazuh`
 - **Sourceref** = `"Rule: 100002"`
-- **Status** 
+- **Status** = `New`
 
-![[Pasted image 20240122173509.png]]
+![[thehive settings 2.png]]
+
+For the **Summary**, type the following message and values:
+```
+Mimikatz detected on host: `Execution Argument -> system -> computer` 
+and the Process ID is: 'Execution Argument -> eventdata -> processId`
+and the Command Line is: 'Execution Argument -> eventdata -> commandLine`
+```
+
+![[thehive computer value.png]]
+![[thehive process id.png]]
+![[thehive command line.png]]
+
