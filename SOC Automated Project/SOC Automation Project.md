@@ -925,10 +925,27 @@ Paste your **SOAR** API key in the field, and change the url into your **TheHive
 Connect **VirusTotal** to **TheHive**. Then click on **TheHive**, and on the **Find Actions** tab, select **Create Alert**.
 ![[thehive settings 1.png]]
 
+Scroll down to the **Date** section. Select **Execution Argument**, then select the **utcTime** value under **eventdata**.
+![[thehive set date.png]]
+![[thehive utctime.png]]
 
-![[Pasted image 20240122172805.png]]
-![[Pasted image 20240122172843.png]]
+For the **Description**, type the following message and values:
+
+```
+Mimikatz detected on host: "Execution Argument -> system -> computer`"
+from user: "Execution Argument -> eventdata -> user"
+```
 
 ![[Pasted image 20240122173029.png]]
 ![[Pasted image 20240122173145.png]]
 
+Scroll down and set the following values:
+- **Flag** = `false`
+- **Pap** = `2`
+	- **Pap** is short for **permissible actions protocol**, which means the level of exposure of information.
+- **Severity** = `2`
+- **Source** = `Wazuh`
+- **Sourceref** = `"Rule: 100002"`
+- **Status** 
+
+![[Pasted image 20240122173509.png]]
