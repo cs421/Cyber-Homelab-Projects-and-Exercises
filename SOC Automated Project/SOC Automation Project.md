@@ -905,4 +905,7 @@ Click on **Edit password** to create your password, then click **Confirm**.
 ![[thehive preview user.png]]
 ![[thehive set password.png]]
 
-For our 
+For our **SOAR** user, click on **Create** on the **API Key** section and copy it. We will need this to authenticate with **Shuffle**. 
+
+Once the password is set and the API key is created, log out of the admin account, and log in with your user account.
+![[thehive cases.png]]
