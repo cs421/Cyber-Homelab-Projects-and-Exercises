@@ -961,3 +961,23 @@ and the Command Line is: 'Execution Argument -> eventdata -> commandLine`
 ![[thehive process id.png]]
 ![[thehive command line.png]]
 
+For the **Tags** = ["T1003"]
+![[thehive tags.png]]
+
+For the **Title**, we can parent it to the alert title.
+![[thehive alert title.png]]
+
+For the **Tlp** = `2`
+- **Tlp** is short for **Traffic light protocol**, which is the level of confidentiality of information
+
+For **Type** = `Internal`
+![[thehive settings 3.png]]
+
+Save your workflow after this.
+
+Before testing the workflow, we will need to configure our cloud firewall to allow inbound connections in port 9000. 
+Go back to the **DigitalOcean** dashboard and navigate to the firewall options.
+![[Pasted image 20240122180035.png]]
+
+Create a rule that allow
+![[Pasted image 20240122180104.png]]
