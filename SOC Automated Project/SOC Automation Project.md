@@ -851,3 +851,19 @@ Save your workflow after. Click on the running person icon to show executions, t
 ![[virustotal rerun.png]]
 
 ![[virustotal rerun2.png]]
+
+After re-running the workflow, expand the **VirusTotal** results.
+
+![[virustotal result.png]]
+
+For some reason, the result **status** shows the **404** code, which means that the file or path cannot be found. The OK status should be **200**. 
+
+According to **MyDFIR**, this is a technical or network issue on **Shuffler's** side, so we cannot do anything about it currently. But for now, we already know how to parse the file hash and send to **VirusTotal** to get a hash report and enrich **IOCs**.
+
+![[virustotal 404.png]]
+
+The next step is to send the details to **TheHive** so that it can create an alert for case management.
+
+### Setting up TheHive
+
+In the **Apps**
