@@ -996,3 +996,17 @@ Sure enough, the alert is now present in the dashboard. Expanding on the alert w
 ![[thehive mimikatz alert expand.png]]
 
 The next step is to send an email to the analyst with the information gathered. 
+
+### Sending Alert to Analyst via Email
+
+In the **Apps** tab, search for "e-mail", then click on the **Email** app to activate it.
+![[thehive email.png]]
+
+Drag and drop the **Email** app into the dashboard, then connect **VirusTotal** to it.
+![[thehive virustotal connect email.png]]
+
+Click on the **Email** app inside the dashboard to access its settings.
+For the **Recipients**, it is best to provide a temporary or disposable email address for this lab.
+
+For the Subject, we can type "**Mimikatz Detected!**"
+
