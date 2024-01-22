@@ -875,6 +875,8 @@ Drag and drop **TheHive** app into the dashboard, save your workflow, wait for a
 
 Go to **TheHive** web interface located at `THEHIVE_VM_IP:9000`, then log in with the default credentials of `admin@thehive.local` and the password `secret`.
 
+#### Creating a new organisation
+
 By default, we will only see one organisation on the dashboard named "**admin**". We will need to create a new user for ourselves. 
 
 Click on the **plus** icon on the top left to add an organisation. Name it however you want, then put "SOC Automation Project" in the **Description** section. Click **Confirm** when ready.
@@ -884,7 +886,19 @@ We can now see two organisations, the default **admin** and our newly created on
 
 ![[thehive organizations.png]]
 
+#### Creating users
+
 Currently, there are no users yet, so we should create one. Click on the **plus** icon.
 ![[thehive add user.png]]
 
-We will leave the **Type** as "Normal", then choose your preferred login with the suffix "`@test.com`". Type your preferred name, then in the **Profile** tab, choose **analyst**. Then 
+We will leave the **Type** as "Normal", then choose your preferred login with the suffix "`@test.com`". Type your preferred name, then in the **Profile** tab, choose **analyst**. Then click **"Save and add another"**.
+![[thehive save add another.png]]
+
+For the other user, we will select the **Type** as "Service". For the **Login**, we will use `shuffle@test.com` and name it "**SOAR**". We will choose "analyst" for the **Profile**, and click **Confirm**.
+
+**NOTE:** In a real-world scenario, we should be assigning profiles for each user with the **principles of least privilege** in mind. 
+![[thehive add shuffle user.png]]
+
+Next, we will create a password for our main user. In the dashboard, click on **PREVIEW** when you hover over your user link.
+
+
