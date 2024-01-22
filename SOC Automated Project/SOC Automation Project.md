@@ -977,7 +977,22 @@ Save your workflow after this.
 
 Before testing the workflow, we will need to configure our cloud firewall to allow inbound connections in port 9000. 
 Go back to the **DigitalOcean** dashboard and navigate to the firewall options.
-![[Pasted image 20240122180035.png]]
+![[firewall 9000_1.png]]
 
-Create a rule that allow
-![[Pasted image 20240122180104.png]]
+Create a rule that allows inbound **TCP** connections in port **9000**. We can remove IPv6 connections, but retain **All IPv4**. 
+![[firewall 9000_2.png]]
+Save the settings then go back to the **Shuffle** dashboard.
+
+In the **Shuffle** dashboard, click on the running person icon to show executions, then refresh the run.
+
+![[thehive test run.png]]
+
+We can now see that **TheHive** has successfully created an alert.
+![[thehive result.png]]
+To confirm this, we'll go back to our **TheHive** dashboard.
+
+Sure enough, the alert is now present in the dashboard. Expanding on the alert will show us the details that we inputted back in **Shuffle**.
+![[thehive mimikatz alert.png]]
+![[thehive mimikatz alert expand.png]]
+
+The next step is to send an email to the analyst with the information gathered. 
