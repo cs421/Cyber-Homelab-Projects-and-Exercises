@@ -1207,3 +1207,14 @@ Save your workflow.
 Before running executions in **Shuffle**, we'll go back to our Ubuntu machine to ping Google's DNS again. We can type `iptables --flush` to flush out our earlier ping session and begin a new one.
 
 Ping Google's DNS at **8.8.8.8** and, then switch back to the **Shuffle** dashboard, click the running person icon to show executions and refresh the run. 
+
+
+Checking at the result, it shows the affected items (agent id: **002**), and checking the IP tables on the Ubuntu machine shows Google's DNS being dropped.
+
+![[wazuh active response result.png]]
+
+![[wazuh active response ip table result.png]]
+
+### Enabling User Input on alerts
+
+In this step, we will set up a user input to send an email to the analyst with the alert info provided. The analyst can then 
