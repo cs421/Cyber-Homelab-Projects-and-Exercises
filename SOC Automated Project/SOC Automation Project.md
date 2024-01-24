@@ -1082,3 +1082,13 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 ![[wazuh api user.png]]
 
+
+![[shuffle stop wazuh.png]]
+![[shuffle delete branch.png]]
+
+![[http drag and drop.png]]
+
+![[http rename get api.png]]
+![[curl expand.png]]
+
+![[curl expand command line.png]]
