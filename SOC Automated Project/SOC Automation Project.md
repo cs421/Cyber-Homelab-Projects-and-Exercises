@@ -1204,4 +1204,6 @@ Back in our **Shuffle dashboard**, enter the following values for the **Alert** 
 Save your workflow.
 
 
-Before ru
+Before running executions in **Shuffle**, we'll go back to our Ubuntu machine to ping Google's DNS again. We can type `iptables --flush` to flush out our earlier ping session and begin a new one.
+
+Ping Google's DNS at **8.8.8.8** and, then switch back to the **Shuffle** dashboard, click the running person icon to show executions and refresh the run. 
