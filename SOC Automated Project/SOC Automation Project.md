@@ -1183,3 +1183,9 @@ To test our active reponse action, we can ping **Google's** DNS (8.8.8.8) on our
 Then, while the ping is running, we can execute the following command in our **Wazuh** manager console: 
 `./agent_control -b 8.8.8.8 -f firewall-drop0 -u 002`
 
+Going back to our Ubuntu machine, we see that it has stopped pinging. Looking at `iptables --list` shows us that it drops everything inbound from Google's DNS.
+
+![[ping no response.png]]
+
+![[iptables list.png]]
+
