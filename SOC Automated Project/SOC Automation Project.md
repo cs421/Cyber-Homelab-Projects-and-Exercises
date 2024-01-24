@@ -1047,40 +1047,12 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 ![[ubuntu agent dashboard.png]]
 
-![[ubuntu firewall 1.png]]
-
-![[ubuntu firewall 2.png]]
-
-![[ubuntu firewall 3.png]]
-
-![[ubuntu firewall 4.png]]
-
-![[wazuh new firewall rule.png]]
-
-
-
-
-`sudo apt-get update && apt-get upgrade`
-
-
+![[ubuntu new firewall.png]]
 
 
 ### Installing Wazuh agent in Ubuntu
 
-![[wazuh agent ubuntu.png]]![[wazuh ubuntu deploy agent.png]]
-
-![[wazuh ubuntu agent settings.png]]![[wazuh ubuntu install command.png]]
-
-![[wazuh ubuntu paste command.png]]
-![[wazuh ubuntu finish install.png]]
-
-`systemctl daemon-reload`
-`systemctl enable wazuh-agent`
-`systemctl start wazuh-agent`
-
-![[wazuh ubuntu status.png]]
-
-
+`sudo apt-get update && apt-get upgrade`
 
 `curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg`
 
@@ -1100,3 +1072,6 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 `sed -i "s/^deb/#deb/" /etc/apt/sources.list.d/wazuh.list`
 `apt-get update`
 
+
+![[wazuh ubuntu agent success.png]]
+![[ubuntu ssh attempts.png]]
