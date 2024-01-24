@@ -1036,7 +1036,7 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 ### Creating an Ubuntu machine in DigitalOcean
 
-![[create droplet.png]]
+![[create droplet 1.png]]
 ![[ubuntu droplet settings 1.png]]
 
 ![[ubuntu droplet settings 2.png]]
@@ -1078,17 +1078,31 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 ### Block SSH attempts on Ubuntu agent
 
+We will need the **API user** credentials that we took note in the earlier steps inside our **Wazuh** manager. The **.txt** file is located at `wazuh-install-files/wazuh-passwords.txt`.
+
 ![[cat wazuh password.png]]
 
-![[wazuh api user.png]]
+![[wazuh api user 1.png]]
 
+Back in our **Shuffle** dashboard, we will disconnect our current workflow first and rebuild it with the responsive action workflow included. We need to stop the **Wazuh-Alerts** app first, then detach the branches.
 
 ![[shuffle stop wazuh.png]]
 ![[shuffle delete branch.png]]
 
+In the **Apps** tab, drag and drop the **Http** app and rename it as "**Get-API**". Select **Curl** in the **Find Actions** tab.
+
 ![[http drag and drop.png]]
 
 ![[http rename get api.png]]
+
+Select **Expand window** in the **Statement** tab and input the following command:
+`curl -u USER:PASSWORD -k -X GET "https://WAZUH-IP:55000/security/user/authenticate?raw=true"`
+
+Be sure to replace the values of **USER**, **PASSWORD**, and the **WAZUH-IP** in the command. The user and password values refer to our **wazuh api user** credentials. 
+
+Click **Submit** when finished and save your workflow.
+
 ![[curl expand.png]]
 
 ![[curl expand command line.png]]
+
