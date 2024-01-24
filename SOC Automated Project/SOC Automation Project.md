@@ -1055,6 +1055,10 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 ![[ubuntu firewall 4.png]]
 
+![[wazuh new firewall rule.png]]
+
+
+
 
 `sudo apt-get update && apt-get upgrade`
 
