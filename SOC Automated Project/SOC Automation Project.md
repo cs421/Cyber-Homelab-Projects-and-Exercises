@@ -1075,3 +1075,24 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 `systemctl start wazuh-agent`
 
 ![[wazuh ubuntu status.png]]
+
+
+
+`curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg`
+
+![[ubuntu instal gpg key.png]]
+
+`echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | tee -a /etc/apt/sources.list.d/wazuh.list`
+![[ubuntu add repository.png]]`apt-get update`
+
+
+`WAZUH_MANAGER="10.0.0.2" apt-get install wazuh-agent`
+![[ubuntu wazuh finish install cli.png]]
+
+`systemctl daemon-reload`
+`systemctl enable wazuh-agent`
+`systemctl start wazuh-agent`
+
+`sed -i "s/^deb/#deb/" /etc/apt/sources.list.d/wazuh.list`
+`apt-get update`
+
