@@ -1106,3 +1106,19 @@ Click **Submit** when finished and save your workflow.
 
 ![[curl expand command line.png]]
 
+
+In the **Apps** tab, search for "wazuh" and click on the app to activate it.
+
+![[shuffle wazuh app.png]]
+
+Drag and drop the **Wazuh** app into the dashboard
+![[wazuh drag and drop.png]]
+
+
+We can partially rebuild our workflow to test the responsive capability without the presence of user input yet by connecting **Wazuh-Alerts** -> **Get-API** -> **Virustotal** -> **Wazuh**.
+
+![[shuffle partial rebuild.png]]
+
+Click on the **Wazuh** app to edit its details. We will leave the **Find Actions** tab on "Run command", then on the **Apikey** tab, click the plus icon and select **Get-API**.
+
+![[Pasted image 20240124173801.png]]
