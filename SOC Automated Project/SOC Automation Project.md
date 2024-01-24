@@ -439,7 +439,7 @@ We can **cat** the .txt file to view its contents. We can now see the credential
 ![[wazuh passwords.png]]
 
 We should also take note of the credentials for **wazuh API user**, since we will be using it later on to perform responsive capabilities.
-![[wazuh api user.png]]
+![[SOC Automated Project/attachments/wazuh api user.png]]
 
 #### Deploying a new agent
 
@@ -1075,3 +1075,10 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 ![[wazuh ubuntu agent success.png]]
 ![[ubuntu ssh attempts.png]]
+
+### Block SSH attempts on Ubuntu agent
+
+![[cat wazuh password.png]]
+
+![[wazuh api user.png]]
+
