@@ -1034,6 +1034,8 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 # Part 6: Ubuntu Client and Responsive Action
 
+### Creating an Ubuntu machine in DigitalOcean
+
 ![[create droplet.png]]
 ![[ubuntu droplet settings 1.png]]
 
@@ -1044,3 +1046,19 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 ![[ubuntu droplet settings 4.png]]
 
 ![[ubuntu agent dashboard.png]]
+
+![[ubuntu firewall 1.png]]
+
+![[ubuntu firewall 2.png]]
+
+![[ubuntu firewall 3.png]]
+
+![[ubuntu firewall 4.png]]
+
+
+`sudo apt-get update && apt-get upgrade`
+
+
+
+### Installing Wazuh agent in Ubuntu
+
