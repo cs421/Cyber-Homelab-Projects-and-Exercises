@@ -1176,3 +1176,10 @@ This shows us the response name of the active reponse, which is `firewall-drop`,
 
 #### Pinging Google DNS on Ubuntu Machine
 
+To test our active reponse action, we can ping **Google's** DNS (8.8.8.8) on our Ubuntu machine.
+
+![[ping google.png]]
+
+Then, while the ping is running, we can execute the following command in our **Wazuh** manager console: 
+`./agent_control -b 8.8.8.8 -f firewall-drop0 -u 002`
+
