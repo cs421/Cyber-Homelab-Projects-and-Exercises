@@ -1030,3 +1030,7 @@ We can now see that **Shuffle** has successfully sent an email to the analyst.
 Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst of the detection.
 
 ![[inbox email received.png]]
+
+
+# Part 6: Ubuntu Client and Responsive Action
+
