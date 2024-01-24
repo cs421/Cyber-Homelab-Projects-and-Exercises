@@ -1058,6 +1058,9 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 `sudo apt-get update && apt-get upgrade`
 
+
+
+
 ### Installing Wazuh agent in Ubuntu
 
 ![[wazuh agent ubuntu.png]]![[wazuh ubuntu deploy agent.png]]
