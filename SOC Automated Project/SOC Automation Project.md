@@ -1217,4 +1217,17 @@ Checking at the result, it shows the affected items (agent id: **002**), and che
 
 ### Enabling User Input on alerts
 
-In this step, we will set up a user input to send an email to the analyst with the alert info provided. The analyst can then 
+In this step, we will set up a user input to send an email to the analyst with the alert info provided. If the analyst chooses to say yes and block the IP, **Wazuh** will then automatically instruct the Ubuntu machine to block said IP.
+
+In the **Triggers** tab, drag and drop the **User Input** trigger into the dashboard.
+
+![[user input trigger.png]]
+
+We can then remove the **Wazuh** app from the flow and replace it with the **User input** trigger.
+
+![[wazuh replace user input.png]]
+
+Click the **User input** trigger to change its settings.
+
+In the
+![[Pasted image 2024012420494
