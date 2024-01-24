@@ -96,7 +96,7 @@ DigitalOcean gives you a free $200 credit for 60 days whenever you use this link
 **IMPORTANT:** To avoid being billed after 60 days has ran out, you have to **DESTROY** the VMs created inside DigitalOcean after you have documented your project and/or are finished with the lab. 
 
 To create a virtual machine, click on "Create" and select "Droplets". Virtual machines are called **Droplets** in DigitalOcean.
-![[create droplet.png]]
+![[SOC Automated Project/attachments/create droplet.png]]
 
 For the **Region**, select the region closest to you. For the **image**, we will be using **Ubuntu 22.04 (LTS) x64**
 ![[droplet region image.png]]
@@ -1034,3 +1034,13 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 # Part 6: Ubuntu Client and Responsive Action
 
+![[create droplet.png]]
+![[ubuntu droplet settings 1.png]]
+
+![[ubuntu droplet settings 2.png]]
+
+![[ubuntu droplet settings 3.png]]
+
+![[ubuntu droplet settings 4.png]]
+
+![[ubuntu agent dashboard.png]]
