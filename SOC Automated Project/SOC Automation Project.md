@@ -1229,5 +1229,17 @@ We can then remove the **Wazuh** app from the flow and replace it with the **Use
 
 Click the **User input** trigger to change its settings.
 
-In the
-![[Pasted image 2024012420494
+In the **Information** tab, type the following message and command:
+
+```
+Do you want to block this source IP: $exec.all_fields.agent.ip ?
+```
+
+In the **Input options**, tick the **Email** box and input your analyst email address, preferably a temporary one.
+
+![[user input settings.png]]
+
+We will now connect the **Wazuh** app back after the **User input** trigger.
+![[wazuh connect back.png]]
+
+In the **Alert** tab, remove **8.8.8.8** to replace it with another IP. 
