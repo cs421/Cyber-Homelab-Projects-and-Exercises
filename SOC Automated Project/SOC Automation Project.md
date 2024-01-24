@@ -1131,5 +1131,17 @@ Input your **Wazuh** public IP on the **localhost** value inside the **Url** tab
 For the **Agents list** tab, we will need to identify our machine's **Agent ID**. One way to view it is to go to the **Agents** dashboard in the **Wazuh** interface and looking at the **ID** row on the machines. 
 ![[wazuh agent id.png]]
 
+We can also select its values by clicking the plus icon, then "**Execution Argument** -> **agent** -> **id**".
+![[shuffle select agent id.png]]
+Select the value for **Wait for complete** to "true".
+![[wait for complete true.png]]
 
-![[Pasted image 20240124174916.png]]
+Before moving on with the rest of the settings, we will need to access our **Wazuh** manager console to configure the active response settings.
+
+Open the **ossec.conf** file with **nano** located at `/var/ossec/etc/ossec.conf`
+
+Search for "active response" by `ctrl+w` and scroll down to the listed commands under it. The command that we will be using is `firewall-drop`
+
+![[conf file active response.png]]
+`firewall-drop` will modify the IP tables of the Ubuntu machine and drop all traffic inbound the machine. 
+We will make an active response tag and make sure that the command reflects the command name we want to use. 
