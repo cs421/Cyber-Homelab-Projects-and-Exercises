@@ -1115,10 +1115,21 @@ Drag and drop the **Wazuh** app into the dashboard
 ![[wazuh drag and drop.png]]
 
 
-We can partially rebuild our workflow to test the responsive capability without the presence of user input yet by connecting **Wazuh-Alerts** -> **Get-API** -> **Virustotal** -> **Wazuh**.
+We can partially rebuild our workflow to test the responsive capability without the presence of user input yet.
+
+Click on the **Wazuh-Alerts** app and start it. Then we can connect the following apps: **Wazuh-Alerts** -> **Get-API** -> **Virustotal** -> **Wazuh**.
 
 ![[shuffle partial rebuild.png]]
 
 Click on the **Wazuh** app to edit its details. We will leave the **Find Actions** tab on "Run command", then on the **Apikey** tab, click the plus icon and select **Get-API**.
 
-![[Pasted image 20240124173801.png]]
+![[wazuh shuffle details 1.png]]
+
+Input your **Wazuh** public IP on the **localhost** value inside the **Url** tab.
+![[wazuh shuffle details 2.png]]
+
+For the **Agents list** tab, we will need to identify our machine's **Agent ID**. One way to view it is to go to the **Agents** dashboard in the **Wazuh** interface and looking at the **ID** row on the machines. 
+![[wazuh agent id.png]]
+
+
+![[Pasted image 20240124174916.png]]
