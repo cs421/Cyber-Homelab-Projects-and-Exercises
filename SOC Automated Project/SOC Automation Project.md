@@ -1189,3 +1189,19 @@ Going back to our Ubuntu machine, we see that it has stopped pinging. Looking at
 
 ![[iptables list.png]]
 
+
+We can check if the active response is working by looking at the `active-reponses.log` located at `/var/ossec/logs`
+![[active response log location.png]]'
+
+![[active response log.png]]
+
+
+Back in our **Shuffle dashboard**, enter the following values for the **Alert** and **Command** tabs:
+- For **Alert**: `{"data":{"srcip":"8.8.8.8"}}`
+- For **Command**: `firewall-drop0`
+![[wazuh shuffle details 3.png]]
+
+Save your workflow.
+
+
+Before ru
