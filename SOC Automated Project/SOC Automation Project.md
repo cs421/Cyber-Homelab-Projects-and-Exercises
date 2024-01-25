@@ -1123,7 +1123,9 @@ Click on the **Virustotal** app, and in the **Find Actions** section, select "**
 
 For the **Ip** section, input `$exec.all_fields.agent.ip`.
 ![[reconfigure virustotal.png]]
-![[Pasted image 20240125192315.png]]
+![[agent ip.png]]
+
+### Restructuring the workflow
 
 Click on the **Wazuh-Alerts** app and start it. Then we can connect the following apps: **Wazuh-Alerts** -> **Get-API** -> **Virustotal** -> **Wazuh**.
 
