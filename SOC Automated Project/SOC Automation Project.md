@@ -1084,6 +1084,12 @@ We will need the **API user** credentials that we took note in the earlier steps
 
 ![[wazuh api user 1.png]]
 
+We will also need to reconfigure our **Wazuh-Alerts** webhook in our manager ossec.conf file. Open `/var/ossec/etc/ossec.conf` , and we will replace the `<rule_id>` tag with `<level>` and put its value at 5.
+
+![[Pasted image 20240125194007.png]]
+
+Save the file and exit. Restart the **Wazuh** manager.
+
 Back in our **Shuffle** dashboard, we will disconnect our current workflow first and rebuild it with the responsive action workflow included. We need to stop the **Wazuh-Alerts** app first, then detach the branches.
 
 ![[shuffle stop wazuh.png]]
