@@ -1232,7 +1232,7 @@ Click the **User input** trigger to change its settings.
 In the **Information** tab, type the following message and command:
 
 ```
-Do you want to block this source IP: $exec.all_fields.agent.ip ?
+Do you want to block this source IP: $exec.all_fields.data.srcip ?
 ```
 
 In the **Input options**, tick the **Email** box and input your analyst email address, preferably a temporary one.
@@ -1242,4 +1242,5 @@ In the **Input options**, tick the **Email** box and input your analyst email ad
 We will now connect the **Wazuh** app back after the **User input** trigger.
 ![[wazuh connect back.png]]
 
-In the **Alert** tab, remove **8.8.8.8** to replace it with another IP. 
+In the **Alert** tab, remove **8.8.8.8** to replace it with another IP via `$exec.all_fields.data.srcip`.
+![[wazuh source ip.png]]
