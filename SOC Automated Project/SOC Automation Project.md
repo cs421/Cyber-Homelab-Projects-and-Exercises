@@ -1223,7 +1223,7 @@ In the **Triggers** tab, drag and drop the **User Input** trigger into the dashb
 
 ![[user input trigger.png]]
 
-We can then remove the **Wazuh** app from the flow and replace it with the **User input** trigger.
+We can then remove the **Wazuh** app from the flow for the time being and replace it with the **User input** trigger.
 
 ![[wazuh replace user input.png]]
 
