@@ -1117,6 +1117,14 @@ Drag and drop the **Wazuh** app into the dashboard
 
 We can partially rebuild our workflow to test the responsive capability without the presence of user input yet.
 
+#### Reconfiguring Virustotal Action
+
+Click on the **Virustotal** app, and in the **Find Actions** section, select "**Get an IP address report**".
+
+For the **Ip** section, input `$exec.all_fields.agent.ip`.
+![[reconfigure virustotal.png]]
+![[Pasted image 20240125192315.png]]
+
 Click on the **Wazuh-Alerts** app and start it. Then we can connect the following apps: **Wazuh-Alerts** -> **Get-API** -> **Virustotal** -> **Wazuh**.
 
 ![[shuffle partial rebuild.png]]
