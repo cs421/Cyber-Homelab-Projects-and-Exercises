@@ -1273,3 +1273,15 @@ In the **Alert** tab, remove **8.8.8.8** to replace it with another IP via `$exe
 
 Save your workflow after this.
 
+### Testing the final workflow
+
+In your Ubuntu machine, we will start pinging the source IP that we took note of earlier.
+
+
+
+
+
+
+
+
+![[Pasted image 20240126162937.png]]
