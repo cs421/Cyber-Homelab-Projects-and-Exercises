@@ -1123,6 +1123,9 @@ Drag and drop the **Wazuh** app into the dashboard
 
 We can partially rebuild our workflow to test the responsive capability without the presence of user input yet.
 
+
+
+
 #### Reconfiguring Virustotal Action
 
 Click on the **Virustotal** app, and in the **Find Actions** section, select "**Get an IP address report**".
