@@ -1277,11 +1277,19 @@ Save your workflow after this.
 
 In your Ubuntu machine, we will start pinging the source IP that we took note of earlier.
 
+![[ping ip.png]]
 
+In our **Shuffle** dashboard, re-rerun the the execution with all nodes connected.
+![[shuffle final run.png]]
 
+After running the execution, you should be able to receive an email from **Shuffle** requiring user input.
 
+![[userinput email.png]]
 
+Clicking the **TRUE** link will forward you to a confirmation page telling us that the action is implemented.
 
+![[shuffle action done.png]]
 
+Going back to the Ubuntu machine, we can see that the ping has stopped and the IP connection was dropped.
 
-![[Pasted image 20240126162937.png]]
+![[ip dropped.png]]
