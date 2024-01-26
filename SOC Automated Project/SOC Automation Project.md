@@ -18,7 +18,7 @@ I will be following **MyDFIR's** videos in creating this lab, as found in: https
 
 # Part 1: Diagram
 
-![[SOC Automated Homelab Diagram.png]]
+![SOC Automated Homelab Diagram](https://github.com/cs421/Create_Homelab_Project/assets/152476259/712059be-5d9b-47b8-9490-74bc760df2f1)
 
 **1.** The  **Wazuh** agent (Windows 10 client) will send events to the internet.
 **2.** The **Wazuh** manager will then receive those events sent by the client and will create alerts.
@@ -38,53 +38,76 @@ Installing VirtualBox and the Windows 10 VM is very linear, as shown in MyDFIR's
 ### Installing Sysmon
 By now, the Windows 10 VM should have been installed and prepped. Open up a browser and go to https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and choose **Download Sysmon**
 
-![[download sysmon.png]]
+![download sysmon](https://github.com/cs421/Create_Homelab_Project/assets/152476259/3893b005-09bc-4eee-abe9-2f3647a60d49)
 
 #### Downloading Sysmon configuration file
 
 Go to https://github.com/olafhartong/sysmon-modular, scroll down and click **sysmonconfig.xml**
-![[sysmon config.png]]
+
+![sysmon config](https://github.com/cs421/Create_Homelab_Project/assets/152476259/88ee7dfd-cac4-412e-bbad-a14ef1a4db22)
+
 click **Raw**, then right click and **Save as** the xml file
-![[sysmon config raw.png]]
-![[sysmon xml save.png]]
+
+![sysmon config raw](https://github.com/cs421/Create_Homelab_Project/assets/152476259/de2b7769-40c8-4257-bfca-2a1945035887)
+![sysmon xml save](https://github.com/cs421/Create_Homelab_Project/assets/152476259/71a64859-cf72-4ec6-bff5-daedb4e3cf8f)
 
 Go to the Sysmon's download location, right click the zip file and select "Extract All"
-![[sysmon extract.png]]
+
+![sysmon extract](https://github.com/cs421/Create_Homelab_Project/assets/152476259/a8eccb03-3437-4a95-bc6a-d3ff142246b0)
+
 
 Move or drag and drop the sysmon config file into the sysmon folder.
-![[sysmonconfig move.png]]
+
+![sysmonconfig move](https://github.com/cs421/Create_Homelab_Project/assets/152476259/4121ce1c-bc1b-44a6-b9a3-bcff77733195)
+
 
 We will be needing **Powershell** in this next step. Go to start, and search for powershell, and select "Run as Administrator"
 
-![[powershell admin.png]]
+![powershell admin](https://github.com/cs421/Create_Homelab_Project/assets/152476259/06416e51-13f3-4c5e-9788-7fc78d169ea8)
+
 `cd` to the extracted sysmon folder
-![[sysmon folder.png]]
+
+![sysmon folder](https://github.com/cs421/Create_Homelab_Project/assets/152476259/79e49b86-8ac9-423c-8d18-875af89dc23d)
+
 **Note:** For good practice, always put paths inside quotation marks (" ")
 
 We will now install sysmon along with the downloaded configuration file.
 
-Run `.\ sysmon64.exe -i sysmonconfig.xml`
-![[sysmon64 install.png]]
+Run `.\sysmon64.exe -i sysmonconfig.xml`
+
+![sysmon64 install](https://github.com/cs421/Create_Homelab_Project/assets/152476259/04c32262-e04d-4c80-8bb3-4c446338bd51)
+
 
 The license agreement window should appear. Click "Agree", and let the installer run its course
-![[sysmon64 license agreement.png]]
-![[sysmon install progress.png]]
+
+![sysmon64 license agreement](https://github.com/cs421/Create_Homelab_Project/assets/152476259/d24ae347-d353-42f0-bf1a-84b366c0f868)
+
+![sysmon install progress](https://github.com/cs421/Create_Homelab_Project/assets/152476259/38bfa904-93a0-49d6-960e-69ac9ead15f9)
 
 To double check if Sysmon has been successfully installed, we can do the following steps:
+
 ##### Services
 Open the **Services** app by typing 'services' in the start menu
-![[services.png]]
+
+![services](https://github.com/cs421/Create_Homelab_Project/assets/152476259/3eb14450-1171-46e6-88d0-958e63234ec3)
+
 Scroll down until you find **Sysmon64** in the list.
-![[services sysmon.png]]
+
+![services sysmon](https://github.com/cs421/Create_Homelab_Project/assets/152476259/ece9d54b-eaa6-4e7f-8085-f3dca74c803e)
+
 
 ##### Event Viewer
 Open the **Event Viewer** by typing 'event' in the start menu and clicking on the app
-![[event viewer.png]]
+
+![event viewer](https://github.com/cs421/Create_Homelab_Project/assets/152476259/5bbe9b74-2e01-46c0-a1a3-eb4171b3821c)
+
 
 Navigate to **Applications and Services Logs** -> **Microsoft** -> **Windows**.
 Scroll down until you find the **Sysmon** folder
-![[SOC Automated Project/attachments/event viewer 1.png]]
-![[event view 2.png]]
+
+![event viewer 1](https://github.com/cs421/Create_Homelab_Project/assets/152476259/50c53bf8-a934-4975-97e8-10b86c37376f)
+
+![event view 2](https://github.com/cs421/Create_Homelab_Project/assets/152476259/0330ab81-c093-418c-b055-5eaea0366a51)
 
 
 ### Installing Wazuh
@@ -96,52 +119,87 @@ DigitalOcean gives you a free $200 credit for 60 days whenever you use this link
 **IMPORTANT:** To avoid being billed after 60 days has ran out, you have to **DESTROY** the VMs created inside DigitalOcean after you have documented your project and/or are finished with the lab. 
 
 To create a virtual machine, click on "Create" and select "Droplets". Virtual machines are called **Droplets** in DigitalOcean.
-![[SOC Automated Project/attachments/create droplet.png]]
+
+![create droplet](https://github.com/cs421/Create_Homelab_Project/assets/152476259/1c02572f-cd45-4d96-87df-0ec04efa794d)
+
 
 For the **Region**, select the region closest to you. For the **image**, we will be using **Ubuntu 22.04 (LTS) x64**
-![[droplet region image.png]]
+
+![droplet region image](https://github.com/cs421/Create_Homelab_Project/assets/152476259/b8e8391f-ea0a-45a9-ae24-2e63122f8bee)
+
 
 For **CPU** options, select the **Basic plan**, then **Premium Intel**, then **8GB/ 2 Intel CPUs** option
-![[droplet cpu.png]]
+
+![droplet cpu](https://github.com/cs421/Create_Homelab_Project/assets/152476259/62d16fd5-429e-4f55-ab8f-7d623f8d6c82)
+
 
 For the **authentication method**, choose a password and create a strong one.
-![[droplet authentication.png]]
+
+![droplet authentication](https://github.com/cs421/Create_Homelab_Project/assets/152476259/f8d353b9-608f-4c6d-bc91-8dc16c4cc2aa)
+
 
 Name the hostname as "Wazuh", then click on **Create Droplet**
-![[droplet name.png]]
+
+![droplet name](https://github.com/cs421/Create_Homelab_Project/assets/152476259/a02334bb-94ec-4a94-997a-fd281f60862a)
+
 
 ### Creating a firewall
 Inside DigitalOcean, we will be creating a firewall to protect our virtual machines against public scanners and unauthorized SSH, and to make sure that the VMs that we create in the cloud provider are only accessible to us via our own public IP address.
 
 Before moving to the next step in creating a firewall, we need to identify our public IPv4 address first. you can go to https://www.whatismyip.com/ to find your public IP address.
-![[whatismyip.png]]
+
+![whatismyip](https://github.com/cs421/Create_Homelab_Project/assets/152476259/7b4e956d-3d3d-49fc-90ee-9737aee38f1b)
 
 
 In the DigitalOcean dashboard, click on the **Networking** link, then on the **Firewalls** tab, and click on **Create Firewall**
-![[create firewall.png]]
+
+![create firewall](https://github.com/cs421/Create_Homelab_Project/assets/152476259/b19ea106-1bda-4e8f-bfb9-cb572b3786a8)
 
 
 For the inbound rules, create a rule where in it allows **All TCP** types on the TCP protocol, and **All ports** are allowed. Do the same for UDP. Then scroll down and click **Create Firewall**
-![[wazuh inbound rules.png]]
+
+![wazuh inbound rules](https://github.com/cs421/Create_Homelab_Project/assets/152476259/f69a6cc6-3e5d-4899-9565-5cfce71e80ab)
+
 
 We can now start adding VMs to the firewall we created.
-![[droplet firewall created.png]]
+
+![droplet firewall created](https://github.com/cs421/Create_Homelab_Project/assets/152476259/a512f582-b438-42b0-b71c-56dd465a6a76)
+
 
 In the dashboard, click on **Droplets**, and right then, we can see our Wazuh VM, along with its public IP address.
-![[wazuh public ip.png]]
+
+![wazuh public ip](https://github.com/cs421/Create_Homelab_Project/assets/152476259/149b03b4-92c0-4098-978e-309f3e2f30ba)
+
 Click on Wazuh and click on the **Networking** tab.
-![[wazuh networking.png]]Scroll down to the **Firewalls** section and click **Edit**
-![[droplet firewall edit.png]]Select the firewall that was created earlier
-![[droplet firewall 2.png]]On the **Droplets** tab, click **Add Droplets**
-![[firewall add droplets.png]]
+
+![wazuh networking](https://github.com/cs421/Create_Homelab_Project/assets/152476259/52384a10-b5b1-41c4-ab1c-850160d82fb6)
+
+Scroll down to the **Firewalls** section and click **Edit**
+
+![droplet firewall edit](https://github.com/cs421/Create_Homelab_Project/assets/152476259/2e993244-258b-4714-9cfd-1abdc798279b)
+
+Select the firewall that was created earlier
+
+![droplet firewall 2](https://github.com/cs421/Create_Homelab_Project/assets/152476259/26ec5b85-2a29-46ae-b29f-211e6cb58903)
+
+On the **Droplets** tab, click **Add Droplets**
+
+![firewall add droplets](https://github.com/cs421/Create_Homelab_Project/assets/152476259/26a1cd44-e601-4aed-b03c-913619ca089b)
+
 Search for your Wazuh VM then click **Add Droplet**
-![[wazuh add firewall.png]]The Wazuh VM should now be protected by the firewall
-![[wazuh firewall added.png]]
+
+![wazuh add firewall](https://github.com/cs421/Create_Homelab_Project/assets/152476259/6d968696-27b7-45cf-b972-f0515ea45c15)
+
+The Wazuh VM should now be protected by the firewall
+
+![wazuh firewall added](https://github.com/cs421/Create_Homelab_Project/assets/152476259/0c7158cc-03dc-4892-9231-cfcc3113290d)
 
 ### Accessing the Wazuh VM
 
 In the **Droplets** dashboard, select your Wazuh VM, click on the **Access**, then select **Launch Droplet Console** to access the machine's terminal. You will be logged as **root**.
-![[wazuh access droplet.png]]
+
+![wazuh access droplet](https://github.com/cs421/Create_Homelab_Project/assets/152476259/88fb2b01-002a-4c2f-b84f-e5c6ddef0862)
+
 
 For some reason, I couldn't access the terminal through the **Droplet console** throughout my entire lab activity. This may be caused by busy servers in Digital Ocean, or some other technical issue that I don't know about.
 
@@ -167,54 +225,67 @@ To establish a connection with your Wazuh VM in Digital Ocean, open up a WSL ter
 The machine IP is your Wazuh VM's public IP address. Type your password as required, and you will be logged in as **root**
 
 Update everything first by typing `apt-get update && apt-get upgrade -y`
-![[wazuh terminal update.png]]
+
+![wazuh terminal update](https://github.com/cs421/Create_Homelab_Project/assets/152476259/b7e1259e-1167-409b-8e08-c63992438c79)
 
 Just hit **enter** whenever you see these screens.
-![[wazuh update.png]]
-![[wazuh terminal update 2.png]]
+
+![wazuh update](https://github.com/cs421/Create_Homelab_Project/assets/152476259/5a203a9d-9e3c-41ce-b8f0-06d6f134aaeb)
+
+![wazuh terminal update 2](https://github.com/cs421/Create_Homelab_Project/assets/152476259/892ead4b-6614-44c8-b0de-f13fa6b2952e)
+
 
 After everything has updated, we can now run the Wazuh installer.
 
 In the terminal, type: `curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-install.sh -a` and hit **enter**.
 
-![[wazuh installer.png]]
+![wazuh installer](https://github.com/cs421/Create_Homelab_Project/assets/152476259/eadcfae4-87b2-4168-876f-af1896c7bfb0)
 
 Wazuh should complete its installation in a few moments, giving us this screen:
-![[wazuh install complete.png]]
+
+![wazuh install complete](https://github.com/cs421/Create_Homelab_Project/assets/152476259/8ceedb81-3b9d-4845-bff2-98f5e197af9d)
+
 Take note of the credentials presented to you, since we will be using it when we log on to the browser interface, which be accessed by typing `https://[wazuh_public_ip]` in the browser
 
 Click on **Advanced** when you see this screen
-![[wazuh connection not private.png]]
+
+![wazuh connection not private](https://github.com/cs421/Create_Homelab_Project/assets/152476259/4172af0e-79a1-46b1-86a4-faa3428a529e)
+
 then click on the bottom link to access the login page.
-![[wazuh connection not private 2.png]]
+
+![wazuh connection not private 2](https://github.com/cs421/Create_Homelab_Project/assets/152476259/ea706eea-7e90-4e3a-9935-efb0085782a6)
 
 We can now log in with the credentials we saved earlier.
-![[wazuh login page.png]]
+![wazuh login page](https://github.com/cs421/Create_Homelab_Project/assets/152476259/1922e017-e7cc-47c2-811a-b0f514467ed7)
 
 
 ### Installing TheHive VM
 
 The steps for installing TheHive VM is very similar to the steps we took in creating our Wazuh VM. 
 
-![[thehive create droplet.png]]
-![[droplet region image.png]]![[droplet cpu.png]]
-![[droplet authentication.png]]
+![droplet region image](https://github.com/cs421/Create_Homelab_Project/assets/152476259/352a5ca3-69bb-4400-8d65-7d57862938cd)
+![droplet cpu](https://github.com/cs421/Create_Homelab_Project/assets/152476259/6e6d6563-4e96-4331-811c-1adf571b5816)
+![droplet authentication](https://github.com/cs421/Create_Homelab_Project/assets/152476259/ce890d54-1b43-4862-babb-9231c7e772c8)
 
 The only difference is the Hostname, which we will change to **thehive**.
-![[droplet thehive name.png]]
+![droplet thehive name](https://github.com/cs421/Create_Homelab_Project/assets/152476259/c36c8c45-7d69-4da4-b813-9a09b58c7744)
+
 
 After creating TheHive droplet, we should also add it to the firewall as we did with our Wazuh VM.
-![[thehive add firewall.png]]
-![[thehive add firewall 2.png]]
+![thehive add firewall](https://github.com/cs421/Create_Homelab_Project/assets/152476259/e9c6a995-3007-4f86-af6d-aabf27aec46f)
+
+![thehive add firewall 2](https://github.com/cs421/Create_Homelab_Project/assets/152476259/cadd6107-045f-4e0c-a038-c75248d18692)
 
 Now both our Wazuh and TheHive VM are protected by our firewall.
-![[thehive wazuh firewall.png]]
+
+![thehive wazuh firewall](https://github.com/cs421/Create_Homelab_Project/assets/152476259/5aee2eb3-73cc-4961-8355-d60222b3a390)
+
 
 ### Accessing TheHive VM
 
 In the **Droplets** dashboard, select your TheHive VM, click on the **Access,** then select **Launch Droplet Console** to access the machine's terminal. You will be logged as **root**.
 
-![[thehive droplet console.png]]
+![thehive droplet console](https://github.com/cs421/Create_Homelab_Project/assets/152476259/7626c286-fc62-487e-9eff-684fb14fe403)
 
 Or, you can open up a WSL terminal and **ssh** to your TheHiveVM by:
 `ssh root@MACHINE_IP` and provide your password.
@@ -276,48 +347,58 @@ The default credentials for TheHive is:
 We first need to configure the **cassandra.yaml** file for it to work in **TheHive** by customizing our listen ports and cluster name
 
 **SSH** into **TheHive** terminal and type `nano /etc/cassandra/cassandra.yaml`
-![[cassandra thehive ssh.png]]
+
+![cassandra thehive ssh](https://github.com/cs421/Create_Homelab_Project/assets/152476259/86872cac-4f0e-4f25-b153-30d455fbf4fd)
 
 Scroll down to the `cluster_name` and name it according to your preference
 
-![[cassandra cluster name.png]]
+![cassandra cluster name](https://github.com/cs421/Create_Homelab_Project/assets/152476259/73e77281-22b1-4208-80f9-a7691090a6de)
 
 Next, we will be changing the settings for the `listen_address` and `rpc_address`
 
 To quickly search for strings inside Nano, press **ctrl+w** to bring up the search bar, type "**listen_address**" and press enter.
 
-![[nano listen address.png]]
+![nano listen address](https://github.com/cs421/Create_Homelab_Project/assets/152476259/4964310d-b8b5-46f7-8536-b5c11573bfb6)
 
 Scroll down to the `listen_address` setting and change the value from `localhost` to **TheHive's** public IP.
 
-![[cassandra listen address.png]]
+![cassandra listen address](https://github.com/cs421/Create_Homelab_Project/assets/152476259/7843da7c-4019-421f-9403-9f0422b5ee07)
 
 Same goes with searching for `rpc_address`.
-![[nano rpc address.png]]
+
+![nano rpc address](https://github.com/cs421/Create_Homelab_Project/assets/152476259/61926d5f-f90c-4e00-8996-94bddf7bb621)
 
 Scroll down to the `rpc_address` setting and change the value from `localhost` to **TheHive's** public IP.
 
-![[cassandra rpc address.png]]
+![cassandra rpc address](https://github.com/cs421/Create_Homelab_Project/assets/152476259/2b105e0a-0d3c-4c9a-93be-915d09ea5286)
 
 The last configuration we need to change is the **seed address**. Search for `seed_provider` and scroll down to the setting. Change the value from **127.0.0.1** to **TheHive's** public IP.
-![[nano seed provider.png]]
-![[cassandra seed provider.png]]
+
+![nano seed provider](https://github.com/cs421/Create_Homelab_Project/assets/152476259/54e58991-f6cb-4dac-93b2-c781363b2616)
+
+![cassandra seed provider](https://github.com/cs421/Create_Homelab_Project/assets/152476259/716f7f12-ac0c-422c-8e3a-9b076964055a)
+
 After that, press **ctrl+x** to prompt exit, type **Y** to save and press enter.
 
 We will need to stop and restart **Cassandra's** services for the changes to take effect.
 
 To stop **Cassandra**, type `systemctl stop cassandra.service` in the terminal and press enter.
-![[stop cassandra.png]]
+
+![stop cassandra](https://github.com/cs421/Create_Homelab_Project/assets/152476259/bae64686-d136-4aa1-a6e8-899e2eaac6d0)
 
 We also need to remove old files prior to configuring the yaml file. In the terminal, type `rm -rf /var/lib/cassandra/*`
 **Note:** The ( * ) input will delete all files inside the directory.
-![[remove old cassandra.png]]
+
+![remove old cassandra](https://github.com/cs421/Create_Homelab_Project/assets/152476259/8319b949-955c-435f-a767-e304e62a87ac)
 
 To restart the service, type `systemctl start cassandra.service` in the terminal.
-![[start cassandra.png]]
+
+![start cassandra](https://github.com/cs421/Create_Homelab_Project/assets/152476259/1e43fc73-4808-4455-874b-da2cf3d81a0b)
 
 We should also maintain a good habit of double checking the status of the service we intend to run. To check **Cassandra's** status, type `systemctl status cassandra.service` in the terminal. It should say whether the service is active and running or has stopped or failed.
-![[cassandra status.png]]
+
+![cassandra status](https://github.com/cs421/Create_Homelab_Project/assets/152476259/4846fb2a-017d-4f8b-a843-822a712af716)
+
 To exit from the status, press **q.**
 
 ### Setting up Elasticsearch
@@ -331,7 +412,8 @@ The first setting to change is the **cluster name**. Scroll down to the `cluster
 Scroll down to the `node.name` setting, remove the comment # and leave the value `node-1` as is.
 
 Leave the values for `path.data` and `path.logs` as is.
-![[elasticsearch yml.png]]
+
+![elasticsearch yml](https://github.com/cs421/Create_Homelab_Project/assets/152476259/ce04509c-d6da-4006-9fef-1fd8a6909f7d)
 
 Scroll down to the `network.host` setting. Remove the comment, and change the value from the default to **TheHive's** public IP.
 
@@ -339,21 +421,28 @@ Remove the comment for `http.port`.
 
 Remove the comment for `cluster.initial_master_nodes` and leave only `node-1` as the value.
 
-![[elasticsearch config 2.png]]
+![elasticsearch config 2](https://github.com/cs421/Create_Homelab_Project/assets/152476259/b84d4148-3123-4274-add5-54bcb246acdb)
 
 Save the file and exit.
 
+
 Now, we need to start **Elasticsearch** as a service. Type `systemctl start elasticsearch` in the terminal. 
-![[start elasticsearch.png]]
+
+![start elasticsearch](https://github.com/cs421/Create_Homelab_Project/assets/152476259/23162864-1239-4d87-b388-400477fad4e1)
 
 We will also need to enable **Elasticsearch**. Type `systemctl enable elasticsearch`
-![[enable elasticsearch.png]]
+
+![enable elasticsearch](https://github.com/cs421/Create_Homelab_Project/assets/152476259/bcf1c76c-df35-41f8-a38b-6812db677315)
+
 
 To double check the status, type `systemctl status elasticsearch`
-![[elasticsearch status.png]]
+
+![elasticsearch status](https://github.com/cs421/Create_Homelab_Project/assets/152476259/90012914-5aab-4860-8c2e-292304353adb)
 
 We should also check **Cassandra's** status again after running **Elasticsearch** to make sure it is still running.
-![[cassandra elasticsearch status.png]]
+
+![cassandra elasticsearch status](https://github.com/cs421/Create_Homelab_Project/assets/152476259/9949a75e-1f09-42c0-9d69-614c15467588)
+
 
 ### Configuring TheHive config file
 
@@ -361,15 +450,19 @@ We should also check **Cassandra's** status again after running **Elasticsearch*
 Before configuring **TheHive's** config file, we need to check whether **TheHive's** user and its group has access to a particular file path. The file path is `/opt/thp`
 
 To check permissions, type `ls -la /opt/thp`
-![[thp access.png]]
+
+![thp access](https://github.com/cs421/Create_Homelab_Project/assets/152476259/64b3e18e-bee5-427a-9c52-b47c1e9df18c)
+
 Currently, the **root** user and group has access to the file path and needs to be changed.
 
 To change ownership, type `chown -R thehive:thehive /opt/thp`.
-![[chown thehive.png]]
+
+![chown thehive](https://github.com/cs421/Create_Homelab_Project/assets/152476259/695d60f7-dbaf-4c15-a3a8-3f45a4ff7493)
 
 Double check with `ls -la`.
 
-![[thehive ownership.png]]
+![thehive ownership](https://github.com/cs421/Create_Homelab_Project/assets/152476259/7d146cc6-66f5-437c-9ec0-a191a1118128)
+
 
 ##### Setting up the config file.
 
@@ -383,31 +476,38 @@ Change the `cluster-name` value to the value that you put the **Cassandra** conf
 
 Within the `index.search` function, change the `hostname` from default to **TheHive's** public IP.
 
-![[thehive config.png]]
+![thehive config](https://github.com/cs421/Create_Homelab_Project/assets/152476259/3088a893-8b5b-45f8-9aff-4e6b4c41197e)
 
 Scrolling a bit down to the `Attachment storage configuration`, it states that the path should belong to the user and group running **thehive** service. This is the reason why we had to change ownership for the file path earlier.
 
-![[thehive default ownership.png]]
+![thehive default ownership](https://github.com/cs421/Create_Homelab_Project/assets/152476259/0d22ae42-782d-4fc6-8f4e-b78e0ac4e16f)
 
 Scroll down to the `Service configuration` section. Change the value of `application.baseUrl` from **localhost** to **TheHive's** public IP.
-![[thehive service config.png]]
+
+![thehive service config](https://github.com/cs421/Create_Homelab_Project/assets/152476259/913767e8-7650-425c-9c83-5295cf182a70)
+
 Save changes and exit the config file.
 
+
 We now need to start and enable **TheHive** as a service with `systemctl start thehive` and `systemctl enable thehive`.
-![[start enable thehive.png]]
+
+![start enable thehive](https://github.com/cs421/Create_Homelab_Project/assets/152476259/fff44300-f5a3-4c5c-87fb-d7bb6b15f8b2)
 
 We should also check **TheHive's** status with `systemctl status thehive`.
-![[thehive status.png]]
+
+![thehive status](https://github.com/cs421/Create_Homelab_Project/assets/152476259/89fa38a0-7f53-4614-8abf-de1375afea95)
+
 
 **Important**: For **TheHive** to run successfully, it also needs **Cassandra** and **Elasticsearch** to be active and running as well. Double checking the status of all three is necessary.
 
-![[status all.png]]
+![status all](https://github.com/cs421/Create_Homelab_Project/assets/152476259/9273aacd-1f05-407b-bb9b-9a2dbeec6c20)
 
 You can now access the web interface for **TheHive** by typing `http://thehive_publicip:9000` on the browser.
 
-![[thehive log in page.png]]
+![thehive log in page](https://github.com/cs421/Create_Homelab_Project/assets/152476259/67f520b4-d1b8-4d41-91e2-45fa098a97a9)
 
 You can also sign in with the default credentials of: `admin@thehive.local` and password: `secret`.
+
 
 #### Troubleshooting TheHive login error
 
@@ -428,46 +528,56 @@ The settings above tells **TheHive** to allocate 2gb of memory for Java instead 
 We first need to access the **Wazuh** web interface by typing the **Wazuh** VM's public IP in the browser and logging in with the credentials that **Wazuh** has provided us during the installation section back in **Part 2**.
 
 If you do not have the credentials provided, you can access the **Wazuh** manager terminal by **ssh** and type `ls`.
-![[wazuh terminal.png]]
+
+![wazuh terminal](https://github.com/cs421/Create_Homelab_Project/assets/152476259/89278a04-c3e0-4d64-a0e6-9d5d7ce348b6)
+
 You should see the **.tar** file for wazuh install files, and we need to extract its contents by typing `tar -xvf wazuh-install-files.tar`.
-![[wazuh install extract.png]]
+
+![wazuh install extract](https://github.com/cs421/Create_Homelab_Project/assets/152476259/0607d196-f92b-4ca4-8932-d309ef869505)
 
 After extracting, we can **cd** to the install files directory and see its contents. The file that we want is `wazuh-passwords.txt`
-![[cd wazuh install.png]]
+
+![cd wazuh install](https://github.com/cs421/Create_Homelab_Project/assets/152476259/f67157a6-8922-4403-b9a9-3c11996544bd)
 
 We can **cat** the .txt file to view its contents. We can now see the credentials we need to log in to the dashboard.
-![[wazuh passwords.png]]
+
+![wazuh passwords](https://github.com/cs421/Create_Homelab_Project/assets/152476259/39ab3455-10c9-4173-ba2f-86fbe41e6916)
+
 
 We should also take note of the credentials for **wazuh API user**, since we will be using it later on to perform responsive capabilities.
-![[SOC Automated Project/attachments/wazuh api user.png]]
+
+![wazuh api user](https://github.com/cs421/Create_Homelab_Project/assets/152476259/f69dd609-b0cd-403a-9597-6995caf19dd4)
+
 
 #### Deploying a new agent
 
 In the **Wazuh** dashboard, we can see that no agent has been added yet. To add one, simply click **Add agent**.
 
-![[wazuh dashboard.png]]
+![wazuh dashboard](https://github.com/cs421/Create_Homelab_Project/assets/152476259/a3c020bf-be62-42cc-85e9-0d94243fa71b)
 
 In the **Deploy new agent** page, select **Windows** as the package. For the **Server address**, type in **Wazuh's** public IP. You can name the agent any way you want, but remember that it cannot be changed once the agent has been enrolled. Leave the groups tab in as default.
 
-![[wazuh deploy agent.png]]
+![wazuh deploy agent](https://github.com/cs421/Create_Homelab_Project/assets/152476259/e4ba8875-6fbb-4d48-ad1b-d5efdf087c02)
 
 Copy the commands in the 4th step, and paste it in your Windows 10 machine's powershell terminal. This will install the Wazuh agent to your Windows 10 machine. Note that you should run powershell with admin privileges.
 
-![[wazuh agent command.png]]
+![wazuh agent command](https://github.com/cs421/Create_Homelab_Project/assets/152476259/6d593468-6636-49ad-a426-03a04c862edd)
 
-![[powershell wazuh agent.png]]
+![powershell wazuh agent](https://github.com/cs421/Create_Homelab_Project/assets/152476259/47174bf0-ee33-41dd-aae1-ee3118518c39)
 
 After the agent has finished installing, we can start the agent by typing `net start wazuhsvc`.
 
-![[wazuh start service.png]]
+![wazuh start service](https://github.com/cs421/Create_Homelab_Project/assets/152476259/66caa96f-7d59-4e22-acb6-205639e97b67)
 
 You can also check the status of the wazuh agent by typing **"services"** in the start menu and opening the app. Then scroll down until you find **Wazuh** in the list.
 
-![[services wazuh.png]]
+![services wazuh](https://github.com/cs421/Create_Homelab_Project/assets/152476259/5ee74ed6-7df7-484a-a0f5-643734b9417f)
 
 Back in the **Wazuh** dashboard, wait for a few moments and refresh the page to see the enrolled agent.
 
-![[wazuh dashboard agent.png]]
+![wazuh dashboard agent](https://github.com/cs421/Create_Homelab_Project/assets/152476259/ff50c929-4685-4417-9a3a-49c0f5aff547)
+
+
 # Part 4: Generate Telemetry & Ingest into Wazuh
 
 ### Windows 10 Telemetry
@@ -481,23 +591,28 @@ You can open the .conf file in **Notepad** with **Administrative Privileges**.
 
 We will be adding syntaxes right below this line group:
 
-![[log analysis.png]]
+![log analysis](https://github.com/cs421/Create_Homelab_Project/assets/152476259/407326df-356b-4dad-ad94-e3bfba5eb77b)
 
 You can also copy the syntax above and build rules from it. Paste the template just below the former syntax.
 
 First, we will build a rule that will ingest **Sysmon** logs into **Wazuh**. We will be needing **Sysmon's** channel name for the `<location>` tag. **Sysmon's** channel name can be located via **Event Viewer**:
 
 Open up **Event Viewer**, expand **Applications and Services Logs** -> **Microsoft** -> **Windows**, then scroll down to the **Sysmon** folder and click it. Right click on **Operational** and select **Properties**. 
-![[event viewer 1 1.png]]
-![[sysmon properties.png]]![[sysmon full name.png]]
+
+![event viewer 1 1](https://github.com/cs421/Create_Homelab_Project/assets/152476259/dd48cf93-7dd9-4177-8e19-58af2c292a16)
+
+![sysmon properties](https://github.com/cs421/Create_Homelab_Project/assets/152476259/ac09eccd-bd1e-4e08-8cc5-37698eacf399)
+
+![sysmon full name](https://github.com/cs421/Create_Homelab_Project/assets/152476259/564a4d29-f1bb-4b41-b10e-b88baf764a4c)
 
 Copy the **Full Name** and replace the `Application` value in the syntax.
 
-![[sysmon channel name.png]]
+![sysmon channel name](https://github.com/cs421/Create_Homelab_Project/assets/152476259/704eba55-0b25-43e0-bd56-1a48af8a6c78)
 
 For the sake of ingestion, we can remove the **Application**, **Security**, and **System** syntax and just retain the **Sysmon** syntax. This means that application, security, and system logs will not be forwarded into **Wazuh**. This is fine because we only want to observe **Sysmon** logs.
 
-![[remove app security syntax.png]]
+![remove app security syntax](https://github.com/cs421/Create_Homelab_Project/assets/152476259/7e9c2e50-d991-40c4-846d-597cf3586c41)
+
 ![[remove system syntax.png]]
 
 Save the file and exit.
