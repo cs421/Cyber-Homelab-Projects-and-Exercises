@@ -1086,7 +1086,7 @@ We will need the **API user** credentials that we took note in the earlier steps
 
 We will also need to reconfigure our **Wazuh-Alerts** webhook in our manager ossec.conf file. Open `/var/ossec/etc/ossec.conf` , and we will replace the `<rule_id>` tag with `<level>` and put its value at 5.
 
-![[Pasted image 20240125194007.png]]
+![[change level tag.png]]
 
 Save the file and exit. Restart the **Wazuh** manager.
 
@@ -1123,9 +1123,16 @@ Drag and drop the **Wazuh** app into the dashboard
 
 We can partially rebuild our workflow to test the responsive capability without the presence of user input yet.
 
+First, we should run the workflow with only the **Wazuh Alerts** trigger and **Get-API** app connected to collect report details.
 
+![[get report detail.png]]
 
+![[get api report detail.png]]
 
+These details will be important in feeding into **Virustotal** and **Wazuh** later on.
+![[srcip.png]]
+
+Also, take note of the **srcip** under the data section, we will be pinging it later. 
 #### Reconfiguring Virustotal Action
 
 Click on the **Virustotal** app, and in the **Find Actions** section, select "**Get an IP address report**".
@@ -1263,3 +1270,6 @@ We will now connect the **Wazuh** app back after the **User input** trigger.
 
 In the **Alert** tab, remove **8.8.8.8** to replace it with another IP via `$exec.all_fields.data.srcip`.
 ![[wazuh source ip.png]]
+
+Save your workflow after this.
+
