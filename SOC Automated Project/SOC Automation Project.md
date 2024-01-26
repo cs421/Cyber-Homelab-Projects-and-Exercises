@@ -1,21 +1,3 @@
-**Goal:** The goal of this project is to create an automated SOC analyst lab complete with a SIEM tool, a case management tool, and a security automation platform for SOAR (Security Orchestration, Automation and Response) capabilities. This lab will also utilize **Mimikatz** as the sample credential harvesting attack.
-
-# Tools to be used
-1. **Wazuh** (https://wazuh.com) - XDR and SIEM tool, for receiving events and sending alerts to SOAR
-2. **Shuffle** (https://shuffler.io) - for SOAR and IOC (indicators of compromise) enrichment
-3. **TheHive** (https://thehive-project.org) - Security Incident Response Platform, for ticket and alert assignments to SOC analysts
-4. **VirusTotal** (https://www.virustotal.com) - for IOC enrichment and threat intel
-5. **Mimikatz** - (https://github.com/gentilkiwi/mimikatz/releases/tag/2.2.0-20220919) for sample credential harvesting attack
-
-
-There will be **two (2)** virtual machines to be used in this project, namely:
-1. A Windows 10 Client which will serve as the Wazuh agent, to be configured via VirtualBox.
-2. An Ubuntu machine which will serve as another Wazuh agent later on, to be configured on the cloud.
-
-**Wazuh, TheHive, and Shuffle** will be configured on the cloud.
-
-I will be following **MyDFIR's** videos in creating this lab, as found in: https://www.youtube.com/watch?v=Lb_ukgtYK_U
-
 # Part 1: Diagram
 
 ![SOC Automated Homelab Diagram](https://github.com/cs421/Create_Homelab_Project/assets/152476259/712059be-5d9b-47b8-9490-74bc760df2f1)
@@ -613,19 +595,19 @@ For the sake of ingestion, we can remove the **Application**, **Security**, and 
 
 ![remove app security syntax](https://github.com/cs421/Create_Homelab_Project/assets/152476259/7e9c2e50-d991-40c4-846d-597cf3586c41)
 
-![[remove system syntax.png]]
+![remove system syntax.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/remove%20system%20syntax.png)
 
 Save the file and exit.
 
 Now we need to restart **Wazuh** by going to Services -> **Wazuh** and clicking Restart.
 
-![[restart wazuh.png]]
+![restart wazuh.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/restart%20wazuh.png)
 
 **Note:** Every time you change settings in the config file, you **MUST** restart the **Wazuh** service.
 
 We can now go back to the **Wazuh** dashboard and search for "sysmon" events. It may take some time for events to show up.
 
-![[wazuh sysmon search.png]]
+![wazuh sysmon search.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20sysmon%20search.png)
 
 ### Downloading Mimikatz
 
@@ -635,42 +617,52 @@ Before downloading **Mimikatz** we need to exclude our *Downloads* folder from W
 
 Go to **Windows Security,** click on **Virus & threat protection** -> **Manage settings**, scroll down to the **Exclusions** section, and click **Add or remove exclusions**.
 
-![[windows security.png]]
-![[virus threat protection.png]]![[manage settings.png]]
-![[exclusions.png]]
+![windows security.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/windows%20security.png)
+
+![virus threat protection.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virus%20threat%20protection.png)
+
+![manage settings.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/manage%20settings.png)
+
+![exclusions.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/exclusions.png)
 
 Click on **Add an exclusion** and choose "Folder", then browse to your *Downloads* folder and select it.
-![[exclude download folder.png]]
-![[select download folder.png]]
+![exclude download folder.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/exclude%20download%20folder.png)
+
+![select download folder.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/select%20download%20folder.png)
 
 Your *Downloads* folder should appear on the list.
-![[download folder list.png]]
+
+![download folder list.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/download%20folder%20list.png)
 
 Using **Google Chrome** is recommended when downloading **Mimikatz** because you can easily disable the browser protection from the security settings.
 
-![[chrome settings.png]]
-![[chrome no protection.png]]
+![chrome settings.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/chrome%20settings.png)
+
+![chrome no protection.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/chrome%20no%20protection.png)
 
 **Mimikatz** download link: [https://github.com/gentilkiwi/mimikatz/releases/tag/2.2.0-20220919](https://github.com/gentilkiwi/mimikatz/releases/tag/2.2.0-20220919)
 
 Right click on the **.zip** file and **Save As**, and save it to the *Downloads* folder.
 
-![[download mimikatz.png]]
+![download mimikatz.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/download%20mimikatz.png)
+
 Go to your *Downloads* folder, right click on the zip file and select "Extract all"
 
-![[extract mimikatz.png]]
+![extract mimikatz.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/extract%20mimikatz.png)
 
 Double click on the newly extracted folder and go inside the **x64** folder.
 
 Open up **Powershell** with **admin** privileges and **cd** into the **x64** folder.
 
-![[powershell mimikatz folder.png]]
+![powershell mimikatz folder.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/powershell%20mimikatz%20folder.png)
+
 Run `.\mimikatz.exe`.
-![[mimikatz exe.png]]
+
+![mimikatz exe.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/mimikatz%20exe.png)
 
 Going back to the **Wazuh** dashboard, if you search for "mimikatz" events, you may not get anything yet. 
 
-![[wazuh mimikatz alert 1.png]]
+![wazuh mimikatz alert 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20mimikatz%20alert%201.png)
 
 This is due to the fact that **Sysmon** or **Wazuh** rules may not be triggering alerts, because, by default, **Wazuh** will only log events whenever a rule or alert is triggered.
 
@@ -683,13 +675,13 @@ Go to the **Wazuh** manager terminal by accessing it via the Digital Ocean Dropl
 The **ossec.conf** file is located at `/var/ossec/etc/ossec.conf`.
 
 First, we'll create a backup copy of the config file by typing `cp /var/ossec/etc/ossec.conf ~/ossec-backup.conf`
-![[wazuh linux ossec backup.png]]
+![wazuh linux ossec backup.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20linux%20ossec%20backup.png)
 
 Now we'll edit the .conf file in **Nano**: `nano /var/ossec/etc/ossec.conf`
 
 Scroll down to the `<logall>` and `<logall_json>` options and change the value from 'no' to 'yes'
 
-![[wazuh manager nano.png]]
+![wazuh manager nano.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20manager%20nano.png)
 
 Save and exit the file.
 
@@ -697,7 +689,7 @@ Now we need to restart the **Wazuh** service by `systemctl restart wazuh-manager
 
 By then, **Wazuh** will now log all events and put it in a file called "**archives**", which is located at `/var/ossec/logs/archives`.
 
-![[wazuh archives 1.png]]
+![wazuh archives 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20archives%201.png)
 
 In order for **Wazuh** to start ingesting the logs, we need to configure our **filebeat** file. **Filebeat** is a log forwarder used by **Elasticsearch**. 
 
@@ -705,71 +697,83 @@ We can edit the **filebeat** config file in **nano** by `nano /etc/filebeat/file
 
 Scroll down to the `filebeat.modules` option, and change the `enabled` value under `archives` from false to `true`.
 
-![[filebeat true.png]]
+![filebeat true.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/filebeat%20true.png)
 
 Save the file and exit.
 
 Restart the **filebeat** service by `systemctl restart filebeat`.
 
+
 ### Creating a new Wazuh index
 
 In our **Wazuh** dashboard, click on the **3-line icon**, click on **Stack Management**, and select **Index Patterns**.
-![[wazuh stack management.png]]
-![[index patterns.png]]
+![wazuh stack management.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20stack%20management.png)
+
+![index patterns.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/index%20patterns.png)
 
 Inside **Index patterns**, we will originally see three patterns.
-![[index pattern list.png]]
+
+![index pattern list.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/index%20pattern%20list.png)
 
 We will need to create a new index pattern for our **archives**. Click on the **Create index pattern** and name the new pattern as `wazuh-archives-**`
 
-![[create new index.png]]
+![create new index.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/create%20new%20index.png)
 
-![[wazuh archives name.png]]
+![wazuh archives name.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20archives%20name.png)
+
 Click on **Next**, then select `timestamp` for the **Time field**, then click **Create index pattern**.
-![[timestamp time field.png]]
+
+![timestamp time field.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/timestamp%20time%20field.png)
 
 To make `wazuh-archives-**` our default index pattern, click on the **3-line icon** again and select **Discover**.
-![[discover.png]]
+
+![discover.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/discover.png)
 
 Then click the dropdown button and select `wazuh-archives-**`.
 
-![[wazuh archive default.png]]
+![wazuh archive default.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20archive%20default.png)
+
 It will take time before events start to flow in, but eventually they will come.
 
 You can also re-run **Mimikatz** in the Windows 10 client to see if any alerts appear in **Wazuh**.
 
 In the **Mimikatz** terminal, exit from the first run by typing `exit` and running it again.
-![[mimikatz rerun.png]]
+
+![mimikatz rerun.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/mimikatz%20rerun.png)
 
 Back in the **Wazuh** dashboard, search for "mimikatz" events again, and a couple of alerts should appear. We should focus more on the alert having an **Event ID** of "1", because it is the event ID for **process creation**. 
-![[mimikatz alert.png]]
+
+![mimikatz alert.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/mimikatz%20alert.png)
 
 Expanding the alert for more details, we can scroll down and see a field called `originalFileName`. We can use this field to create our alert for **Mimikatz**. This field is more reliable to use than the `image` field, because attackers can simply rename the file and it will reflect on that field, and they can bypass the alert, whereas the `originalFileName` field keeps the original name of that file, regardless of any renaming process.
 
-![[orignalfilename mimikatz.png]]
+![orignalfilename mimikatz.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/orignalfilename%20mimikatz.png)
 
 
 ### Creating Rules in Wazuh
 
 In the **Wazuh** dashboard, click on the drop-down button, click on **Management**, and select **Rules**.
-![[wazuh create rules.png]]
+
+![wazuh create rules.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20create%20rules.png)
 
 Click on **Manage Rules Files**.
-![[manage rules files.png]]
+
+![manage rules files.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/manage%20rules%20files.png)
 
 Search for "sysmon" and look for **0800-sysmon_id_1.xml**. Preview the file by clicking on the **eye** icon
 
-![[sysmon event id 1.png]]
+![sysmon event id 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/sysmon%20event%20id%201.png)
 
 We can copy the first rule and use it as our template.
-![[sysmon copy rule.png]]
+![sysmon copy rule.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/sysmon%20copy%20rule.png)
 
 Go back from the sysmon xml rule and click **Custom rules**.
 
-![[custom rules.png]]
+![custom rules.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/custom%20rules.png)
 
 Inside, we can see the `local_rules.xml` file. We can edit this by clicking on the **pencil** icon.
-![[local rules.png]]
+
+![local rules.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/local%20rules.png)
 
 We can paste the rule we copied earlier below the already existing rule inside **local_rules**.
 
@@ -781,22 +785,25 @@ We can paste the rule we copied earlier below the already existing rule inside *
 - Remove the `<options>` field, then change the `<description>` to `Mimikatz Usage Detected`.
 - Change the **mirtre id** to `T1003`,  (**credential dumping**), which is what **Mimikatz** is known to do.
 
-![[create mimikatz rule.png]]
+![create mimikatz rule.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/create%20mimikatz%20rule.png)
 
 Save the rule and restart the manager.
 
 Before we run **Mimikatz** again, we can try renaming the .exe file into something different.
-![[rename mimikatz.png]]
+![rename mimikatz.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/rename%20mimikatz.png)
 
 Now we'll run **Mimikatz** in powershell once more.
 
-![[verylegitprogram.png]]
+![verylegitprogram.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/verylegitprogram.png)
 
 Refresh the **Wazuh** dashboard, then go to **Security Events** to check if any alert has been triggered.
 
-![[mimikatz alert triggered.png]]![[mimikatz original name.png]]
+![mimikatz alert triggered.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/mimikatz%20alert%20triggered.png)
+
+![mimikatz original name.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/mimikatz%20original%20name.png)
 
 Even if we renamed **Mimikatz** into something else, the alert still triggered because we used the `originalFileName` value.
+
 
 # Part 5: Connect Suffle (SOAR), Send Alert to TheHive, Send to SOC Analyst via Email
 
@@ -804,28 +811,32 @@ Even if we renamed **Mimikatz** into something else, the alert still triggered b
 Head over to the **Shuffle** site (https://shuffler.io) and create an account
 
 Click on **Workflows**
-![[shuffle workflow.png]]
+
+![shuffle workflow.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20workflow.png)
 
 Click on **New Workflow** to create a new workflow
-![[shuffle new workflow.png]]
+
+![shuffle new workflow.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20new%20workflow.png)
 
 Name the workflow as "**SOC Automation Project**" and type any description that you like. For the **Usecases**, you can select any in the list. Click **Done** when you're ready.
-![[shuffle name workflow.png]]
+
+![shuffle name workflow.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20name%20workflow.png)
 
 This will be your new dashboard
-![[shuffle dashboard.png]]
+
+![shuffle dashboard.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20dashboard.png)
 
 Navigate to **Triggers** on the bottom left corner, then drag and drop the **Webhook** app into the dashboard.
-![[shuffle add webhook.png]]
+![shuffle add webhook.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20add%20webhook.png)
 
 Name the webhook as "**Wazuh-Alerts**", then copy the **Webhook URI**. We will need this URI to put into the **ossec.conf** file in our **Wazuh** manager.
-![[shuffle name webhook.png]]
+![shuffle name webhook.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20name%20webhook.png)
 
 Click on the **Change Me** icon, select the **Repeat back to me** option in the **Find Actions** tab, and on the **Call** tab, click on the plus icon and select **Execution Argument**.
-![[changeme settings.png]]
+![changeme settings.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/changeme%20settings.png)
 
 Save the changes.
-![[changeme save.png]]
+![changeme save.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/changeme%20save.png)
 
 #### Integrating Shuffle to Wazuh
 
@@ -842,7 +853,7 @@ Open the **ossec.conf** file with **nano**. Scroll down just past below the `<gl
 </integration>
 ```
 
-![[shuffle integration.png]]
+![shuffle integration.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20integration.png)
 
 Replace `YOUR_SHUFFLE_URL` with the url that we copied from **Shuffle** earlier. Add a space (  ) between the url and the `</hook_url>` closing tag to avoid the tag becoming a part of the url. This is indicated by having the url highlighted, but not the `</hook_url>` tag.
 
@@ -852,19 +863,21 @@ Save and exit the editor.
 
 Restart the wazuh manager service by `systemctl restart wazuh-manager.service` and check the status by `systemctl status wazuh-manager.service`
 
+
 #### Testing the integration
 
 In your Windows 10 VM, re-run **Mimikatz** to generate telemetry.
 
 In the **Shuffle** dashboard, click on the **Wazuh-Alerts** webhook and click **Start**. Then click on the running man icon at the bottom to show executions.
 
-![[shuffle test telemetry.png]]
+![shuffle test telemetry.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20test%20telemetry.png)
 
 This should show results regarding the telemetry. Click on the result and expand the **Execution Argument** tab.
-![[shuffle telemetry result.png]]
+
+![shuffle telemetry result.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20telemetry%20result.png)
 
 This shows us the information that is generated from **Wazuh**.
-![[shuffle info from wazuh.png]]
+![shuffle info from wazuh.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20info%20from%20wazuh.png)
 
 Before moving on with the **IOC Enrichment** setup, we'll review our current objectives for the workflow:
 1. **Mimikatz** alert sent to **Shuffle**
@@ -872,75 +885,96 @@ Before moving on with the **IOC Enrichment** setup, we'll review our current obj
 3. Check reputation score with **VirustTotal**
 4. Send details to **TheHive** to create alert
 5. Send email to **SOC Analyst** to begin investigation
+
+
 ### IOC Enrichment
 
-![[hash value.png]]
+![hash value.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/hash%20value.png)
 
 
 The file's return value for the **hashes** is appended by their hash type (e.g., **SHA1, MD5**). We will need to parse out the hash value itself to be sent to VirusTotal.
 
 
 Click on the **Change Me** icon, and search for "**Regex capture group**" in the **Find Actions** tab, and select it. You can also change the name of the icon to "**SHA256_Regex**".
-![[regex capture group.png]]
+
+![regex capture group.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/regex%20capture%20group.png)_
 
 In the **Input data**, select **Execution Argument** and find the **hashes** parameter. You can check the values of a parameter by hovering over it and looking at the details that appear beside it.
-![[input data.png]]
-![[execution argument hashes.png]]
+
+![input data.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/input%20data.png)
+
+![execution argument hashes.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/execution%20argument%20hashes.png)
 
 For the **Regex** field, we can utilize **ChatGPT** to help us create the formula for the hashes. We'll type a prompt to create a regex to parse our file's sha256 value. Copy the hash details of the file earlier and paste it in the prompt as seen below.
 
-![[regex field.png]]
-![[chatgpt hash prompt.png]]
+![regex field.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/regex%20field.png)
+
+![chatgpt hash prompt.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/chatgpt%20hash%20prompt.png)
 
 We can now copy the regex that **ChatGPT** has created after it has finished generating. 
-![[chatgpt finished regex.png]]
+
+![chatgpt finished regex.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/chatgpt%20finished%20regex.png)
 
 Paste the regex into the field and save the workflow.
-![[regex pasted.png]]
+
+![regex pasted.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/regex%20pasted.png)
 
 Click on the running person icon to show executions, then click the refresh button on top to re-run executions.
-![[refresh workflow.png]]
+
+![refresh workflow.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/refresh%20workflow.png)
 
 Expanding on the results will show us the parsed SHA256 hash of the file.
-![[regex parse result.png]]
+
+![regex parse result.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/regex%20parse%20result.png)
+
 
 #### Setting up VirusTotal
 
 Go to the **VirusTotal** (https://www.virustotal.com/) website and create an account 
 
 After signing up, request for your API key and copy it.
-![[virustotal api1.png]]
-![[virustotal api2.png]]
+
+![virustotal api1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20api1.png)
+
+![virustotal api2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20api2.png)
 
 
 In the **Apps** tab, search for **VirustTotal** and click it to activate the app. Once it has been added in your instance, drag and drop it into the workflow. Save the workflow first. Wait for a couple of minutes for **VirusTotal** to finish loading, then refresh the page.
 
-![[virustotal app.png]]
-![[virustotal drag and drop.png]]
+![virustotal app.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20app.png)
+
+![virustotal drag and drop.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20drag%20and%20drop.png)
+
 
 ##### Checking VirusTotal report file path
 
 Before we delve more into configuring **Virustotal** in the workflow, we must double check first its file path on reports, because it has become an issue to several users whenever they run the workflow with **VirusTotal**.
 
 According to the **VirusTotal** API documentation (https://docs.virustotal.com/reference/file-info), the correct file path for getting a file report by hash is in `https://www.virustotal.com/api/v3/files/{id}`
-![[virustotal filepath.png]]
+
+![virustotal filepath.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20filepath.png)
 
 We should take note of this file path.
 
 Going back to the **Shuffle** dashboard, click on **Apps** on top of the page.
 
-![[shuffle go to apps.png]]
+![shuffle go to apps.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20go%20to%20apps.png)
 
 Click on the icon on the top right of **VirusTotal**.
-![[virustotal top right.png]]
+
+![virustotal top right.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20top%20right.png)
 
 Click the **FORK** button to edit the files.
-![[virustotal fork.png]]
+
+![virustotal fork.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20fork.png)
 
 Click on **Get a hash report**, then make sure that the **URL path/Curl statement** value is `/files/{id}`. Then click on **Submit** and **SAVE**.
-![[virustotal edit file 1.png]]
-![[virustotal edit file 2.png]]
-![[virustotal edit file 3.png]]
+
+![virustotal edit file 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20edit%20file%201.png)
+
+![virustotal edit file 2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20edit%20file%202.png)
+
+![virustotal edit file 3.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20edit%20file%203.png)
 
 
 #### Configuring the VirusTotal app
@@ -948,34 +982,36 @@ Click on **Get a hash report**, then make sure that the **URL path/Curl statemen
 Click on the **VirusTotal** icon to change its settings. You can change the name to just "Virustotal".
 
 In the **Find Actions** option, search for "hash" and select **Get a hash report.**
-![[virustotal get hash report.png]]
+![virustotal get hash report.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20get%20hash%20report.png)
 
 Click on **AUTHENTICATE VIRUSTOTAL V3** for us to authenticate using our API key.
-![[authenticate virustotal.png]]
+![authenticate virustotal.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/authenticate%20virustotal.png)
 
 You can paste your API key here, then click **Submit**.
-![[authenticate virustotal2.png]]
+![authenticate virustotal2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/authenticate%20virustotal2.png)
 
 
 In the **Hash** field, click on the plus icon, select **SHA256_Regex**, then select **list**.
-![[hash field regex.png]]
-![[hash field regex2.png]]
+
+![hash field regex.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/hash%20field%20regex.png)
+
+![hash field regex2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/hash%20field%20regex2.png)
 
 Save your workflow after. Click on the running person icon to show executions, then select the most recent **Wazuh** run. Then click on the refresh icon to re-run the workflow.
 
-![[virustotal rerun.png]]
+![virustotal rerun.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20rerun.png)
 
-![[virustotal rerun2.png]]
+![virustotal rerun2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20rerun2.png)
 
 After re-running the workflow, expand the **VirusTotal** results.
 
-![[virustotal result.png]]
+![virustotal result.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20result.png)
 
 For some reason, the result **status** shows the **404** code, which means that the file or path cannot be found. The OK status should be **200**. 
 
 According to **MyDFIR**, this is a technical or network issue on **Shuffler's** side, so we cannot do anything about it currently. But for now, we already know how to parse the file hash and send to **VirusTotal** to get a hash report and enrich **IOCs**.
 
-![[virustotal 404.png]]
+![virustotal 404.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/virustotal%20404.png)
 
 The next step is to send the details to **TheHive** so that it can create an alert for case management.
 
@@ -983,42 +1019,48 @@ The next step is to send the details to **TheHive** so that it can create an ale
 
 In the **Apps** tab, search for "thehive", then click on the app to activate it.
 
-![[thehive app.png]]
+![thehive app.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20app.png)
 
 Drag and drop **TheHive** app into the dashboard, save your workflow, wait for a couple of minutes for the app to finish loading its features, then refresh the page.
-![[thehive drag and drop.png]]
+
+![thehive drag and drop.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20drag%20and%20drop.png)
 
 Go to **TheHive** web interface located at `THEHIVE_VM_IP:9000`, then log in with the default credentials of `admin@thehive.local` and the password `secret`.
+
 
 #### Creating a new organisation
 
 By default, we will only see one organisation on the dashboard named "**admin**". We will need to create a new user for ourselves. 
 
 Click on the **plus** icon on the top left to add an organisation. Name it however you want, then put "SOC Automation Project" in the **Description** section. Click **Confirm** when ready.
-![[thehive add organization.png]]
+![thehive add organization.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20add%20organization.png)
 
 We can now see two organisations, the default **admin** and our newly created one. Click the latest organisation to view its users.
 
-![[thehive organizations.png]]
+![thehive organizations.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20organizations.png)
+
 
 #### Creating users
 
 Currently, there are no users yet, so we should create one. Click on the **plus** icon.
-![[thehive add user.png]]
+
+![thehive add user.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20add%20user.png)
 
 We will leave the **Type** as "Normal", then choose your preferred login with the suffix "`@test.com`". Type your preferred name, then in the **Profile** tab, choose **analyst**. Then click **"Save and add another"**.
-![[thehive save add another.png]]
+
+![thehive save add another.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20save%20add%20another.png)
 
 For the other user, we will select the **Type** as "Service". For the **Login**, we will use `shuffle@test.com` and name it "**SOAR**". We will choose "analyst" for the **Profile**, and click **Confirm**.
 
 **NOTE:** In a real-world scenario, we should be assigning profiles for each user with the **principles of least privilege** in mind. 
-![[thehive add shuffle user.png]]
+![thehive add shuffle user.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20add%20shuffle%20user.png)
 
 Next, we will create a password for our main user. In the dashboard, click on **PREVIEW** when you hover over your user link.
 Click on **Edit password** to create your password, then click **Confirm**. 
 
-![[thehive preview user.png]]
-![[thehive set password.png]]
+![thehive preview user.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20preview%20user.png)
+
+![thehive set password.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20set%20password.png)
 
 For our **SOAR** user, click on **Create** on the **API Key** section and copy it. We will need this to authenticate with **Shuffle**. 
 
@@ -1026,8 +1068,10 @@ Once the password is set and the API key is created, log out of the admin accoun
 
 These are the default dashboards for the cases and alerts inside the analyst page.
 
-![[thehive cases.png]]
-![[thehive alerts.png]]
+![thehive cases.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20cases.png)
+
+![thehive alerts.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20alerts.png)
+
 
 ### Authenticating TheHive with Shuffle
 
@@ -1035,14 +1079,17 @@ Go back to the **Shuffle** dashboard. Click on **TheHive** app and select **AUTH
 
 Paste your **SOAR** API key in the field, and change the url into your **TheHive**'s public ip + port 9000. Click **Submit** when finished. Make sure to save your workflow.
 
-![[authenticate thehive.png]]
+![authenticate thehive.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/authenticate%20thehive.png)
 
 Connect **VirusTotal** to **TheHive**. Then click on **TheHive**, and on the **Find Actions** tab, select **Create Alert**.
-![[thehive settings 1.png]]
+
+![thehive settings 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20settings%201.png)
 
 Scroll down to the **Date** section. Select **Execution Argument**, then select the **utcTime** value under **eventdata**.
-![[thehive set date.png]]
-![[thehive utctime.png]]
+
+![thehive set date.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20set%20date.png)
+
+![thehive utctime.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20utctime.png)
 
 For the **Description**, type the following message and values:
 
@@ -1051,8 +1098,9 @@ Mimikatz detected on host: "Execution Argument -> system -> computer`"
 from user: "Execution Argument -> eventdata -> user"
 ```
 
-![[thehive computer value.png]]
-![[thehive user value.png]]
+![thehive computer value.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20computer%20value.png)
+
+![thehive user value.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20user%20value.png)
 
 Scroll down and set the following values:
 - **Flag** = `false`
@@ -1063,7 +1111,7 @@ Scroll down and set the following values:
 - **Sourceref** = `"Rule: 100002"`
 - **Status** = `New`
 
-![[thehive settings 2.png]]
+![thehive settings 2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20settings%202.png)
 
 For the **Summary**, type the following message and values:
 ```
@@ -1072,53 +1120,67 @@ and the Process ID is: 'Execution Argument -> eventdata -> processId`
 and the Command Line is: 'Execution Argument -> eventdata -> commandLine`
 ```
 
-![[thehive computer value.png]]
-![[thehive process id.png]]
-![[thehive command line.png]]
+![thehive computer value.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20computer%20value.png)
+
+![thehive process id.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20process%20id.png)
+
+![thehive command line.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20command%20line.png)
 
 For the **Tags** = ["T1003"]
-![[thehive tags.png]]
+
+![thehive tags.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20tags.png)
 
 For the **Title**, we can parent it to the alert title.
-![[thehive alert title.png]]
+
+![thehive alert title.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20alert%20title.png)
 
 For the **Tlp** = `2`
 - **Tlp** is short for **Traffic light protocol**, which is the level of confidentiality of information
 
 For **Type** = `Internal`
-![[thehive settings 3.png]]
+![thehive settings 3.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20settings%203.png)
 
 Save your workflow after this.
 
 Before testing the workflow, we will need to configure our cloud firewall to allow inbound connections in port 9000. 
 Go back to the **DigitalOcean** dashboard and navigate to the firewall options.
-![[firewall 9000_1.png]]
+
+![firewall 9000_1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/firewall%209000_1.png)
 
 Create a rule that allows inbound **TCP** connections in port **9000**. We can remove IPv6 connections, but retain **All IPv4**. 
-![[firewall 9000_2.png]]
+
+![firewall 9000_2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/firewall%209000_2.png)
+
 Save the settings then go back to the **Shuffle** dashboard.
 
 In the **Shuffle** dashboard, click on the running person icon to show executions, then refresh the run.
 
-![[thehive test run.png]]
+![thehive test run.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20test%20run.png)
 
 We can now see that **TheHive** has successfully created an alert.
-![[thehive result.png]]
+
+![thehive result.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20result.png)
+
 To confirm this, we'll go back to our **TheHive** dashboard.
 
 Sure enough, the alert is now present in the dashboard. Expanding on the alert will show us the details that we inputted back in **Shuffle**.
-![[thehive mimikatz alert.png]]
-![[thehive mimikatz alert expand.png]]
+
+![thehive mimikatz alert.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20mimikatz%20alert.png)
+
+![thehive mimikatz alert expand.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20mimikatz%20alert%20expand.png)
 
 The next step is to send an email to the analyst with the information gathered. 
+
 
 ### Sending Alert to Analyst via Email
 
 In the **Apps** tab, search for "e-mail", then click on the **Email** app to activate it.
-![[thehive email.png]]
+
+![thehive email.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20email.png)
 
 Drag and drop the **Email** app into the dashboard, then connect **VirusTotal** to it.
-![[thehive virustotal connect email.png]]
+
+![thehive virustotal connect email.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20virustotal%20connect%20email.png)
 
 Click on the **Email** app inside the dashboard to access its settings.
 For the **Recipients**, it is best to provide a temporary or disposable email address for this lab.
@@ -1132,37 +1194,41 @@ Title: 'Execution Argument -> title'
 Host: 'Execution Argument -> system -> computer'
 ```
 
-![[thehive utctime.png]]![[thehive alert title.png]]
-![[thehive computer value.png]]
+![thehive utctime.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20utctime.png)
+
+![thehive alert title.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20alert%20title.png)
+
+![thehive computer value.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/thehive%20computer%20value.png)
 
 Save your workflow after.
 
 Click on the running person icon again to show executions, then refresh the run. 
 
 We can now see that **Shuffle** has successfully sent an email to the analyst.
-![[shuffle email sent.png]]
+![shuffle email sent.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20email%20sent.png)
 
 Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst of the detection.
 
-![[inbox email received.png]]
+![inbox email received.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/inbox%20email%20received.png)
 
 
 # Part 6: Ubuntu Client and Responsive Action
 
 ### Creating an Ubuntu machine in DigitalOcean
 
-![[create droplet 1.png]]
-![[ubuntu droplet settings 1.png]]
+![create droplet 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/create%20droplet%201.png)
 
-![[ubuntu droplet settings 2.png]]
+![ubuntu droplet settings 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20droplet%20settings%201.png)
 
-![[ubuntu droplet settings 3.png]]
+![ubuntu droplet settings 2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20droplet%20settings%202.png)
 
-![[ubuntu droplet settings 4.png]]
+![ubuntu droplet settings 3.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20droplet%20settings%203.png)
 
-![[ubuntu agent dashboard.png]]
+![ubuntu droplet settings 4.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20droplet%20settings%204.png)
 
-![[ubuntu new firewall.png]]
+![ubuntu agent dashboard.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20agent%20dashboard.png)
+
+![ubuntu new firewall.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20new%20firewall.png)
 
 
 ### Installing Wazuh agent in Ubuntu
@@ -1175,14 +1241,18 @@ Then run the following commands to install the **Wazuh** agent.
 
 `curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg`
 
-![[ubuntu instal gpg key.png]]
+![ubuntu instal gpg key.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20instal%20gpg%20key.png)
 
 `echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | tee -a /etc/apt/sources.list.d/wazuh.list`
-![[ubuntu add repository.png]]`apt-get update`
+
+![ubuntu add repository.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20add%20repository.png)
+
+`apt-get update`
 
 
 `WAZUH_MANAGER="10.0.0.2" apt-get install wazuh-agent`
-![[ubuntu wazuh finish install cli.png]]
+
+![ubuntu wazuh finish install cli.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20wazuh%20finish%20install%20cli.png)
 
 `systemctl daemon-reload`
 `systemctl enable wazuh-agent`
@@ -1194,27 +1264,31 @@ Then run the following commands to install the **Wazuh** agent.
 After installing the **Wazuh** agent, we will go back to the **Wazuh** web interface to see the Ubuntu machine registered.
 
 In the **Security Events,** we will also see a flood of brute-force ssh attempts in our machine. 
-![[wazuh ubuntu agent success.png]]
-![[ubuntu ssh attempts.png]]
+
+![wazuh ubuntu agent success.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20ubuntu%20agent%20success.png)
+
+![ubuntu ssh attempts.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ubuntu%20ssh%20attempts.png)
+
 
 ### Block SSH attempts on Ubuntu agent
 
 We will need the **API user** credentials that we took note in the earlier steps inside our **Wazuh** manager. The **.txt** file is located at `wazuh-install-files/wazuh-passwords.txt`.
 
-![[cat wazuh password.png]]
+![cat wazuh password.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/cat%20wazuh%20password.png)
 
-![[wazuh api user 1.png]]
+![wazuh api user 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20api%20user%201.png)
 
 Back in our **Shuffle** dashboard, we will disconnect our current workflow first and rebuild it with the responsive action workflow included. We need to stop the **Wazuh-Alerts** app first, then detach the branches.
 
-![[shuffle stop wazuh.png]]
-![[shuffle delete branch.png]]
+![shuffle stop wazuh.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20stop%20wazuh.png)
+
+![shuffle delete branch.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20delete%20branch.png)
 
 In the **Apps** tab, drag and drop the **Http** app and rename it as "**Get-API**". Select **Curl** in the **Find Actions** tab.
 
-![[http drag and drop.png]]
+![http drag and drop.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/http%20drag%20and%20drop.png)
 
-![[http rename get api.png]]
+![http rename get api.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/http%20rename%20get%20api.png)
 
 Select **Expand window** in the **Statement** tab and input the following command:
 `curl -u USER:PASSWORD -k -X GET "https://WAZUH-IP:55000/security/user/authenticate?raw=true"`
@@ -1223,59 +1297,69 @@ Be sure to replace the values of **USER**, **PASSWORD**, and the **WAZUH-IP** in
 
 Click **Submit** when finished and save your workflow.
 
-![[curl expand.png]]
+![curl expand.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/curl%20expand.png)
 
-![[curl expand command line.png]]
+![curl expand command line.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/curl%20expand%20command%20line.png)
 
 
 In the **Apps** tab, search for "wazuh" and click on the app to activate it.
 
-![[shuffle wazuh app.png]]
+![shuffle wazuh app.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20wazuh%20app.png)
 
 Drag and drop the **Wazuh** app into the dashboard
-![[wazuh drag and drop.png]]
 
+![wazuh drag and drop.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20drag%20and%20drop.png)
 
 We can partially rebuild our workflow to test the responsive capability without the presence of user input yet.
 
 First, we should run the workflow with only the **Wazuh Alerts** trigger and **Get-API** app connected to collect report details.
 
-![[get report detail.png]]
+![get report detail.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/get%20report%20detail.png)
 
-![[get api report detail.png]]
+![get api report detail.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/get%20api%20report%20detail.png)
 
 These details will be important in feeding into **Virustotal** and **Wazuh** later on.
-![[srcip.png]]
+
+![srcip.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/srcip.png)
 
 Also, take note of the **srcip** under the data section, we will be pinging it later. 
+
+
 #### Reconfiguring Virustotal Action
 
 Click on the **Virustotal** app, and in the **Find Actions** section, select "**Get an IP address report**".
 
 For the **Ip** section, input `$exec.all_fields.agent.ip`.
-![[reconfigure virustotal.png]]
-![[agent ip.png]]
+
+![reconfigure virustotal.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/reconfigure%20virustotal.png)
+
+![agent ip.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/agent%20ip.png)
+
 
 ### Restructuring the workflow
 
 Click on the **Wazuh-Alerts** app and start it. Then we can connect the following apps: **Wazuh-Alerts** -> **Get-API** -> **Virustotal** -> **Wazuh**.
 
-![[shuffle partial rebuild.png]]
+![shuffle partial rebuild.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20partial%20rebuild.png)
 
 Click on the **Wazuh** app to edit its details. We will leave the **Find Actions** tab on "Run command", then on the **Apikey** tab, click the plus icon and select **Get-API**.
 
-![[wazuh shuffle details 1.png]]
+![wazuh shuffle details 1.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20shuffle%20details%201.png)
 
 Input your **Wazuh** public IP on the **localhost** value inside the **Url** tab.
-![[wazuh shuffle details 2.png]]
+![wazuh shuffle details 2.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20shuffle%20details%202.png)
 
 For the **Agents list** tab, we will need to identify our machine's **Agent ID**. One way to view it is to go to the **Agents** dashboard in the **Wazuh** interface and looking at the **ID** row on the machines. 
-![[wazuh agent id.png]]
+
+![wazuh agent id.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20agent%20id.png)
 
 We can also select its values by clicking the plus icon, then "**Execution Argument** -> **agent** -> **id**".
-![[shuffle select agent id.png]]
+
+![shuffle select agent id.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20select%20agent%20id.png)
+
 Select the value for **Wait for complete** to "true".
-![[wait for complete true.png]]
+
+![wait for complete true.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wait%20for%20complete%20true.png)
 
 Before moving on with the rest of the settings, we will need to access our **Wazuh** manager console to configure the active response settings.
 
@@ -1283,20 +1367,25 @@ Open the **ossec.conf** file with **nano** located at `/var/ossec/etc/ossec.conf
 
 Search for "active response" by `ctrl+w` and scroll down to the listed commands under it. The command that we will be using is `firewall-drop`
 
-![[conf file active response.png]]
+![conf file active response.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/conf%20file%20active%20response.png)
+
 `firewall-drop` will modify the IP tables of the Ubuntu machine and drop all traffic inbound the machine. 
 We will make an active response tag and make sure that the command reflects the command name we want to use. 
 
 Scroll down until we see the `<active-reponse>` tag. We will modify this to use the `firewall-drop` command.
-![[active response tag.png]]
+
+![active response tag.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/active%20response%20tag.png)
 
 The final tag should look like this:
-![[active response modified.png]]
+
+![active response modified.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/active%20response%20modified.png)
+
 The `local` location means that the active response will be implemented by wherever the alert was triggered from. In our case, the local location is our Ubuntu machine.
 
 Save the file and exit. 
 
 We will restart the wazuh manager through `systemctl restart wazuh-manager`
+
 
 ### Testing Active Response
 
@@ -1306,44 +1395,49 @@ Example of this is the `firewall-drop` command. If we want to use this command v
 
 One way to see the name and test to see if the script is active is to use an **agent control binary**, which is located at `/var/ossec/bin`.
 
-![[agent control location.png]]
+![agent control location.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/agent%20control%20location.png)
 
 Running `agent_control` without options will show us this list:
-![[agent control options.png]]
+
+![agent control options.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/agent%20control%20options.png)
+
 We can use `-L` to list available active responses.
 
-![[agent control response name.png]]
+![agent control response name.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/agent%20control%20response%20name.png)
+
 This shows us the response name of the active reponse, which is `firewall-drop`, along with the timeout value appended to it. 
+
 
 #### Pinging Google DNS on Ubuntu Machine
 
 To test our active reponse action, we can ping **Google's** DNS (8.8.8.8) on our Ubuntu machine.
 
-![[ping google.png]]
+![ping google.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ping%20google.png)
 
 Then, while the ping is running, we can execute the following command in our **Wazuh** manager console: 
 `./agent_control -b 8.8.8.8 -f firewall-drop0 -u 002`
 
 Going back to our Ubuntu machine, we see that it has stopped pinging. Looking at `iptables --list` shows us that it drops everything inbound from Google's DNS.
 
-![[ping no response.png]]
+![ping no response.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ping%20no%20response.png)
 
-![[iptables list.png]]
+![iptables list.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/iptables%20list.png)
 
 
 We can check if the active response is working by looking at the `active-reponses.log` located at `/var/ossec/logs`
-![[active response log location.png]]'
 
-![[active response log.png]]
+![active response log location.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/active%20response%20log%20location.png)
+
+![active response log.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/active%20response%20log.png)
 
 
 Back in our **Shuffle dashboard**, enter the following values for the **Alert** and **Command** tabs:
 - For **Alert**: `{"data":{"srcip":"8.8.8.8"}}`
 - For **Command**: `firewall-drop0`
-![[wazuh shuffle details 3.png]]
+
+![wazuh shuffle details 3.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20shuffle%20details%203.png)
 
 Save your workflow.
-
 
 Before running executions in **Shuffle**, we'll go back to our Ubuntu machine to ping Google's DNS again. We can type `iptables --flush` to flush out our earlier ping session and begin a new one.
 
@@ -1352,9 +1446,10 @@ Ping Google's DNS at **8.8.8.8** and, then switch back to the **Shuffle** dashbo
 
 Checking at the result, it shows the affected items (agent id: **002**), and checking the IP tables on the Ubuntu machine shows Google's DNS being dropped.
 
-![[wazuh active response result.png]]
+![wazuh active response result.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20active%20response%20result.png)
 
-![[wazuh active response ip table result.png]]
+![wazuh active response ip table result.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20active%20response%20ip%20table%20result.png)
+
 
 ### Enabling User Input on alerts
 
@@ -1362,11 +1457,11 @@ In this step, we will set up a user input to send an email to the analyst with t
 
 In the **Triggers** tab, drag and drop the **User Input** trigger into the dashboard.
 
-![[user input trigger.png]]
+![user input trigger.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/user%20input%20trigger.png)
 
 We can then remove the **Wazuh** app from the flow for the time being and replace it with the **User input** trigger.
 
-![[wazuh replace user input.png]]
+![wazuh replace user input.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20replace%20user%20input.png)
 
 Click the **User input** trigger to change its settings.
 
@@ -1378,33 +1473,36 @@ Do you want to block this source IP: $exec.all_fields.data.srcip ?
 
 In the **Input options**, tick the **Email** box and input your analyst email address, preferably a temporary one.
 
-![[user input settings.png]]
+![user input settings.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/user%20input%20settings.png)
 
 We will now connect the **Wazuh** app back after the **User input** trigger.
-![[wazuh connect back.png]]
+![wazuh connect back.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20connect%20back.png)
 
 In the **Alert** tab, remove **8.8.8.8** to replace it with another IP via `$exec.all_fields.data.srcip`.
-![[wazuh source ip.png]]
+
+![wazuh source ip.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/wazuh%20source%20ip.png)
 
 Save your workflow after this.
+
 
 ### Testing the final workflow
 
 In your Ubuntu machine, we will start pinging the source IP that we took note of earlier.
 
-![[ping ip.png]]
+![ping ip.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ping%20ip.png)
 
 In our **Shuffle** dashboard, re-rerun the the execution with all nodes connected.
-![[shuffle final run.png]]
+
+![shuffle final run.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20final%20run.png)
 
 After running the execution, you should be able to receive an email from **Shuffle** requiring user input.
 
-![[userinput email.png]]
+![userinput email.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/userinput%20email.png)
 
 Clicking the **TRUE** link will forward you to a confirmation page telling us that the action is implemented.
 
-![[shuffle action done.png]]
+![shuffle action done.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/shuffle%20action%20done.png)
 
 Going back to the Ubuntu machine, we can see that the ping has stopped and the IP connection was dropped.
 
-![[ip dropped.png]]
+![ip dropped.png](https://github.com/cs421/Create_Homelab_Project/blob/main/SOC%20Automated%20Project/attachments/ip%20dropped.png)
