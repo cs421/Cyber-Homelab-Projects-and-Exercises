@@ -1052,6 +1052,10 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 
 ### Installing Wazuh agent in Ubuntu
 
+Access the Ubuntu machine by either the **Droplet** console in **DigitalOcean** or via ssh, depending on which one is faster for you.
+
+Then run the following commands to install the **Wazuh** agent.
+
 `sudo apt-get update && apt-get upgrade`
 
 `curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg`
@@ -1072,7 +1076,9 @@ Going to our inbox, we see the message sent by **Shuffle**, alerting the analyst
 `sed -i "s/^deb/#deb/" /etc/apt/sources.list.d/wazuh.list`
 `apt-get update`
 
+After installing the **Wazuh** agent, we will go back to the **Wazuh** web interface to see the Ubuntu machine registered.
 
+In the **Security Events,** we will also see a flood of brute-force ssh attempts in our machine. 
 ![[wazuh ubuntu agent success.png]]
 ![[ubuntu ssh attempts.png]]
 
@@ -1083,12 +1089,6 @@ We will need the **API user** credentials that we took note in the earlier steps
 ![[cat wazuh password.png]]
 
 ![[wazuh api user 1.png]]
-
-We will also need to reconfigure our **Wazuh-Alerts** webhook in our manager ossec.conf file. Open `/var/ossec/etc/ossec.conf` , and we will replace the `<rule_id>` tag with `<level>` and put its value at 5.
-
-![[change level tag.png]]
-
-Save the file and exit. Restart the **Wazuh** manager.
 
 Back in our **Shuffle** dashboard, we will disconnect our current workflow first and rebuild it with the responsive action workflow included. We need to stop the **Wazuh-Alerts** app first, then detach the branches.
 
