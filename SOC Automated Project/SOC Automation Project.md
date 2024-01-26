@@ -3,14 +3,23 @@
 ![SOC Automated Homelab Diagram](https://github.com/cs421/Create_Homelab_Project/assets/152476259/712059be-5d9b-47b8-9490-74bc760df2f1)
 
 **1.** The  **Wazuh** agent (Windows 10 client) will send events to the internet.
+
 **2.** The **Wazuh** manager will then receive those events sent by the client and will create alerts.
+
 **3.** **Wazuh** will send the alerts to **Shuffle**
+
 **4.** **Shuffle** will send the alerts over to the Internet for IOC enrichment via OSINT (Open Source Intelligence), then back to **Shuffle**
+
 **5.** **Shuffle** will then send the alerts over to **TheHive** for case management.
-**6.** **Shuffle** will also send and email to the SOC analyst regarding the alerts.
+
+**6.** **Shuffle** will also send and email to the SOC analyst regarding the alerts
+
 **7.** The SOC analyst will receive the email sent by **Shuffle**. The email should contain details of the alert, and will ask the question, "Do you want to contain this event or not?" to the SOC analyst.
+
 **8.** The SOC analyst will send the appropriate response action to **Shuffle**, which, in turn, will send the response back to the **Wazuh**.
+
 **9.** **Wazuh** will instruct the agent to perform the appropriate responsive action.
+
 
 # Part 2: Installing Virtual Machines and Applications
 
