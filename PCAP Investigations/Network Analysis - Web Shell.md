@@ -199,5 +199,5 @@ Following the tcp stream, we see that the attacker has successfully created a we
 
 # Challenge Submission
 
-![[challenge submission.png]]
+![challenge submission](https://github.com/cs421/Create_Homelab_Project/assets/152476259/ed3f2e7d-34b2-4da5-aaa4-d42341a5c5df)
 
