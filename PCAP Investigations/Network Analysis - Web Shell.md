@@ -1,4 +1,4 @@
-This PCAP investigation activity is a retired network analysis challenge from **Blue Team Labs Online**(https://blueteamslabs.online), and completed by 
+This PCAP investigation activity is a retired network analysis challenge from **Blue Team Labs Online** (https://blueteamslabs.online), and completed with guidance from **MYDFIR** (https://www.youtube.com/watch?v=0DuJnPxKfBg)
 
 ![[btlo challenges.png]]
 ![[btlo retired.png]]
@@ -177,6 +177,7 @@ Packet 16203 shows us the initial connection to port 4422
 "In real life scenarios, persistence is likely to occur, such as creating a cron job, modifying ssh keys, or spinning up a cryptominer." - MyDFIR
 ```
 
+# Challenge Submission
 
-
+![[challenge submission.png]]
 
