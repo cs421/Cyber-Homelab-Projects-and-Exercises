@@ -1,5 +1,5 @@
 {
-  "shiba-theme-settings@@shiba-accent-style": true,
+  "shiba-theme-settings@@shiba-accent-style": false,
   "shiba-theme-settings@@shiba-accent-colors": "accent-red",
   "shiba-theme-settings@@shiba-colors-theme-dark": "pure-dark",
   "things-style@@h3-color": "#95F22E"

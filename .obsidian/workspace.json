@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC Automated Project/SOC Automation Project.md",
+                "file": "Untitled/Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOC Automated Project/SOC Automation Project.md",
+                "file": "Untitled/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOC Automated Project/SOC Automation Project.md",
+                "file": "Untitled/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOC Automated Project/SOC Automation Project.md"
+                "file": "Untitled/Untitled.md"
               }
             }
           },
@@ -165,14 +165,17 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "c181a3bf971b852a",
   "lastOpenFiles": [
+    "Pasted image 20240220170953.png",
+    "SOC Automated Project/SOC Automation Project.md",
+    "Untitled/Untitled.md",
+    "Untitled",
     "README.md",
     "SOC Automated Project/attachments/ip dropped.png",
     "SOC Automated Project/attachments/shuffle action done.png",
     "SOC Automated Project/attachments/shuffle final run.png",
     "SOC Automated Project/attachments/userinput email.png",
-    "SOC Automated Project/SOC Automation Project.md",
     "SOC Automated Project/attachments/ping ip.png",
     "SOC Automated Project/attachments/srcip.png",
     "SOC Automated Project/attachments/user input settings.png",
@@ -196,7 +199,6 @@
     "test note.md",
     "new folder",
     "new folder",
-    "repository",
-    "01 Configuring PfSense - Firewall and Network Segmentation"
+    "repository"
   ]
 }
