@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled/Untitled.md",
+                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled/Untitled.md",
+                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled/Untitled.md",
+                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled/Untitled.md"
+                "file": "PCAP Investigations/Network Analysis - Web Shell.md"
               }
             }
           },
@@ -165,23 +165,24 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "c181a3bf971b852a",
+  "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
-    "Pasted image 20240220170953.png",
+    "PCAP Investigations/attachments/dest ip port 80 open.png",
+    "PCAP Investigations/attachments/btlo wireshark change time.png",
+    "PCAP Investigations/attachments/btlo portscan udp conversations.png",
+    "PCAP Investigations/attachments/btlo portscan sqlmap last time.png",
+    "PCAP Investigations/attachments/btlo portscan sql attack decode.png",
+    "PCAP Investigations/attachments/btlo portscan python command.png",
+    "PCAP Investigations/attachments/btlo portscan protocol hierarcy.png",
+    "PCAP Investigations/attachments/btlo portscan port 80 connect.png",
+    "PCAP Investigations/attachments/btlo portscan port 80 22 scan.png",
+    "PCAP Investigations/attachments/btlo portscan packet 16201.png",
+    "PCAP Investigations/attachments/btlo portscan packet 16201 http stream.png",
+    "PCAP Investigations/attachments",
     "SOC Automated Project/SOC Automation Project.md",
-    "Untitled/Untitled.md",
-    "Untitled",
+    "PCAP Investigations/Network Analysis - Web Shell.md",
+    "PCAP Investigations",
     "README.md",
-    "SOC Automated Project/attachments/ip dropped.png",
-    "SOC Automated Project/attachments/shuffle action done.png",
-    "SOC Automated Project/attachments/shuffle final run.png",
-    "SOC Automated Project/attachments/userinput email.png",
-    "SOC Automated Project/attachments/ping ip.png",
-    "SOC Automated Project/attachments/srcip.png",
-    "SOC Automated Project/attachments/user input settings.png",
-    "SOC Automated Project/attachments/get api report detail.png",
-    "SOC Automated Project/attachments/change level tag.png",
-    "SOC Automated Project/attachments/get report detail.png",
     "Untitled.md",
     "SOC Automated Project/Untitled/Untitled.md",
     "SOC Automated Project/attachments",
@@ -198,7 +199,6 @@
     "attachments",
     "test note.md",
     "new folder",
-    "new folder",
-    "repository"
+    "new folder"
   ]
 }
