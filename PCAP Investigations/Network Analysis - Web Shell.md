@@ -1,3 +1,4 @@
+This PCAP investigation activity is a retired network analysis challenge from **Blue Team Labs Online**(https://blueteamslabs.online), and completed by 
 
 ![[btlo challenges.png]]
 ![[btlo retired.png]]
