@@ -165,8 +165,9 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "c181a3bf971b852a",
   "lastOpenFiles": [
+    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations/attachments/challenge submission.png",
     "PCAP Investigations/attachments/dest ip port 80 open.png",
     "PCAP Investigations/attachments/btlo wireshark change time.png",
@@ -177,10 +178,8 @@
     "PCAP Investigations/attachments/btlo portscan protocol hierarcy.png",
     "PCAP Investigations/attachments/btlo portscan port 80 connect.png",
     "PCAP Investigations/attachments/btlo portscan port 80 22 scan.png",
-    "PCAP Investigations/attachments/btlo portscan packet 16201.png",
     "PCAP Investigations/attachments",
     "SOC Automated Project/SOC Automation Project.md",
-    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations",
     "README.md",
     "Untitled.md",
