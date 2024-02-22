@@ -52,10 +52,22 @@ What are they doing? What activity is associated with the IPs?
 ![[user agent.png]]
 The user-agent detail is in the 6th column of the log and is surround by quotation marks , so we'll use the **cut** function to select them and use ' **"** ' as the delimiter.
 
-`cat access.log | cut -d '"' -f 6 | sort uniq -c | sort -nr`
+`cat access.log | cut -d '"' -f 6 | sort | uniq -c | sort -nr`
 
 ![[cut f6.png]]
 
 There are some details that are not related to user agents, such as the [Thu Jan 14....] data. We'll need to run an additional **cut** function, then use the " [ " as the delimiter on the first field after the first cut function
 
-``
+`cat access.log | cut -d '"' -f 6 | cut -d "[" -f 1 | sort | uniq -c | sort -nr`
+
+![[cut f6 f1.png]]
+
+#### Output result to Txt file
+We can now output the user agent results to a text file called **"useragents.txt"**.
+
+`cat access.log | cut -d '"' -f 6 | cut -d "[" -f 1 | sort | uniq -c | sort -nr > useragents.txt`
+
+![[useragents txt.png]]
+
+We need to take note of these 3 user agents to dig deeper into later.
+![[sus user agents.png]]
