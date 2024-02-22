@@ -35,6 +35,18 @@ This lists the IPs found in the first field, but does not sort them of duplicate
 
 #### De-duplication
 `cat access.log | cut -d ' ' -f 1 | sort uniq -c | sort -nr`
-`sort uniq -c` - sorts the duplicate strings or data and does a count of the duplicates
+`sort | uniq -c` - sorts the duplicate strings or data and does a count of the duplicates
 `sort -nr` - shows the top hits in descending order
+![[access log sort uniq.png]]
+There are **1035** hits for the IP **172.21.0.1**. There are also non-IP data, such as "[Thu]", "sh:", and "[Tue"
+
+#### Output result to Txt file
+
+`cat access.log | cut -d ' ' -f1 | sort | uniq -c | sort -nr > IPs.txt`
+
+![[ips txt.png]]
+Take note of the top 2 IPs, **172.21.0.1** and **119.241.22.121**.
+What are they doing? What activity is associated with the IPs?
+
+### List User Agents
 
