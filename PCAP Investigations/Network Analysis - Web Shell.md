@@ -124,17 +124,14 @@ Looking at the filter result, the usual length of packets vary from 500-700. But
 ![[btlo portscan packet 7725.png]]
 - Following its http stream and scrolling down, we see the directory in which the server has responded from. 
 - The directory's name is */info.php*, and it is an html file with *phpinfo* as the title.
-
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%207725%20apache%20version.png)
+![[btlo portscan packet 7725 apache version.png]]
 - The version of php used is also visible in the info, which means that the attacker can be able to look for vulnerabilities to exploit in this particular version.
-
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20gobuster%20end.png)
+![[btlo portscan gobuster end.png]]
 **gobuster** ended its search at **16:34:06**.
 
 ## SQLmap
-
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2013979.png)
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2013979%20http%20stream.png)
+![[btlo portscan packet 13979.png]]
+![[btlo portscan packet 13979 http stream.png]]
 
 Further down the list, we see another POST request from **10.251.96.4** to **10.251.96.5** at packet 13979
 - Following the http stream, the **User-Agent** has changed to: *sqlmap/1.4.7*.
@@ -142,46 +139,45 @@ Further down the list, we see another POST request from **10.251.96.4** to **10.
 - They also tried to login with the following credentials: *username=user&password=pass*.
 Time **sqlmap** was first encountered is at **16:36:17**
 
+![[btlo portscan packet 14060.png]]
+![[btlo portscan packet 14060 http stream.png]]
+![[btlo portscan sql attack decode.png]]
 
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2014060.png)
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2014060%20http%20stream.png)
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20sql%20attack%20decode.png)
 In packet 14060, we see an unusual POST request from **10.251.96.4** to **10.251.96.5**. 
 - Following the http stream, we see a string of what could only be an SQL attack.
 - Pasting the string into the URL decoder will give us the script that the attacker is trying to to.
 	- Their end goal is to execute a command that will read */etc/passwd* as provided by the command `EXEC xp_cmdshell('cat ../../../etc/passwd')`
-
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20sqlmap%20last%20time.png)
+![[btlo portscan sqlmap last time.png]]
 
 The last POST request made by **sqlmap** is on packet 15978, which ended at **16:37:28**.
+![[btlo portscan filter post request.png]]
 
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20filter%20post%20request.png)
 We will search for POST requests made by **10.251.96.4** by the filter syntax: `http.request.method == POST && ip.addr == 10.251.96.4`.
 - The result displayed that the last POST method made is on packet 16102 and occured at **16:40:39**.
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20last%20post%20http%20stream.png)
+![[btlo portscan last post http stream.png]]
 
 Following the http stream, the POST request was made on the */upload.php* file, and refered to by *editprofile.php*. 
 - The attackers must have clicked on *editprofile.php*, which they clicked on */upload.php* that was inside.
 - The filename that was uploaded was **dbfunctions.php**.
 
 On packet 16134, we see a GET function performed on **dbfunctions.php?cmd=id**
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20get%20dbfunction.png)
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20get%20uid.png)
+![[btlo portscan get dbfunction.png]]
+![[btlo portscan get uid.png]]
 
 Following the http stream, we see that the command is successful in getting the UIDs and GIDs.
 
 The attacker initiated the **id** command at **16:40:51**
+![[btlo portscan packet 16201.png]]
+![[btlo portscan packet 16201 http stream.png]]
+![[btlo portscan python command.png]]
 
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2016201.png)
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2016201%20http%20stream.png)
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20python%20command.png)
 On packet 16201, there is another GET request on **dbfunctions**, followed by encoded commands.
 - Following the http stream, we see a clearer view of the command.
 - Running the command into the url decoder reveals a python command that imports a connection to **10.251.96.4** on port **4422**, and a call for a subproces `["/bin/sh","-i"]`
+![[btlo portscan 4422 initial connect.png]]
 
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%204422%20initial%20connect.png)
 Packet 16203 shows us the initial connection to port 4422
-![](https://github.com/cs421/Create_Homelab_Project/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%204422%20stream.png)
+![[btlo portscan 4422 stream.png]]
 
 Following the tcp stream, we see that the attacker has successfully created a web shell (**dbfunctions.php**) in which they now have hands-on keyboard access on the server.
 - Looking at the stream, they were listing directories and attempting to remove the files that they uploaded, but failed to do so.
