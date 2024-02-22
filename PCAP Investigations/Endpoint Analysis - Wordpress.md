@@ -68,6 +68,10 @@ We can now output the user agent results to a text file called **"useragents.txt
 `cat access.log | cut -d '"' -f 6 | cut -d "[" -f 1 | sort | uniq -c | sort -nr > useragents.txt`
 
 ![[useragents txt.png]]
+The top two user agents are **Linux** using **Mozilla 5.0** and **iPhone** using **Mozilla 5.0**.
 
-We need to take note of these 3 user agents to dig deeper into later.
 ![[sus user agents.png]]
+We need to take note of these 3 user agents to dig deeper into later.
+
+### POST Requests
+Web traffic that have **POST** requests are usually worth looking into because they send data to the server.
