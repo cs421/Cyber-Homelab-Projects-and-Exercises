@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b4f2970ebb20d578",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "PCAP Investigations/Network Analysis - Web Shell.md",
                 "mode": "source",
                 "source": false
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md"
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md"
               }
             }
           },
@@ -167,8 +179,12 @@
   },
   "active": "c181a3bf971b852a",
   "lastOpenFiles": [
-    "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+    "Pasted image 20240222165634.png",
+    "Pasted image 20240222165602.png",
+    "PCAP Investigations/attachments/download wordpress.png",
     "PCAP Investigations/Network Analysis - Web Shell.md",
+    "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+    "PCAP Investigations/attachments/blue team wordpress.png",
     "PCAP Investigations/attachments/btlo portscan packet 13979.png",
     "SOC Automated Project/SOC Automation Project.md",
     "PCAP Investigations/attachments/challenge submission.png",
@@ -177,9 +193,6 @@
     "PCAP Investigations/attachments/btlo portscan udp conversations.png",
     "PCAP Investigations/attachments/btlo portscan sqlmap last time.png",
     "PCAP Investigations/attachments/btlo portscan sql attack decode.png",
-    "PCAP Investigations/attachments/btlo portscan python command.png",
-    "PCAP Investigations/attachments/btlo portscan protocol hierarcy.png",
-    "PCAP Investigations/attachments/btlo portscan port 80 connect.png",
     "PCAP Investigations/attachments",
     "PCAP Investigations",
     "README.md",
