@@ -75,3 +75,11 @@ We need to take note of these 3 user agents to dig deeper into later.
 
 ### POST Requests
 Web traffic that have **POST** requests are usually worth looking into because they send data to the server.
+
+`grep POST access.log`
+![[grep post.png]]
+![[403.png]]There are **POST** requests that return the code **403**. **403** are forbidden errors, so we can exclude them in the search.
+
+`grep POST access.log | grep -v '403'`
+`-v` - tells grep to exclude a string or a pattern
+
