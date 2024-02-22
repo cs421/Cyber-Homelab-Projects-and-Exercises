@@ -40,7 +40,7 @@ This lists the IPs found in the first field, but does not sort them of duplicate
 ![[access log sort uniq.png]]
 There are **1035** hits for the IP **172.21.0.1**. There are also non-IP data, such as "[Thu]", "sh:", and "[Tue"
 
-#### Output result to Txt file
+#### Output result to TXT file
 
 `cat access.log | cut -d ' ' -f1 | sort | uniq -c | sort -nr > IPs.txt`
 
@@ -62,7 +62,7 @@ There are some details that are not related to user agents, such as the [Thu Jan
 
 ![[cut f6 f1.png]]
 
-#### Output result to Txt file
+#### Output result to TXT file
 We can now output the user agent results to a text file called **"useragents.txt"**.
 
 `cat access.log | cut -d '"' -f 6 | cut -d "[" -f 1 | sort | uniq -c | sort -nr > useragents.txt`
@@ -83,3 +83,15 @@ Web traffic that have **POST** requests are usually worth looking into because t
 `grep POST access.log | grep -v '403'`
 `-v` - tells grep to exclude a string or a pattern
 
+![[grep 403.png]]
+
+#### List Source IPs with POST Requests
+We can list and output the source IPs that made **POST** requests.
+`grep 'POST' access.log | grep -v '403' | cut -d ' ' -f 1 | sort | uniq -c | sort -nr`
+![[source ip post.png]]Take note of the 2nd IP, **103.69.55.212**, as this could be an IP of interest.
+
+#### Output result to TXT file
+We can now output the source IP results to a file called **"POSTIPs.txt"**.
+`grep 'POST' access.log | grep -v '403' | cut -d ' ' -f 1 | sort | uniq -c | sort -nr > POSTIPs.txt`
+
+![[output post ip.png]]
