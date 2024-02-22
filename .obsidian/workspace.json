@@ -177,8 +177,12 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "c181a3bf971b852a",
+  "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
+    "tail access log.png",
+    "head access log.png",
+    "PCAP Investigations/attachments/head access log.png",
+    "PCAP Investigations/attachments/wordpress unzip.png",
     "Pasted image 20240222165634.png",
     "Pasted image 20240222165602.png",
     "PCAP Investigations/attachments/download wordpress.png",
@@ -189,10 +193,6 @@
     "SOC Automated Project/SOC Automation Project.md",
     "PCAP Investigations/attachments/challenge submission.png",
     "PCAP Investigations/attachments/dest ip port 80 open.png",
-    "PCAP Investigations/attachments/btlo wireshark change time.png",
-    "PCAP Investigations/attachments/btlo portscan udp conversations.png",
-    "PCAP Investigations/attachments/btlo portscan sqlmap last time.png",
-    "PCAP Investigations/attachments/btlo portscan sql attack decode.png",
     "PCAP Investigations/attachments",
     "PCAP Investigations",
     "README.md",
