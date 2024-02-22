@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "SOC Automated Project/SOC Automation Project.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "SOC Automated Project/SOC Automation Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "SOC Automated Project/SOC Automation Project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md"
+                "file": "SOC Automated Project/SOC Automation Project.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   "active": "c181a3bf971b852a",
   "lastOpenFiles": [
     "PCAP Investigations/Network Analysis - Web Shell.md",
+    "PCAP Investigations/Endpoint Analysis - Wordpress.md",
     "PCAP Investigations/attachments/challenge submission.png",
     "PCAP Investigations/attachments/dest ip port 80 open.png",
     "PCAP Investigations/attachments/btlo wireshark change time.png",
