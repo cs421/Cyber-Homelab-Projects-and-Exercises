@@ -49,4 +49,13 @@ Take note of the top 2 IPs, **172.21.0.1** and **119.241.22.121**.
 What are they doing? What activity is associated with the IPs?
 
 ### List User Agents
+![[user agent.png]]
+The user-agent detail is in the 6th column of the log and is surround by quotation marks , so we'll use the **cut** function to select them and use ' **"** ' as the delimiter.
 
+`cat access.log | cut -d '"' -f 6 | sort uniq -c | sort -nr`
+
+![[cut f6.png]]
+
+There are some details that are not related to user agents, such as the [Thu Jan 14....] data. We'll need to run an additional **cut** function, then use the " [ " as the delimiter on the first field after the first cut function
+
+``
