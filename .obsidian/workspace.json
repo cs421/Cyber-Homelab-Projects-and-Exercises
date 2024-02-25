@@ -30,19 +30,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "7ff7554d7d566c61",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.8"
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -188,8 +177,9 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "7ff7554d7d566c61",
+  "active": "c181a3bf971b852a",
   "lastOpenFiles": [
+    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations/attachments/wordpress/output post ip.png",
     "PCAP Investigations/attachments/wordpress/source ip post.png",
     "PCAP Investigations/attachments/wordpress/grep 403.png",
@@ -202,8 +192,6 @@
     "PCAP Investigations/attachments/wordpress/cut f6 f1.png",
     "PCAP Investigations/attachments/wordpress/cut f6.png",
     "PCAP Investigations/attachments/wordpress/user agent.png",
-    "Pasted image 20240222173153.png",
-    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations/Endpoint Analysis - Wordpress.md",
     "SOC Automated Project/SOC Automation Project.md",
     "PCAP Investigations/attachments",
