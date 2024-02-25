@@ -30,8 +30,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7ff7554d7d566c61",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -177,7 +188,7 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "7ff7554d7d566c61",
   "lastOpenFiles": [
     "PCAP Investigations/attachments/wordpress/output post ip.png",
     "PCAP Investigations/attachments/wordpress/source ip post.png",
