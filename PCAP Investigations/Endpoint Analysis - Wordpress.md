@@ -162,4 +162,21 @@ We see interactions with the **contact-form-7** and **simple-file-list** plugins
 ![[hb token.png]]
 Scrolling down, we see a POST request to **itsec-hb-token=adminlogin**, which occured on **Jan 14 2021 05:54:14 UTC**.
 
-This could mean that that atta
+This could mean that that attackers have identified a token that grants them access.
+
+![[wpscan.png]]Further down, we also see the IP using the user agent **WPScan v3.8.10**, which occured on **Jan 14 2021 06:01:41 UTC**.
+
+![[fr43k rename.png]]On **Jan 14 2021, 06:26:53 UTC**, we see a POST request for **simple-file-list**, then immediately we see a GET request for **fr34k.png**.
+
+This could be the exploit's process of renaming **.png** files to **.php**. 
+
+##### OSINT
+###### AbuseIPDB
+![[abuse 119 241 22 121.png]]
+ISP: BIGLOBE Inc.
+Domain: biglobe.co.jp
+Location: Nagano, Japan
+
+###### VirusTotal
+![[virustotal 119 241 22 121.png]]
+AbuseIPDB and VirusTotal did not return any results of malicious activity for **119.241.22.121**. ''
