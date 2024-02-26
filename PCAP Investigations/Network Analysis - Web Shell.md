@@ -1,16 +1,15 @@
 This PCAP investigation activity is a retired network analysis challenge from **Blue Team Labs Online** (https://blueteamslabs.online), and completed with guidance from **MYDFIR** (https://www.youtube.com/watch?v=0DuJnPxKfBg)
 
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20challenges.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20retired.png)
-
+![[btlo challenges.png]]
+![[btlo retired.png]]
 
 # Scenario
 The SOC received an alert in their SIEM for ‘Local to Local Port Scanning’ where an internal private IP began scanning another internal system. Can you investigate and determine if this activity is malicious or not? You have been provided a PCAP, investigate using any tools you wish.
 
 ## Capture File Properties
 View capture file properties to take note of the time frame.
+![[btlo portscan capture file properties.png]]
 
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20capture%20file%20properties.png)
 ```ad-important
 Always ask the client this question:
 "The PCAP you provided me is within this [time frame], is that correct?"
@@ -18,7 +17,7 @@ Always ask the client this question:
 
 
 ## Protocol Hierarchy
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20protocol%20hierarcy.png)
+![[btlo portscan protocol hierarcy.png]]
 
 Look out for the following protocols:
 - SMB
@@ -29,26 +28,26 @@ They can be indicators of a potential lateral move opportunity.
 
 ## Conversations
 ### IPv4
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/blto%20portscan%20conversation.png)
+![[blto portscan conversation.png]]
 Take note of the top 2 conversations and IP addresses:
 - **10.251.96.4** & **10.251.96.5**
 - **172.20.10.5** & **172.20.10.2**
 
 ### TCP
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/blto%20portscan%20tcp%20conversation.png)
+![[blto portscan tcp conversation.png]]
 Src IP (**10.251.96.4**) using the same src port (**41675**) to different dest ports of dest ip (**10.251.96.5**) indicates **port scanning**.
 
 ```ad-note
 Ports should be unique **per connection attempt**. If the IP uses the same port in different connection attempts, it usually indicates **port scanning** activity.
 ```
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20port%2080%20connect.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20port%2080%2022%20scan.png)
+![[btlo portscan port 80 connect.png]]
+![[btlo portscan port 80 22 scan.png]]
 - Scrolling down, we can see that **10.251.96.4** had multiple connections with port **80** (http).
 - Going back to the top, we see that **10.251.96.4**'s connection attempt at port **80** consisted of 184 bytes, rather than the usual 118 bytes shown by other connection attempts on the list. This might mean that dest IP's port 80 had responded back with a **SYN/ACK** packet. 
 - The same is seen on dest IP's port 22. port 22 is **SSH**.
 
 This indicates that dest IP's port 80 and port 22 is **open**.
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/dest%20ip%20port%2080%20open.png)
+![[dest ip port 80 open.png]]
 
 - Scrolling further down, we see that dest IP **10.251.96.5** had responded to src IP **10.251.96.4** on port **4422**. 
 - There is also an external IP that starts with **34.122.121.31** connecting with dest IP on port 80. This can be a C2 server or just something legitimate.
@@ -57,22 +56,22 @@ We can hypothesize that dest IP **10.251.96.5** is a web server of some sort, bu
 We can also see the second conversation between **172.20.10.5** and **172.20.10.2**.
 
 ### UDP
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20udp%20conversations.png)
+![[btlo portscan udp conversations.png]]
 
 Checking the UDP section, we see DHCP and DNS requests and a few NetBIOS requests.
 
 ## Scanning PCAP
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20wireshark%20change%20time.png)
 
+![[btlo wireshark change time.png]]
 This changes the time info from duration of connection to the date and time of the day.
 
 We will select the first HTTP connection, which is on packet **14**, and follow its HTTP stream.
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20first%20http.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20http%20stream.png)
+![[btlo portscan first http.png]]
+![[btlo portscan http stream.png]]
 
 According to the HTTP stream, we can see that the IP **172.20.10.2** is an Ubuntu server.
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2038%20post.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2038%20http%20stream.png)
+![[btlo portscan packet 38 post.png]]
+![[btlo portscan packet 38 http stream.png]]
 
 Scrolling further down, we see the first **POST** packet in the pcap. following its http stream, we see credentials that were used to log in.
 
@@ -82,27 +81,27 @@ Scrolling further down, we see the first **POST** packet in the pcap. following 
 In POST requests, special characters are usually encoded. Just search up 'URL decoder' and paste the character you wish to decode. In the case above, the special character is the '%40' part of the password. Running it to the URL decoder will give us the character '@'.
 ```
 
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20first%20red%20connection.png)
+![[btlo portscan first red connection.png]]
 
 Scrolling further down, we see the first red connection, which is also the start of the conversation between the src IP **10.251.96.4** and dest IP **10.251.96.5**
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20add%20port%20details.png)
+![[btlo portscan add port details.png]]
 
 This adds the source and destination port details in the main display.
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%20133.png)
+![[btlo portscan packet 133.png]]
 
 On packet 133 and 134, There was a SYN/ACK connection from dest IP **10.251.96.4** on port 80, confirming that port 80 is open on the dest IP.
 
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%20150.png)
+![[btlo portscan packet 150.png]]
 
 In packet 150 and 151, we can also confirm that port 22 on dest IP **10.251.96.4** is open.
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%202172.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%202172%20htp%20stream.png)
+![[btlo portscan packet 2172.png]]
+![[btlo portscan packet 2172 htp stream.png]]
 
 - In packet 2172, we see that this is the first communication between **10.251.96.5** and **10.251.96.4** on port 80. 
 - Following the http stream, we can see that dest IP **10.251.96.5** is an Ubuntu server.
 - We will also take note of the **User-Agent**: *Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0*
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%202190.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%202190%20http%20stream.png)
+![[btlo portscan packet 2190.png]]
+![[btlo portscan packet 2190 http stream.png]]
 
 - Packet 2190 provides us with the first POST request from **10.251.96.4** to **10.251.96.5**.
 - Following 2190's http stream, we see the following credentials:
@@ -110,8 +109,8 @@ In packet 150 and 151, we can also confirm that port 22 on dest IP **10.251.96.4
 		- Running **%27** in the URL decoder will give us the ( ' ) symbol.
 
 ## gobuster
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%202215.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%202215%20http%20stream.png)
+![[btlo portscan packet 2215.png]]
+![[btlo portscan packet 2215 http stream.png]]
 
 - Scrolling further down, we see another GET request in packet 2215.
 - Following the http stream, we see that the **User-Agent** has changed to: *gobuster/3.01*.
@@ -119,21 +118,21 @@ In packet 150 and 151, we can also confirm that port 22 on dest IP **10.251.96.4
 - Time of **gobuster**'s first action: **16:34:05**
 
 We will search for response code **200** from IP **10.251.96.5** using the filter: `(http.response.code == 200) && (ip.src==10.251.96.5)`
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20200%20filter%20result.png)
+![[btlo portscan 200 filter result.png]]
 
 Looking at the filter result, the usual length of packets vary from 500-700. But packet 7725 has a length of 8494, which means that the server is delivering something big to its destination (**10.251.96.4**).
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%207725.png)
+![[btlo portscan packet 7725.png]]
 
 - Following its http stream and scrolling down, we see the directory in which the server has responded from. 
 - The directory's name is */info.php*, and it is an html file with *phpinfo* as the title.
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%207725%20apache%20version.png)
+![[btlo portscan packet 7725 apache version.png]]
 - The version of php used is also visible in the info, which means that the attacker can be able to look for vulnerabilities to exploit in this particular version.
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20gobuster%20end.png)
+![[btlo portscan gobuster end.png]]
 **gobuster** ended its search at **16:34:06**.
 
 ## SQLmap
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2013979.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2013979%20http%20stream.png)
+![[btlo portscan packet 13979.png]]
+![[btlo portscan packet 13979 http stream.png]]
 
 Further down the list, we see another POST request from **10.251.96.4** to **10.251.96.5** at packet 13979
 - Following the http stream, the **User-Agent** has changed to: *sqlmap/1.4.7*.
@@ -141,8 +140,8 @@ Further down the list, we see another POST request from **10.251.96.4** to **10.
 - They also tried to login with the following credentials: *username=user&password=pass*.
 Time **sqlmap** was first encountered is at **16:36:17**
 
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2014060.png)
-![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20packet%2014060%20http%20stream.png)
+![[btlo portscan packet 14060.png]]
+![[btlo portscan packet 14060 http stream.png]]
 ![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/PCAP%20Investigations/attachments/btlo%20portscan%20sql%20attack%20decode.png)
 
 In packet 14060, we see an unusual POST request from **10.251.96.4** to **10.251.96.5**. 
