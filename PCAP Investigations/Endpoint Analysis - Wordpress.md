@@ -95,3 +95,19 @@ We can now output the source IP results to a file called **"POSTIPs.txt"**.
 `grep 'POST' access.log | grep -v '403' | cut -d ' ' -f 1 | sort | uniq -c | sort -nr > POSTIPs.txt`
 
 ![[output post ip.png]]
+
+### OSINT
+Perform OSINT on the 2nd IP (**103.69.55.212**)
+
+![[abuseipdb.png]]**AbuseIPDB results:**
+ISP: Quewu Co. Ltd.
+Domain Name: pni.tw
+Location: Taipei, Taiwan
+
+![[taiwan ip virustotal.png]]No results on **VirusTotal**.
+
+### Check Logs
+Use `grep` to check log activity associated with **103.69.55.212**.
+`grep '103.69.55.212' access.log`
+
+![[103 69 55 212 grep.png]]
