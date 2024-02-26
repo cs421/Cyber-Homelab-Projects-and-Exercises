@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4f55cc662746319c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "PCAP Investigations/Network Analysis - Web Shell.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -165,21 +178,26 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "b4f2970ebb20d578",
+  "active": "fa65d2267ac2638c",
   "lastOpenFiles": [
+    "btlo challenges.png",
     "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+    "btlo challenges.png.md",
+    "Pasted image 20240226175915.png",
     "PCAP Investigations/Network Analysis - Web Shell.md",
+    "conflict-files-obsidian-git.md",
+    "Network Analysis - Web Shell.md",
+    "PCAP Investigations/attachments/web shell/blto portscan conversation.png",
+    "PCAP Investigations/attachments/web shell/webshell challenge.png",
+    "PCAP Investigations/attachments/web shell/dest ip port 80 open.png",
+    "PCAP Investigations/attachments/web shell/btlo wireshark change time.png",
+    "PCAP Investigations/attachments/web shell/btlo portscan udp conversations.png",
+    "PCAP Investigations/attachments/web shell/btlo portscan sqlmap last time.png",
+    "PCAP Investigations/attachments/web shell/btlo portscan sql attack decode.png",
+    "PCAP Investigations/attachments/web shell/btlo portscan python command.png",
+    "PCAP Investigations/attachments/web shell/btlo portscan protocol hierarcy.png",
+    "PCAP Investigations/attachments/web shell",
     "SOC Automated Project/SOC Automation Project.md",
-    "PCAP Investigations/attachments/wordpress/contact form wpscan.png",
-    "PCAP Investigations/attachments/wordpress/wordpress challenge.png",
-    "PCAP Investigations/attachments/wordpress/simple file activate.png",
-    "PCAP Investigations/attachments/wordpress/contact form activate.png",
-    "PCAP Investigations/attachments/wordpress/virustotal 119 241 22 121.png",
-    "PCAP Investigations/attachments/wordpress/abuse 119 241 22 121.png",
-    "PCAP Investigations/attachments/wordpress/fr43k rename.png",
-    "PCAP Investigations/attachments/wordpress/wpscan.png",
-    "PCAP Investigations/attachments/wordpress/hb token.png",
-    "PCAP Investigations/attachments/wordpress/ip crawling.png",
     "PCAP Investigations/attachments/web shell",
     "PCAP Investigations/attachments/wordpress",
     "PCAP Investigations/attachments",
@@ -198,7 +216,6 @@
     "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
     "Virtual Lab Building Project",
-    "attachments",
     "test note.md"
   ]
 }
