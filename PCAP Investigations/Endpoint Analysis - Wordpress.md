@@ -127,4 +127,14 @@ The summary indicates that attackers can upload arbitrary files because the plug
 
 ![[Pasted image 20240226153824.png]]
 
-A recent https://wpscan.com/plugin/contact-form-7/
+A recent update on https://wpscan.com/plugin/contact-form-7/ indicates that the arbitrary file upload vulnerability on Contact Form 7 has been fixed in version 5.8.4, with a CVSS of 6.6 (medium)
+
+#### Simple File List
+![[google simple file list.png]]
+![[exploitdb simple file list.png]]ExploitDB has a code of how the arbitrary file upload for Simple File List is executed.
+
+We also see that the exploit is a **pre-authenticated Remote Code Execution**
+
+### Filter Plugins
+We will now filter the log results to show only activities associated with **contact-form-7** and **simple-file-list**.
+
