@@ -125,7 +125,7 @@ A LinkedIn post (https://www.linkedin.com/pulse/contact-form-7-wordpress-plugin-
 
 The summary indicates that attackers can upload arbitrary files because the plugin fails to properly sanitize user-supplied input.
 
-![[Pasted image 20240226153824.png]]
+![[contact form wpscan.png]]
 
 A recent update on https://wpscan.com/plugin/contact-form-7/ indicates that the arbitrary file upload vulnerability on Contact Form 7 has been fixed in version 5.8.4, with a CVSS of 6.6 (medium)
 
