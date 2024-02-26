@@ -138,13 +138,22 @@ We also see that the exploit is a **pre-authenticated Remote Code Execution**
 ### Filter Plugins
 We will now filter the log results to show only activities associated with **contact-form-7** and **simple-file-list**, and find any activities regarding file uploads.
 
+#### Contact Form 7
 `grep 'POST' access.log | grep -i 'contact'`
 `-i` - ignores case sensitivity
 ![[grep contact.png]]
 The result for **contact-form-7** did not return any file upload activities.
 
+#### Simple File List
 `grep 'POST' access.log | grep -i 'simple'`
 ![[grep simple.png]]The results for **simple-file-list** has returned file upload activities, with the filename of **fr34k.php**.
 
-We also see another IP (**119.241.22.121**) in the result.
+We also see another IP (**119.241.22.121**) in the result, using a "**python-requests**" user agent. This could be an automated event.
+
+#### 119.241.22.121
+
+`grep '119.241.22.121' access.log`
+![[grep 119 241 22 121.png]]The first event recorded for this IP was on **Jan. 14 2021** at **05:42:34 UTC**.
+
+We see interactions with the **contact-form-7** and **simple-file-list** plugins, at it is using an iPhone, but could be spoofed.
 
