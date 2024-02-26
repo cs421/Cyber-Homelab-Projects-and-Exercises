@@ -115,4 +115,16 @@ Upon scrolling down, we see a POST request for a file called "**fr34k.php**", wh
 
 ![[plugin.png]]Scrolling back to the beginning of the log, we see GET requests on a couple of plugins: "**contact-form-7**" and "**simple-file-list**". Recalling the scenario, it is hypothesized that a plugin had a vulnerability for remote code execution in which the attacker might have exploited.
 
-We can search for possible vulnerabi
+We can search for possible vulnerabilities about these plugins.
+
+#### Contact Form 7
+![[google contact form.png]]
+![[contact form linkedin 1.png]]![[contact form linkedin 2.png]]
+
+A LinkedIn post (https://www.linkedin.com/pulse/contact-form-7-wordpress-plugin-vulnerability-isha-singh) listed vulnerability details on the Contact Form 7 plugin, including the impact and ways to protect against it.
+
+The summary indicates that attackers can upload arbitrary files because the plugin fails to properly sanitize user-supplied input.
+
+![[Pasted image 20240226153824.png]]
+
+A recent https://wpscan.com/plugin/contact-form-7/
