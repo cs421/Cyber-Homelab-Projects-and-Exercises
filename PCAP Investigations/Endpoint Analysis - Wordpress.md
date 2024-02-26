@@ -193,12 +193,45 @@ We will check the earliest date and time the two plugins were installed or activ
 ![[simple file activate.png]]The **simple-file-list** plugin was first activated on **Jan 12 2021, 15:56:41 UTC**.
 
 ## Recap
-**January 12, 2021, 15:56:41 UTC**
-Plugin: contact-form-7 was activated
+###### January 12, 2021
+**15:56:41 UTC**
+Plugin: **contact-form-7** was activated
 
-**January 12, 2021, 15:57:07 UTC**
-Plugin: simple-file-list was activated
+**15:57:07 UTC**
+Plugin: **simple-file-list** was activated
 
 *Both plugins have vulnerabilities to RCE*
-contact-form-7 - version 5.3.1
-simple-file-list - version 4.2.2
+contact-form-7 - version 5.3.1 and below
+simple-file-list - version 4.2.2 and below
+
+###### January 14, 2021
+**05:42:32 UTC**
+First External IP activity
+IP: **119.241.22.121 - Japan**
+*Interacting with both plugins*
+*Crawling file paths on 172.21.0.3*
+
+**05:54:14 UTC**
+Identified Token: **adminlogin**
+Full URI: **wp-login.php?itsec-hb-token=adminlogin**
+
+**06:01:41 UTC**
+IP: **119.241.22.121 - Japan**
+Used tool: **WPScan (WordPress Scanner)**
+
+**06:08:31 UTC**
+IP: **103.69.55.212 - Taiwan**
+*Crawling plugins on 172.21.0.3*
+
+**06:26:53 UTC**
+IP: **119.241.22.121 - Japan**
+- Exploited plugin: **simple-file-list**
+- Uploaded file named: **fr34k.png**
+- GET Request towards **fr43k.php**
+
+###### Last Observed Activity
+**January 14, 2021 06:26:53 UTC**
+IP: **119.241.22.121 - Japan**
+
+**January 14, 2021 06:30:11 UTC**
+
