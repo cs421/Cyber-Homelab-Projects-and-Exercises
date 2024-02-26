@@ -179,4 +179,15 @@ Location: Nagano, Japan
 
 ###### VirusTotal
 ![[virustotal 119 241 22 121.png]]
-AbuseIPDB and VirusTotal did not return any results of malicious activity for **119.241.22.121**. ''
+
+AbuseIPDB and VirusTotal did not return any results of malicious activity for **119.241.22.121**. 
+
+### Checking First Activity
+We will check the earliest date and time the two plugins were installed or activated
+
+#### Contact Form 7
+`grep -i 'contact-form-7' access.log`
+![[contact form activate.png]]The **contact-form-7** plugin was first activated on **Jan 12 2021, 15:57:07 UTC**.
+
+`grep -i 'simple-file-list' access.log`
+![[simple file activate.png]]The **simple-file-list** plugin was first activated on **Jan 12 2021, 15:56:41 UTC**.
