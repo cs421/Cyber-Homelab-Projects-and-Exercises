@@ -136,5 +136,15 @@ A recent update on https://wpscan.com/plugin/contact-form-7/ indicates that the 
 We also see that the exploit is a **pre-authenticated Remote Code Execution**
 
 ### Filter Plugins
-We will now filter the log results to show only activities associated with **contact-form-7** and **simple-file-list**.
+We will now filter the log results to show only activities associated with **contact-form-7** and **simple-file-list**, and find any activities regarding file uploads.
+
+`grep 'POST' access.log | grep -i 'contact'`
+`-i` - ignores case sensitivity
+![[grep contact.png]]
+The result for **contact-form-7** did not return any file upload activities.
+
+`grep 'POST' access.log | grep -i 'simple'`
+![[grep simple.png]]The results for **simple-file-list** has returned file upload activities, with the filename of **fr34k.php**.
+
+We also see another IP (**119.241.22.121**) in the result.
 

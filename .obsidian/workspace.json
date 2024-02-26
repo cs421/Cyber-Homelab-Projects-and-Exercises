@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c181a3bf971b852a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b4f2970ebb20d578",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
                 "mode": "source",
                 "source": false
               }
@@ -177,21 +165,21 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "b4f2970ebb20d578",
   "lastOpenFiles": [
-    "PCAP Investigations/attachments/wordpress/exploitdb simple file list.png",
-    "google simple file list.png",
-    "wpscan contact form.png",
+    "grep simple.png",
+    "grep contact.png",
+    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+    "PCAP Investigations/attachments/wordpress/exploitdb simple file list.png",
+    "PCAP Investigations/attachments/wordpress/google simple file list.png",
+    "PCAP Investigations/attachments/wordpress/wpscan contact form.png",
     "Pasted image 20240226153824.png",
     "PCAP Investigations/attachments/wordpress/contact form linkedin 2.png",
     "PCAP Investigations/attachments/wordpress/contact form linkedin 1.png",
-    "google contact form.png",
-    "plugin.png",
+    "PCAP Investigations/attachments/wordpress/google contact form.png",
+    "PCAP Investigations/attachments/wordpress/plugin.png",
     "PCAP Investigations/attachments/wordpress/fr34k.png",
-    "PCAP Investigations/attachments/wordpress/103 69 55 212 grep.png",
-    "taiwan ip virustotal.png",
-    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations/attachments/web shell",
     "PCAP Investigations/attachments/wordpress",
     "SOC Automated Project/SOC Automation Project.md",
