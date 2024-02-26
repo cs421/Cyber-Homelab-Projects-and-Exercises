@@ -110,4 +110,9 @@ Location: Taipei, Taiwan
 Use `grep` to check log activity associated with **103.69.55.212**.
 `grep '103.69.55.212' access.log`
 
-![[103 69 55 212 grep.png]]
+![[103 69 55 212 grep.png]]![[fr34k.png]]
+Upon scrolling down, we see a POST request for a file called "**fr34k.php**", which is suspicious.
+
+![[plugin.png]]Scrolling back to the beginning of the log, we see GET requests on a couple of plugins: "**contact-form-7**" and "**simple-file-list**". Recalling the scenario, it is hypothesized that a plugin had a vulnerability for remote code execution in which the attacker might have exploited.
+
+We can search for possible vulnerabi
