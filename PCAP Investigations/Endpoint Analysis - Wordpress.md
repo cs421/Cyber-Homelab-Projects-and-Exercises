@@ -191,3 +191,14 @@ We will check the earliest date and time the two plugins were installed or activ
 
 `grep -i 'simple-file-list' access.log`
 ![[simple file activate.png]]The **simple-file-list** plugin was first activated on **Jan 12 2021, 15:56:41 UTC**.
+
+## Recap
+**January 12, 2021, 15:56:41 UTC**
+Plugin: contact-form-7 was activated
+
+**January 12, 2021, 15:57:07 UTC**
+Plugin: simple-file-list was activated
+
+*Both plugins have vulnerabilities to RCE*
+contact-form-7 - version 5.3.1
+simple-file-list - version 4.2.2
