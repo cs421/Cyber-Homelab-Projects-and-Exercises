@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md"
+                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md"
               }
             }
           },
