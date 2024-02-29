@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PCAP Investigations/Endpoint Analysis - Wordpress.md"
+                "file": "PCAP Investigations/Network Analysis - Web Shell.md"
               }
             }
           },
@@ -178,14 +178,15 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "fa65d2267ac2638c",
+  "active": "4f55cc662746319c",
   "lastOpenFiles": [
+    "SOC Automated Project/SOC Automation Project.md",
+    "PCAP Investigations/Endpoint Analysis - Wordpress.md",
+    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations/attachments/web shell/btlo retired.png",
     "PCAP Investigations/attachments/web shell/btlo challenges.png",
-    "PCAP Investigations/Endpoint Analysis - Wordpress.md",
     "btlo challenges.png.md",
     "Pasted image 20240226175915.png",
-    "PCAP Investigations/Network Analysis - Web Shell.md",
     "conflict-files-obsidian-git.md",
     "Network Analysis - Web Shell.md",
     "PCAP Investigations/attachments/web shell/blto portscan conversation.png",
@@ -195,9 +196,7 @@
     "PCAP Investigations/attachments/web shell/btlo portscan udp conversations.png",
     "PCAP Investigations/attachments/web shell/btlo portscan sqlmap last time.png",
     "PCAP Investigations/attachments/web shell/btlo portscan sql attack decode.png",
-    "PCAP Investigations/attachments/web shell/btlo portscan python command.png",
     "PCAP Investigations/attachments/web shell",
-    "SOC Automated Project/SOC Automation Project.md",
     "PCAP Investigations/attachments/web shell",
     "PCAP Investigations/attachments/wordpress",
     "PCAP Investigations/attachments",
