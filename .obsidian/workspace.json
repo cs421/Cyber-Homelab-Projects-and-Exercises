@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "SOC Automated Project/SOC Automation Project.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "SOC Automated Project/SOC Automation Project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md",
+                "file": "SOC Automated Project/SOC Automation Project.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PCAP Investigations/Network Analysis - Web Shell.md"
+                "file": "SOC Automated Project/SOC Automation Project.md"
               }
             }
           },
@@ -180,9 +180,9 @@
   },
   "active": "4f55cc662746319c",
   "lastOpenFiles": [
+    "PCAP Investigations/Network Analysis - Web Shell.md",
     "SOC Automated Project/SOC Automation Project.md",
     "PCAP Investigations/Endpoint Analysis - Wordpress.md",
-    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations/attachments/web shell/btlo retired.png",
     "PCAP Investigations/attachments/web shell/btlo challenges.png",
     "btlo challenges.png.md",
