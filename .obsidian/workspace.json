@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SOC Automated Project/SOC Automation Project.md",
+                "file": "Active Directory Homelab/Introduction.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SOC Automated Project/SOC Automation Project.md",
+                "file": "Active Directory Homelab/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SOC Automated Project/SOC Automation Project.md",
+                "file": "Active Directory Homelab/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SOC Automated Project/SOC Automation Project.md"
+                "file": "Active Directory Homelab/Introduction.md"
               }
             }
           },
@@ -180,28 +180,36 @@
   },
   "active": "4f55cc662746319c",
   "lastOpenFiles": [
-    "PCAP Investigations/Network Analysis - Web Shell.md",
+    "README.md",
+    "Active Directory Homelab/Introduction.md",
+    "Active Directory Homelab/Part 5 - Simulate Brute Force Attacks and View Telemetry.md",
+    "Active Directory Homelab/Part 4 - Installing and Configuring Active Directory.md",
+    "Active Directory Homelab/Part 3 - Installing and Configuring Sysmon and Splunk.md",
+    "Active Directory Homelab/Part 2 - Installing VirtualBox and Virtual Machines.md",
+    "Active Directory Homelab/Part 1 - Diagram.md",
+    "Active Directory Homelab/Active Directory Diagram.jpg",
+    "Active Directory Homelab/attachments/winserver start.png",
+    "Active Directory Homelab/attachments/winserver standard eval desktop.png",
+    "Active Directory Homelab/attachments/winserver installing.png",
+    "Active Directory Homelab/attachments/winserver install now.png",
+    "Active Directory Homelab/attachments/winserver dashboard.png",
+    "Active Directory Homelab/attachments/winserver custom install.png",
+    "Active Directory Homelab/attachments/winserver custom install 2.png",
+    "Active Directory Homelab/attachments/winserver ctrl alt del.png",
+    "Active Directory Homelab/attachments/winserver create account.png",
+    "Active Directory Homelab/attachments",
     "SOC Automated Project/SOC Automation Project.md",
+    "Active Directory Homelab",
+    "PCAP Investigations/Network Analysis - Web Shell.md",
     "PCAP Investigations/Endpoint Analysis - Wordpress.md",
-    "PCAP Investigations/attachments/web shell/btlo retired.png",
-    "PCAP Investigations/attachments/web shell/btlo challenges.png",
     "btlo challenges.png.md",
-    "Pasted image 20240226175915.png",
     "conflict-files-obsidian-git.md",
     "Network Analysis - Web Shell.md",
-    "PCAP Investigations/attachments/web shell/blto portscan conversation.png",
-    "PCAP Investigations/attachments/web shell/webshell challenge.png",
-    "PCAP Investigations/attachments/web shell/dest ip port 80 open.png",
-    "PCAP Investigations/attachments/web shell/btlo wireshark change time.png",
-    "PCAP Investigations/attachments/web shell/btlo portscan udp conversations.png",
-    "PCAP Investigations/attachments/web shell/btlo portscan sqlmap last time.png",
-    "PCAP Investigations/attachments/web shell/btlo portscan sql attack decode.png",
     "PCAP Investigations/attachments/web shell",
     "PCAP Investigations/attachments/web shell",
     "PCAP Investigations/attachments/wordpress",
     "PCAP Investigations/attachments",
     "PCAP Investigations",
-    "README.md",
     "Untitled.md",
     "SOC Automated Project/Untitled/Untitled.md",
     "SOC Automated Project/attachments",
@@ -209,12 +217,10 @@
     "SOC Automated Project",
     "Cybersecurity Detection Lab/02 Configuring Pfsense - Firewall & Network Segmentation.md",
     "Cybersecurity Detection Lab/attachments_02",
-    "Cybersecurity Detection Lab",
     "Virtual Lab Building Project/Opnsense Firewall Installation.md",
     "Virtual Lab Building Project/04 Opnsense Web Filtering - Proxy Configuration.md",
     "Virtual Lab Building Project/03 Suricata IDS-IPS Installation on Opnsense.md",
     "01 Configuring PfSense - Firewall and Network Segmentation/Installing Pfsense and Virtual machine.md",
-    "Virtual Lab Building Project",
     "test note.md"
   ]
 }
