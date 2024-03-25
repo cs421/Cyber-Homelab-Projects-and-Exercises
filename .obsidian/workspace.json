@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory Homelab/Introduction.md",
+                "file": "Active Directory Homelab/Part 3 - Installing and Configuring Sysmon and Splunk.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Active Directory Homelab/Introduction.md",
+                "file": "Active Directory Homelab/Part 3 - Installing and Configuring Sysmon and Splunk.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Active Directory Homelab/Introduction.md",
+                "file": "Active Directory Homelab/Part 3 - Installing and Configuring Sysmon and Splunk.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Active Directory Homelab/Introduction.md"
+                "file": "Active Directory Homelab/Part 3 - Installing and Configuring Sysmon and Splunk.md"
               }
             }
           },
@@ -180,13 +180,13 @@
   },
   "active": "4f55cc662746319c",
   "lastOpenFiles": [
-    "README.md",
+    "Active Directory Homelab/Part 2 - Installing VirtualBox and Virtual Machines.md",
+    "Active Directory Homelab/Part 1 - Diagram.md",
     "Active Directory Homelab/Introduction.md",
+    "README.md",
     "Active Directory Homelab/Part 5 - Simulate Brute Force Attacks and View Telemetry.md",
     "Active Directory Homelab/Part 4 - Installing and Configuring Active Directory.md",
     "Active Directory Homelab/Part 3 - Installing and Configuring Sysmon and Splunk.md",
-    "Active Directory Homelab/Part 2 - Installing VirtualBox and Virtual Machines.md",
-    "Active Directory Homelab/Part 1 - Diagram.md",
     "Active Directory Homelab/Active Directory Diagram.jpg",
     "Active Directory Homelab/attachments/winserver start.png",
     "Active Directory Homelab/attachments/winserver standard eval desktop.png",
