@@ -1,5 +1,5 @@
 
-![[Active Directory Diagram.jpg]]
+![](https://github.com/cs421/Cyber-Homelab-Projects-and-Exercises/blob/main/Active%20Directory%20Homelab/attachments/Active%20Directory%20Diagram.jpg)
 
 - **Domain** - We can name our domain however we want, with our network IP of *192.168.10.0/24*.
 - **Target machine** - Our target machine will be the Windows 10 machine, with the IP created by DHCP. It will have **Sysmon** installed for log collection and **Splunk Universal Forwarder** for forwarding logs to Splunk. We will also install **Atomic Red Team** in the target machine so we can generate telemetry from the MITRE framework.
